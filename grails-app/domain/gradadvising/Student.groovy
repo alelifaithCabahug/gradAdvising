@@ -1,7 +1,35 @@
 package gradadvising
 
-class Student {
-
+class Student{	
+	String studentName
+	String idNumber
+	String underGradCourse
+	Date dateEnrolled
+	Program program
+	YearSem yrsem
+	String bachelorsDegree
+	boolean withGPAof2Above
+	boolean withSuitableBackground
+	
+	static belongsTo = [Program]
+	
+	static hasMany = [enrollments:Enrollments]
+	
+	
     static constraints = {
+		idNumber(blank:false, unique:true)
+		studentName(blank:false)
+		underGradCourse(blank:false)
+		bachelorsDegree(blank:false)
+		program(blank:false)
+		dateEnrolled()
+		withGPAof2Above()
+		withSuitableBackground()
     }
+	
+	static searchable = true
+	
+	String toString(){
+	"${this.idNumber} ${studentName}"
+	}
 }
