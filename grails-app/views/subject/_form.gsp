@@ -28,15 +28,14 @@
 
 <div class="fieldcontain ${hasErrors(bean: subjectInstance, field: 'isCore', 'error')} ">
 	<label for="isCore">
-		<g:message code="subject.isCore.label" default="Is Core" />
-		
+		<g:message code="subject.isCore.label" default="Core" />
 	</label>
 	<g:checkBox name="isCore" value="${subjectInstance?.isCore}" />
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: subjectInstance, field: 'yrsem', 'error')} required">
 	<label for="yrsem">
-		<g:message code="subject.yrsem.label" default="Yrsem" />
+		<g:message code="subject.yrsem.label" default="Year & Semester Offered" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select id="yrsem" name="yrsem.id" from="${gradadvising.YearSem.list()}" optionKey="id" required="" value="${subjectInstance?.yrsem?.id}" class="many-to-one"/>

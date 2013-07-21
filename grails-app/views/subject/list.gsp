@@ -1,36 +1,53 @@
-
 <%@ page import="gradadvising.Subject" %>
+
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'subject.label', default: 'Subject')}" />
+		<g:set var="entityName" value="${message(code: 'student.label', default: 'Student')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
+	
 	<body>
-		<a href="#list-subject" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-			</ul>
+		<br><br>
+	
+		<div align="right">	
+		<ul class="nav nav-pills" style="border: solid 1px #d3d3d3;">
+		
+		<li>
+		<a class="btn btn-small btn-info" href="http://localhost:8080/gradAdvising/Subject/create">
+		<i class="icon-info-sign"></i> Add Subject</a>
+		</li>
+		
+		
+		<g:form action="searchSubject" controller="student" class="">
+					<g:textField name="lastname" value="${params.input}" size="20" placeholder="Search Subject"/>
+					<g:submitButton name="search" class="buttons" value="Search" />
+		</g:form> 
+		
+		
 		</div>
-		<div id="list-subject" class="content scaffold-list" role="main">
-			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
+		
 			<g:if test="${flash.message}">
-			<div class="message" role="status">${flash.message}</div>
+			<div class="alert alert-error">
+				<div class="message" role="status">${flash.message}</div>
+			</div>
 			</g:if>
-			<table>
+			
+			
+			<center><h3> Courses Offered </h3></center>
+			<table class="table table-bordered">
 				<thead>
-					<tr>
-					
+				
+					<tr>					
 						<g:sortableColumn property="subjectCode" title="${message(code: 'subject.subjectCode.label', default: 'Subject Code')}" />
 					
 						<g:sortableColumn property="subjectDescription" title="${message(code: 'subject.subjectDescription.label', default: 'Subject Description')}" />
 					
 						<g:sortableColumn property="unitLoad" title="${message(code: 'subject.unitLoad.label', default: 'Unit Load')}" />
 					
-						<g:sortableColumn property="isCore" title="${message(code: 'subject.isCore.label', default: 'Is Core')}" />
+						<g:sortableColumn property="isCore" title="${message(code: 'subject.isCore.label', default: 'Core')}" />
 					
 						<th><g:message code="subject.yrsem.label" default="Yrsem" /></th>
 					

@@ -1,27 +1,45 @@
-
 <%@ page import="gradadvising.Program" %>
+
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'program.label', default: 'Program')}" />
+		<g:set var="entityName" value="${message(code: 'student.label', default: 'Student')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
+	
 	<body>
-		<a href="#list-program" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-			</ul>
+		<br><br>
+	
+		<div align="right">	
+		<ul class="nav nav-pills" style="border: solid 1px #d3d3d3;">
+		
+		<li>
+		<a class="btn btn-small btn-info" href="http://localhost:8080/gradAdvising/Program/create">
+		<i class="icon-info-sign"></i> New Program</a>
+		</li>
+		
+		
+		<g:form action="searchProgram" controller="student" class="">
+					<g:textField name="Name" value="${params.input}" size="20" placeholder="Search Program"/>
+					<g:submitButton name="search" class="buttons" value="Search" />
+		</g:form> 
+		
+		
 		</div>
-		<div id="list-program" class="content scaffold-list" role="main">
-			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
+		
 			<g:if test="${flash.message}">
-			<div class="message" role="status">${flash.message}</div>
+			<div class="alert alert-error">
+				<div class="message" role="status">${flash.message}</div>
+			</div>
 			</g:if>
-			<table>
+			
+			
+			<center><h3> Programs Offered </h3></center>
+			<table class="table table-bordered">
 				<thead>
+				
 					<tr>
 					
 						<g:sortableColumn property="programName" title="${message(code: 'program.programName.label', default: 'Program Name')}" />
