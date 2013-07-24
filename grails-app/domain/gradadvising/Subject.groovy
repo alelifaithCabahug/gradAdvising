@@ -2,7 +2,7 @@ package gradadvising
 
 class Subject {
 
-	String subjectCode
+   String subjectCode
 	String subjectDescription
 	int unitLoad
 	boolean isCore
@@ -24,6 +24,4 @@ class Subject {
 	String toString(){
 	"${this.subjectCode}"
 	}
-
-
 }
