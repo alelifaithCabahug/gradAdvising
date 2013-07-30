@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="5" hostname="LYUR" name="gradadvising.SubjectControllerTests" tests="8" time="1.148" timestamp="2013-07-30T15:04:30">
+  <properties />
+  <testcase classname="gradadvising.SubjectControllerTests" name="testIndex" time="0.363" />
+  <testcase classname="gradadvising.SubjectControllerTests" name="testList" time="0.067" />
+  <testcase classname="gradadvising.SubjectControllerTests" name="testCreate" time="0.058" />
+  <testcase classname="gradadvising.SubjectControllerTests" name="testSave" time="0.093">
+    <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/subject/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1f43093&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == &apos;/subject/show/1&apos;
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1f43093
+
+	at gradadvising.SubjectControllerTests.testSave(SubjectControllerTests.groovy:48)
+</failure>
+  </testcase>
+  <testcase classname="gradadvising.SubjectControllerTests" name="testShow" time="0.092">
+    <failure message="Assertion failed: &#xa;&#xa;assert subject.save() != null&#xa;       |       |      |&#xa;       null    null   false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert subject.save() != null
+       |       |      |
+       null    null   false
+
+	at gradadvising.SubjectControllerTests.testShow(SubjectControllerTests.groovy:62)
+</failure>
+  </testcase>
+  <testcase classname="gradadvising.SubjectControllerTests" name="testEdit" time="0.089">
+    <failure message="Assertion failed: &#xa;&#xa;assert subject.save() != null&#xa;       |       |      |&#xa;       null    null   false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert subject.save() != null
+       |       |      |
+       null    null   false
+
+	at gradadvising.SubjectControllerTests.testEdit(SubjectControllerTests.groovy:80)
+</failure>
+  </testcase>
+  <testcase classname="gradadvising.SubjectControllerTests" name="testUpdate" time="0.103">
+    <failure message="Assertion failed: &#xa;&#xa;assert subject.save() != null&#xa;       |       |      |&#xa;       null    null   false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert subject.save() != null
+       |       |      |
+       null    null   false
+
+	at gradadvising.SubjectControllerTests.testUpdate(SubjectControllerTests.groovy:100)
+</failure>
+  </testcase>
+  <testcase classname="gradadvising.SubjectControllerTests" name="testDelete" time="0.154">
+    <failure message="Assertion failed: &#xa;&#xa;assert subject.save() != null&#xa;       |       |      |&#xa;       null    null   false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert subject.save() != null
+       |       |      |
+       null    null   false
+
+	at gradadvising.SubjectControllerTests.testDelete(SubjectControllerTests.groovy:144)
+</failure>
+  </testcase>
+  <system-out><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-out>
+  <system-err><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-err>
+</testsuite>

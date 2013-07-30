@@ -1,0 +1,108 @@
+Testsuite: gradadvising.SubjectControllerTests
+Tests run: 8, Failures: 5, Errors: 0, Time elapsed: 1.148 sec
+------------- Standard Output ---------------
+--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+------------- ---------------- ---------------
+
+Testcase: testIndex took 0.363 sec
+Testcase: testList took 0.067 sec
+Testcase: testCreate took 0.058 sec
+Testcase: testSave took 0.093 sec
+	FAILED
+Assertion failed: 
+
+assert response.redirectedUrl == '/subject/show/1'
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1f43093
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == '/subject/show/1'
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1f43093
+
+	at gradadvising.SubjectControllerTests.testSave(SubjectControllerTests.groovy:48)
+
+Testcase: testShow took 0.092 sec
+	FAILED
+Assertion failed: 
+
+assert subject.save() != null
+       |       |      |
+       null    null   false
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert subject.save() != null
+       |       |      |
+       null    null   false
+
+	at gradadvising.SubjectControllerTests.testShow(SubjectControllerTests.groovy:62)
+
+Testcase: testEdit took 0.089 sec
+	FAILED
+Assertion failed: 
+
+assert subject.save() != null
+       |       |      |
+       null    null   false
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert subject.save() != null
+       |       |      |
+       null    null   false
+
+	at gradadvising.SubjectControllerTests.testEdit(SubjectControllerTests.groovy:80)
+
+Testcase: testUpdate took 0.103 sec
+	FAILED
+Assertion failed: 
+
+assert subject.save() != null
+       |       |      |
+       null    null   false
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert subject.save() != null
+       |       |      |
+       null    null   false
+
+	at gradadvising.SubjectControllerTests.testUpdate(SubjectControllerTests.groovy:100)
+
+Testcase: testDelete took 0.154 sec
+	FAILED
+Assertion failed: 
+
+assert subject.save() != null
+       |       |      |
+       null    null   false
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert subject.save() != null
+       |       |      |
+       null    null   false
+
+	at gradadvising.SubjectControllerTests.testDelete(SubjectControllerTests.groovy:144)
+

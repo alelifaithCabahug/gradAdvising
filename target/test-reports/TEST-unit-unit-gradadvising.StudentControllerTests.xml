@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="5" hostname="LYUR" name="gradadvising.StudentControllerTests" tests="8" time="1.113" timestamp="2013-07-30T15:04:29">
+  <properties />
+  <testcase classname="gradadvising.StudentControllerTests" name="testIndex" time="0.36" />
+  <testcase classname="gradadvising.StudentControllerTests" name="testList" time="0.083" />
+  <testcase classname="gradadvising.StudentControllerTests" name="testCreate" time="0.066" />
+  <testcase classname="gradadvising.StudentControllerTests" name="testSave" time="0.085">
+    <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/student/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@14fe17&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == &apos;/student/show/1&apos;
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@14fe17
+
+	at gradadvising.StudentControllerTests.testSave(StudentControllerTests.groovy:48)
+</failure>
+  </testcase>
+  <testcase classname="gradadvising.StudentControllerTests" name="testShow" time="0.113">
+    <failure message="Assertion failed: &#xa;&#xa;assert student.save() != null&#xa;       |       |      |&#xa;       |       null   false&#xa;       null null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert student.save() != null
+       |       |      |
+       |       null   false
+       null null
+
+	at gradadvising.StudentControllerTests.testShow(StudentControllerTests.groovy:62)
+</failure>
+  </testcase>
+  <testcase classname="gradadvising.StudentControllerTests" name="testEdit" time="0.102">
+    <failure message="Assertion failed: &#xa;&#xa;assert student.save() != null&#xa;       |       |      |&#xa;       |       null   false&#xa;       null null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert student.save() != null
+       |       |      |
+       |       null   false
+       null null
+
+	at gradadvising.StudentControllerTests.testEdit(StudentControllerTests.groovy:80)
+</failure>
+  </testcase>
+  <testcase classname="gradadvising.StudentControllerTests" name="testUpdate" time="0.089">
+    <failure message="Assertion failed: &#xa;&#xa;assert student.save() != null&#xa;       |       |      |&#xa;       |       null   false&#xa;       null null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert student.save() != null
+       |       |      |
+       |       null   false
+       null null
+
+	at gradadvising.StudentControllerTests.testUpdate(StudentControllerTests.groovy:100)
+</failure>
+  </testcase>
+  <testcase classname="gradadvising.StudentControllerTests" name="testDelete" time="0.084">
+    <failure message="Assertion failed: &#xa;&#xa;assert student.save() != null&#xa;       |       |      |&#xa;       |       null   false&#xa;       null null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert student.save() != null
+       |       |      |
+       |       null   false
+       null null
+
+	at gradadvising.StudentControllerTests.testDelete(StudentControllerTests.groovy:144)
+</failure>
+  </testcase>
+  <system-out><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-out>
+  <system-err><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-err>
+</testsuite>
