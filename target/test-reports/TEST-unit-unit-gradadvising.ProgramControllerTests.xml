@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="5" hostname="LYUR" name="gradadvising.ProgramControllerTests" tests="8" time="1.277" timestamp="2013-07-30T15:04:27">
+  <properties />
+  <testcase classname="gradadvising.ProgramControllerTests" name="testIndex" time="0.484" />
+  <testcase classname="gradadvising.ProgramControllerTests" name="testList" time="0.057" />
+  <testcase classname="gradadvising.ProgramControllerTests" name="testCreate" time="0.077" />
+  <testcase classname="gradadvising.ProgramControllerTests" name="testSave" time="0.116">
+    <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/program/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@fe55e8&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert response.redirectedUrl == &apos;/program/show/1&apos;
+       |        |             |
+       |        null          false
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@fe55e8
+
+	at gradadvising.ProgramControllerTests.testSave(ProgramControllerTests.groovy:48)
+</failure>
+  </testcase>
+  <testcase classname="gradadvising.ProgramControllerTests" name="testShow" time="0.114">
+    <failure message="Assertion failed: &#xa;&#xa;assert program.save() != null&#xa;       |       |      |&#xa;       null    null   false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert program.save() != null
+       |       |      |
+       null    null   false
+
+	at gradadvising.ProgramControllerTests.testShow(ProgramControllerTests.groovy:62)
+</failure>
+  </testcase>
+  <testcase classname="gradadvising.ProgramControllerTests" name="testEdit" time="0.1">
+    <failure message="Assertion failed: &#xa;&#xa;assert program.save() != null&#xa;       |       |      |&#xa;       null    null   false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert program.save() != null
+       |       |      |
+       null    null   false
+
+	at gradadvising.ProgramControllerTests.testEdit(ProgramControllerTests.groovy:80)
+</failure>
+  </testcase>
+  <testcase classname="gradadvising.ProgramControllerTests" name="testUpdate" time="0.134">
+    <failure message="Assertion failed: &#xa;&#xa;assert program.save() != null&#xa;       |       |      |&#xa;       null    null   false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert program.save() != null
+       |       |      |
+       null    null   false
+
+	at gradadvising.ProgramControllerTests.testUpdate(ProgramControllerTests.groovy:100)
+</failure>
+  </testcase>
+  <testcase classname="gradadvising.ProgramControllerTests" name="testDelete" time="0.08">
+    <failure message="Assertion failed: &#xa;&#xa;assert program.save() != null&#xa;       |       |      |&#xa;       null    null   false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert program.save() != null
+       |       |      |
+       null    null   false
+
+	at gradadvising.ProgramControllerTests.testDelete(ProgramControllerTests.groovy:144)
+</failure>
+  </testcase>
+  <system-out><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-out>
+  <system-err><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-err>
+</testsuite>

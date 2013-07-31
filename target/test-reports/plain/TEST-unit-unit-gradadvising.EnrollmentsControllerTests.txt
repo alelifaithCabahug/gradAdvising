@@ -1,0 +1,61 @@
+Testsuite: gradadvising.EnrollmentsControllerTests
+Tests run: 8, Failures: 2, Errors: 0, Time elapsed: 9.194 sec
+------------- Standard Output ---------------
+--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+------------- ---------------- ---------------
+
+Testcase: testIndex took 4.503 sec
+Testcase: testList took 2.412 sec
+Testcase: testCreate took 0.236 sec
+Testcase: testSave took 1.286 sec
+	FAILED
+Assertion failed: 
+
+assert model.enrollmentsInstance != null
+       |     |                   |
+       [:]   null                false
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert model.enrollmentsInstance != null
+       |     |                   |
+       [:]   null                false
+
+	at gradadvising.EnrollmentsControllerTests.testSave(EnrollmentsControllerTests.groovy:40)
+
+Testcase: testShow took 0.192 sec
+Testcase: testEdit took 0.087 sec
+Testcase: testUpdate took 0.129 sec
+	FAILED
+Assertion failed: 
+
+assert view == "/enrollments/edit"
+       |    |
+       null false
+
+junit.framework.AssertionFailedError: Assertion failed: 
+
+assert view == "/enrollments/edit"
+       |    |
+       null false
+
+	at gradadvising.EnrollmentsControllerTests.testUpdate(EnrollmentsControllerTests.groovy:108)
+
+Testcase: testDelete took 0.196 sec

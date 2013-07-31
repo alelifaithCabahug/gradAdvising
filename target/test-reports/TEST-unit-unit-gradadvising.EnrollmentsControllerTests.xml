@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="2" hostname="LYUR" name="gradadvising.EnrollmentsControllerTests" tests="8" time="9.194" timestamp="2013-07-30T15:04:16">
+  <properties />
+  <testcase classname="gradadvising.EnrollmentsControllerTests" name="testIndex" time="4.502" />
+  <testcase classname="gradadvising.EnrollmentsControllerTests" name="testList" time="2.412" />
+  <testcase classname="gradadvising.EnrollmentsControllerTests" name="testCreate" time="0.236" />
+  <testcase classname="gradadvising.EnrollmentsControllerTests" name="testSave" time="1.287">
+    <failure message="Assertion failed: &#xa;&#xa;assert model.enrollmentsInstance != null&#xa;       |     |                   |&#xa;       [:]   null                false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert model.enrollmentsInstance != null
+       |     |                   |
+       [:]   null                false
+
+	at gradadvising.EnrollmentsControllerTests.testSave(EnrollmentsControllerTests.groovy:40)
+</failure>
+  </testcase>
+  <testcase classname="gradadvising.EnrollmentsControllerTests" name="testShow" time="0.192" />
+  <testcase classname="gradadvising.EnrollmentsControllerTests" name="testEdit" time="0.087" />
+  <testcase classname="gradadvising.EnrollmentsControllerTests" name="testUpdate" time="0.13">
+    <failure message="Assertion failed: &#xa;&#xa;assert view == &quot;/enrollments/edit&quot;&#xa;       |    |&#xa;       null false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+
+assert view == &quot;/enrollments/edit&quot;
+       |    |
+       null false
+
+	at gradadvising.EnrollmentsControllerTests.testUpdate(EnrollmentsControllerTests.groovy:108)
+</failure>
+  </testcase>
+  <testcase classname="gradadvising.EnrollmentsControllerTests" name="testDelete" time="0.196" />
+  <system-out><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-out>
+  <system-err><![CDATA[--Output from testIndex--
+--Output from testList--
+--Output from testCreate--
+--Output from testSave--
+--Output from testShow--
+--Output from testEdit--
+--Output from testUpdate--
+--Output from testDelete--
+]]></system-err>
+</testsuite>
