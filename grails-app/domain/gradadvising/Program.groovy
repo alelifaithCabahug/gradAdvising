@@ -10,7 +10,8 @@ class Program {
 		programName(blank:false, unique:true)
     }
 	
-
+	static searchable = true
+	
 	String toString(){
 		"${this.programName}"
 	}
