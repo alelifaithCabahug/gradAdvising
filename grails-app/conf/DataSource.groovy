@@ -2,7 +2,7 @@ dataSource {
     pooled = true
     driverClassName = "org.h2.Driver"
     username = "postgres"
-    password = "metotcomeda"
+    password = "postgres"
 }
 hibernate {
     cache.use_second_level_cache = true

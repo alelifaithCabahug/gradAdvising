@@ -51,12 +51,12 @@ grails.project.dependency.resolution = {
         runtime ":resources:1.1.6"
 
         build ":tomcat:$grailsVersion"
-<<<<<<< HEAD
+//<<<<<<< HEAD
 
 
-=======
+//=======
         runtime ":database-migration:1.3.2"
->>>>>>> 93e1c65e230565b2782da5cab994862b1c7488b9
+//>>>>>>> 93e1c65e230565b2782da5cab994862b1c7488b9
         compile ':cache:1.0.1'
 		
 		compile ":jquery-ui-extensions:0.5.8"
