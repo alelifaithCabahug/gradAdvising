@@ -42,36 +42,23 @@ grails.project.dependency.resolution = {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
 
         // runtime 'mysql:mysql-connector-java:5.1.22'
-		runtime 'postgresql:postgresql:9.1-902.jdbc4'
+		//runtime 'postgresql:postgresql:9.1-902.jdbc4'
     }
 
     plugins {
-        runtime ":hibernate:$grailsVersion"
+      runtime ":hibernate:$grailsVersion"
         runtime ":jquery:1.8.3"
-        runtime ":resources:1.1.6"
+        runtime ":resources:1.2"
+
+        // Uncomment these (or add new ones) to enable additional resources capabilities
+        //runtime ":zipped-resources:1.0"
+        //runtime ":cached-resources:1.0"
+        //runtime ":yui-minify-resources:0.1.5"
 
         build ":tomcat:$grailsVersion"
-<<<<<<< HEAD
-        //runtime ":database-migration:1.3.2"
-=======
-<<<<<<< HEAD
-        //runtime ":database-migration:1.3.2"
-=======
-<<<<<<< HEAD
-        runtime ":database-migration:1.3.2"
-=======
-<<<<<<< HEAD
 
-
-=======
         runtime ":database-migration:1.3.2"
->>>>>>> 93e1c65e230565b2782da5cab994862b1c7488b9
->>>>>>> 8e53c05e7266a55faf4241e2c153bef9451bfc6e
->>>>>>> 7b9f0dd0c9a0adf407e0a7437eecb6240c45e8dc
->>>>>>> e94955840bc1c28d72e4d37d6a329cbe9ee72ea6
+
         compile ':cache:1.0.1'
-		
-		compile ":jquery-ui-extensions:0.5.8"
-		compile ":font-awesome-resources:3.0"
     }
 }

@@ -24,11 +24,19 @@
 				<thead>
 					<tr>
 					
+						<g:sortableColumn property="sem" title="${message(code: 'yearSem.sem.label', default: 'Sem')}" />
+					
+						<g:sortableColumn property="year" title="${message(code: 'yearSem.year.label', default: 'Year')}" />
+					
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${yearSemInstanceList}" status="i" var="yearSemInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					
+						<td><g:link action="show" id="${yearSemInstance.id}">${fieldValue(bean: yearSemInstance, field: "sem")}</g:link></td>
+					
+						<td>${fieldValue(bean: yearSemInstance, field: "year")}</td>
 					
 					</tr>
 				</g:each>
