@@ -4,8 +4,27 @@ import org.springframework.dao.DataIntegrityViolationException
 
 class ProgramController {
 
+	def searchableService
+	
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
+	//ADDED METHODS
+	
+	//function for search - not yet done
+	def searchProgramPlugin(){
+		def query = params.program
+		
+		if(query){
+			def srchResults = searchableService.search(query)
+			//gsp file for view not yet available
+			render(view: "", model: [programInstanceList: srchResults.results, programInstanceTotal:srchResults.total])	
+		}else{
+			//gsp file for view not yet available
+			render (view: "")
+			}
+	}
+	
+	//--end
     def index() {
         redirect(action: "list", params: params)
     }
