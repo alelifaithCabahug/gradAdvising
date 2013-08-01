@@ -20,11 +20,12 @@
 		<i class="icon-info-sign"></i> Add Student</a>
 		</li>
 		
-		
-		<g:form action="searchStudent" controller="student" class="">
-					<g:textField name="Name" value="${params.input}" size="20" placeholder="Search Student"/>
+				<fieldset class="buttons">
+					<g:form action="searchStudent" controller="student" class="">
+					<g:textField name="idNumber" value="${params.input}" size="20" placeholder="Student Id No."/>
 					<g:submitButton name="search" class="buttons" value="Search" />
-		</g:form> 
+					</g:form> 
+				</fieldset>
 		
 		
 		</div>
