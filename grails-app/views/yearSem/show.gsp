@@ -23,20 +23,20 @@
 			</g:if>
 			<ol class="property-list yearSem">
 			
-				<g:if test="${yearSemInstance?.sem}">
-				<li class="fieldcontain">
-					<span id="sem-label" class="property-label"><g:message code="yearSem.sem.label" default="Sem" /></span>
-					
-						<span class="property-value" aria-labelledby="sem-label"><g:fieldValue bean="${yearSemInstance}" field="sem"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${yearSemInstance?.year}">
 				<li class="fieldcontain">
 					<span id="year-label" class="property-label"><g:message code="yearSem.year.label" default="Year" /></span>
 					
 						<span class="property-value" aria-labelledby="year-label"><g:fieldValue bean="${yearSemInstance}" field="year"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${yearSemInstance?.sem}">
+				<li class="fieldcontain">
+					<span id="sem-label" class="property-label"><g:message code="yearSem.sem.label" default="Sem" /></span>
+					
+						<span class="property-value" aria-labelledby="sem-label"><g:fieldValue bean="${yearSemInstance}" field="sem"/></span>
 					
 				</li>
 				</g:if>
