@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="2" hostname="LYUR" id="0" name="EnrollmentsControllerTests" package="gradadvising" tests="8" time="9.194" timestamp="2013-07-30T15:04:16">
+  <testsuite errors="0" failures="2" hostname="LYUR" id="0" name="EnrollmentsControllerTests" package="gradadvising" tests="8" time="4.186" timestamp="2013-08-01T14:43:22">
       <properties />
 
-      <testcase classname="gradadvising.EnrollmentsControllerTests" name="testIndex" time="4.502" />
+      <testcase classname="gradadvising.EnrollmentsControllerTests" name="testIndex" time="2.433" />
 
-      <testcase classname="gradadvising.EnrollmentsControllerTests" name="testList" time="2.412" />
+      <testcase classname="gradadvising.EnrollmentsControllerTests" name="testList" time="0.651" />
 
-      <testcase classname="gradadvising.EnrollmentsControllerTests" name="testCreate" time="0.236" />
+      <testcase classname="gradadvising.EnrollmentsControllerTests" name="testCreate" time="0.183" />
 
-      <testcase classname="gradadvising.EnrollmentsControllerTests" name="testSave" time="1.287">
+      <testcase classname="gradadvising.EnrollmentsControllerTests" name="testSave" time="0.335">
           <failure message="Assertion failed: &#xa;&#xa;assert model.enrollmentsInstance != null&#xa;       |     |                   |&#xa;       [:]   null                false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert model.enrollmentsInstance != null
@@ -21,11 +21,11 @@ assert model.enrollmentsInstance != null
 
       </testcase>
 
-      <testcase classname="gradadvising.EnrollmentsControllerTests" name="testShow" time="0.192" />
+      <testcase classname="gradadvising.EnrollmentsControllerTests" name="testShow" time="0.081" />
 
-      <testcase classname="gradadvising.EnrollmentsControllerTests" name="testEdit" time="0.087" />
+      <testcase classname="gradadvising.EnrollmentsControllerTests" name="testEdit" time="0.074" />
 
-      <testcase classname="gradadvising.EnrollmentsControllerTests" name="testUpdate" time="0.13">
+      <testcase classname="gradadvising.EnrollmentsControllerTests" name="testUpdate" time="0.136">
           <failure message="Assertion failed: &#xa;&#xa;assert view == &quot;/enrollments/edit&quot;&#xa;       |    |&#xa;       null false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert view == &quot;/enrollments/edit&quot;
@@ -37,7 +37,7 @@ assert view == &quot;/enrollments/edit&quot;
 
       </testcase>
 
-      <testcase classname="gradadvising.EnrollmentsControllerTests" name="testDelete" time="0.196" />
+      <testcase classname="gradadvising.EnrollmentsControllerTests" name="testDelete" time="0.146" />
 
       <system-out><![CDATA[--Output from testIndex--
 --Output from testList--
@@ -60,10 +60,10 @@ assert view == &quot;/enrollments/edit&quot;
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="1" hostname="LYUR" id="1" name="EnrollmentsTests" package="gradadvising" tests="1" time="0.257" timestamp="2013-07-30T15:04:25">
+  <testsuite errors="0" failures="1" hostname="LYUR" id="1" name="EnrollmentsTests" package="gradadvising" tests="1" time="0.219" timestamp="2013-08-01T14:43:26">
       <properties />
 
-      <testcase classname="gradadvising.EnrollmentsTests" name="testSomething" time="0.121">
+      <testcase classname="gradadvising.EnrollmentsTests" name="testSomething" time="0.076">
           <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
 	at gradadvising.EnrollmentsTests.testSomething(EnrollmentsTests.groovy:15)
 </failure>
@@ -77,16 +77,16 @@ assert view == &quot;/enrollments/edit&quot;
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="2" hostname="LYUR" id="2" name="GradeControllerTests" package="gradadvising" tests="8" time="1.185" timestamp="2013-07-30T15:04:26">
+  <testsuite errors="0" failures="2" hostname="LYUR" id="2" name="GradeControllerTests" package="gradadvising" tests="8" time="1.597" timestamp="2013-08-01T14:43:26">
       <properties />
 
-      <testcase classname="gradadvising.GradeControllerTests" name="testIndex" time="0.396" />
+      <testcase classname="gradadvising.GradeControllerTests" name="testIndex" time="0.417" />
 
-      <testcase classname="gradadvising.GradeControllerTests" name="testList" time="0.068" />
+      <testcase classname="gradadvising.GradeControllerTests" name="testList" time="0.085" />
 
-      <testcase classname="gradadvising.GradeControllerTests" name="testCreate" time="0.064" />
+      <testcase classname="gradadvising.GradeControllerTests" name="testCreate" time="0.079" />
 
-      <testcase classname="gradadvising.GradeControllerTests" name="testSave" time="0.119">
+      <testcase classname="gradadvising.GradeControllerTests" name="testSave" time="0.131">
           <failure message="Assertion failed: &#xa;&#xa;assert model.gradeInstance != null&#xa;       |     |             |&#xa;       [:]   null          false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert model.gradeInstance != null
@@ -98,11 +98,11 @@ assert model.gradeInstance != null
 
       </testcase>
 
-      <testcase classname="gradadvising.GradeControllerTests" name="testShow" time="0.074" />
+      <testcase classname="gradadvising.GradeControllerTests" name="testShow" time="0.09" />
 
-      <testcase classname="gradadvising.GradeControllerTests" name="testEdit" time="0.081" />
+      <testcase classname="gradadvising.GradeControllerTests" name="testEdit" time="0.08" />
 
-      <testcase classname="gradadvising.GradeControllerTests" name="testUpdate" time="0.112">
+      <testcase classname="gradadvising.GradeControllerTests" name="testUpdate" time="0.088">
           <failure message="Assertion failed: &#xa;&#xa;assert view == &quot;/grade/edit&quot;&#xa;       |    |&#xa;       null false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert view == &quot;/grade/edit&quot;
@@ -114,7 +114,7 @@ assert view == &quot;/grade/edit&quot;
 
       </testcase>
 
-      <testcase classname="gradadvising.GradeControllerTests" name="testDelete" time="0.117" />
+      <testcase classname="gradadvising.GradeControllerTests" name="testDelete" time="0.493" />
 
       <system-out><![CDATA[--Output from testIndex--
 --Output from testList--
@@ -137,10 +137,10 @@ assert view == &quot;/grade/edit&quot;
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="1" hostname="LYUR" id="3" name="GradeTests" package="gradadvising" tests="1" time="0.217" timestamp="2013-07-30T15:04:27">
+  <testsuite errors="0" failures="1" hostname="LYUR" id="3" name="GradeTests" package="gradadvising" tests="1" time="0.193" timestamp="2013-08-01T14:43:28">
       <properties />
 
-      <testcase classname="gradadvising.GradeTests" name="testSomething" time="0.081">
+      <testcase classname="gradadvising.GradeTests" name="testSomething" time="0.062">
           <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
 	at gradadvising.GradeTests.testSomething(GradeTests.groovy:15)
 </failure>
@@ -154,29 +154,29 @@ assert view == &quot;/grade/edit&quot;
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="5" hostname="LYUR" id="4" name="ProgramControllerTests" package="gradadvising" tests="8" time="1.277" timestamp="2013-07-30T15:04:27">
+  <testsuite errors="0" failures="5" hostname="LYUR" id="4" name="ProgramControllerTests" package="gradadvising" tests="8" time="1.197" timestamp="2013-08-01T14:43:28">
       <properties />
 
-      <testcase classname="gradadvising.ProgramControllerTests" name="testIndex" time="0.484" />
+      <testcase classname="gradadvising.ProgramControllerTests" name="testIndex" time="0.457" />
 
-      <testcase classname="gradadvising.ProgramControllerTests" name="testList" time="0.057" />
+      <testcase classname="gradadvising.ProgramControllerTests" name="testList" time="0.059" />
 
-      <testcase classname="gradadvising.ProgramControllerTests" name="testCreate" time="0.077" />
+      <testcase classname="gradadvising.ProgramControllerTests" name="testCreate" time="0.069" />
 
-      <testcase classname="gradadvising.ProgramControllerTests" name="testSave" time="0.116">
-          <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/program/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@fe55e8&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+      <testcase classname="gradadvising.ProgramControllerTests" name="testSave" time="0.109">
+          <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/program/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1f8c10e&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert response.redirectedUrl == &apos;/program/show/1&apos;
        |        |             |
        |        null          false
-       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@fe55e8
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1f8c10e
 
 	at gradadvising.ProgramControllerTests.testSave(ProgramControllerTests.groovy:48)
 </failure>
 
       </testcase>
 
-      <testcase classname="gradadvising.ProgramControllerTests" name="testShow" time="0.114">
+      <testcase classname="gradadvising.ProgramControllerTests" name="testShow" time="0.098">
           <failure message="Assertion failed: &#xa;&#xa;assert program.save() != null&#xa;       |       |      |&#xa;       null    null   false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert program.save() != null
@@ -188,7 +188,7 @@ assert program.save() != null
 
       </testcase>
 
-      <testcase classname="gradadvising.ProgramControllerTests" name="testEdit" time="0.1">
+      <testcase classname="gradadvising.ProgramControllerTests" name="testEdit" time="0.077">
           <failure message="Assertion failed: &#xa;&#xa;assert program.save() != null&#xa;       |       |      |&#xa;       null    null   false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert program.save() != null
@@ -200,7 +200,7 @@ assert program.save() != null
 
       </testcase>
 
-      <testcase classname="gradadvising.ProgramControllerTests" name="testUpdate" time="0.134">
+      <testcase classname="gradadvising.ProgramControllerTests" name="testUpdate" time="0.094">
           <failure message="Assertion failed: &#xa;&#xa;assert program.save() != null&#xa;       |       |      |&#xa;       null    null   false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert program.save() != null
@@ -212,7 +212,7 @@ assert program.save() != null
 
       </testcase>
 
-      <testcase classname="gradadvising.ProgramControllerTests" name="testDelete" time="0.08">
+      <testcase classname="gradadvising.ProgramControllerTests" name="testDelete" time="0.085">
           <failure message="Assertion failed: &#xa;&#xa;assert program.save() != null&#xa;       |       |      |&#xa;       null    null   false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert program.save() != null
@@ -245,10 +245,10 @@ assert program.save() != null
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="1" hostname="LYUR" id="5" name="ProgramTests" package="gradadvising" tests="1" time="0.257" timestamp="2013-07-30T15:04:28">
+  <testsuite errors="0" failures="1" hostname="LYUR" id="5" name="ProgramTests" package="gradadvising" tests="1" time="0.273" timestamp="2013-08-01T14:43:29">
       <properties />
 
-      <testcase classname="gradadvising.ProgramTests" name="testSomething" time="0.133">
+      <testcase classname="gradadvising.ProgramTests" name="testSomething" time="0.142">
           <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
 	at gradadvising.ProgramTests.testSomething(ProgramTests.groovy:15)
 </failure>
@@ -262,29 +262,29 @@ assert program.save() != null
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="5" hostname="LYUR" id="6" name="StudentControllerTests" package="gradadvising" tests="8" time="1.113" timestamp="2013-07-30T15:04:29">
+  <testsuite errors="0" failures="5" hostname="LYUR" id="6" name="StudentControllerTests" package="gradadvising" tests="8" time="1.11" timestamp="2013-08-01T14:43:29">
       <properties />
 
-      <testcase classname="gradadvising.StudentControllerTests" name="testIndex" time="0.36" />
+      <testcase classname="gradadvising.StudentControllerTests" name="testIndex" time="0.417" />
 
-      <testcase classname="gradadvising.StudentControllerTests" name="testList" time="0.083" />
+      <testcase classname="gradadvising.StudentControllerTests" name="testList" time="0.064" />
 
-      <testcase classname="gradadvising.StudentControllerTests" name="testCreate" time="0.066" />
+      <testcase classname="gradadvising.StudentControllerTests" name="testCreate" time="0.054" />
 
-      <testcase classname="gradadvising.StudentControllerTests" name="testSave" time="0.085">
-          <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/student/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@14fe17&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+      <testcase classname="gradadvising.StudentControllerTests" name="testSave" time="0.075">
+          <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/student/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@19fc023&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert response.redirectedUrl == &apos;/student/show/1&apos;
        |        |             |
        |        null          false
-       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@14fe17
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@19fc023
 
 	at gradadvising.StudentControllerTests.testSave(StudentControllerTests.groovy:48)
 </failure>
 
       </testcase>
 
-      <testcase classname="gradadvising.StudentControllerTests" name="testShow" time="0.113">
+      <testcase classname="gradadvising.StudentControllerTests" name="testShow" time="0.121">
           <failure message="Assertion failed: &#xa;&#xa;assert student.save() != null&#xa;       |       |      |&#xa;       |       null   false&#xa;       null null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert student.save() != null
@@ -297,7 +297,7 @@ assert student.save() != null
 
       </testcase>
 
-      <testcase classname="gradadvising.StudentControllerTests" name="testEdit" time="0.102">
+      <testcase classname="gradadvising.StudentControllerTests" name="testEdit" time="0.09">
           <failure message="Assertion failed: &#xa;&#xa;assert student.save() != null&#xa;       |       |      |&#xa;       |       null   false&#xa;       null null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert student.save() != null
@@ -310,7 +310,7 @@ assert student.save() != null
 
       </testcase>
 
-      <testcase classname="gradadvising.StudentControllerTests" name="testUpdate" time="0.089">
+      <testcase classname="gradadvising.StudentControllerTests" name="testUpdate" time="0.082">
           <failure message="Assertion failed: &#xa;&#xa;assert student.save() != null&#xa;       |       |      |&#xa;       |       null   false&#xa;       null null&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert student.save() != null
@@ -357,12 +357,12 @@ assert student.save() != null
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="1" hostname="LYUR" id="7" name="StudentTests" package="gradadvising" tests="1" time="0.25" timestamp="2013-07-30T15:04:30">
+  <testsuite errors="0" failures="1" hostname="LYUR" id="7" name="StudentTests" package="gradadvising" tests="1" time="0.249" timestamp="2013-08-01T14:43:31">
       <properties />
 
-      <testcase classname="gradadvising.StudentTests" name="testSomething" time="0.12">
-          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
-	at gradadvising.StudentTests.testSomething(StudentTests.groovy:15)
+      <testcase classname="gradadvising.StudentTests" name="testSomething" time="0.13">
+          <failure message="java.lang.AssertionError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: java.lang.AssertionError: Implement me
+	at gradadvising.StudentTests.testSomething(StudentTests.groovy:24)
 </failure>
 
       </testcase>
@@ -374,29 +374,29 @@ assert student.save() != null
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="5" hostname="LYUR" id="8" name="SubjectControllerTests" package="gradadvising" tests="8" time="1.148" timestamp="2013-07-30T15:04:30">
+  <testsuite errors="0" failures="5" hostname="LYUR" id="8" name="SubjectControllerTests" package="gradadvising" tests="8" time="1.013" timestamp="2013-08-01T14:43:31">
       <properties />
 
-      <testcase classname="gradadvising.SubjectControllerTests" name="testIndex" time="0.363" />
+      <testcase classname="gradadvising.SubjectControllerTests" name="testIndex" time="0.34" />
 
-      <testcase classname="gradadvising.SubjectControllerTests" name="testList" time="0.067" />
+      <testcase classname="gradadvising.SubjectControllerTests" name="testList" time="0.055" />
 
-      <testcase classname="gradadvising.SubjectControllerTests" name="testCreate" time="0.058" />
+      <testcase classname="gradadvising.SubjectControllerTests" name="testCreate" time="0.063" />
 
-      <testcase classname="gradadvising.SubjectControllerTests" name="testSave" time="0.093">
-          <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/subject/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1f43093&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
+      <testcase classname="gradadvising.SubjectControllerTests" name="testSave" time="0.079">
+          <failure message="Assertion failed: &#xa;&#xa;assert response.redirectedUrl == &apos;/subject/show/1&apos;&#xa;       |        |             |&#xa;       |        null          false&#xa;       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@e041be&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert response.redirectedUrl == &apos;/subject/show/1&apos;
        |        |             |
        |        null          false
-       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1f43093
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@e041be
 
 	at gradadvising.SubjectControllerTests.testSave(SubjectControllerTests.groovy:48)
 </failure>
 
       </testcase>
 
-      <testcase classname="gradadvising.SubjectControllerTests" name="testShow" time="0.092">
+      <testcase classname="gradadvising.SubjectControllerTests" name="testShow" time="0.09">
           <failure message="Assertion failed: &#xa;&#xa;assert subject.save() != null&#xa;       |       |      |&#xa;       null    null   false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert subject.save() != null
@@ -408,7 +408,7 @@ assert subject.save() != null
 
       </testcase>
 
-      <testcase classname="gradadvising.SubjectControllerTests" name="testEdit" time="0.089">
+      <testcase classname="gradadvising.SubjectControllerTests" name="testEdit" time="0.077">
           <failure message="Assertion failed: &#xa;&#xa;assert subject.save() != null&#xa;       |       |      |&#xa;       null    null   false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert subject.save() != null
@@ -420,7 +420,7 @@ assert subject.save() != null
 
       </testcase>
 
-      <testcase classname="gradadvising.SubjectControllerTests" name="testUpdate" time="0.103">
+      <testcase classname="gradadvising.SubjectControllerTests" name="testUpdate" time="0.106">
           <failure message="Assertion failed: &#xa;&#xa;assert subject.save() != null&#xa;       |       |      |&#xa;       null    null   false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert subject.save() != null
@@ -432,7 +432,7 @@ assert subject.save() != null
 
       </testcase>
 
-      <testcase classname="gradadvising.SubjectControllerTests" name="testDelete" time="0.154">
+      <testcase classname="gradadvising.SubjectControllerTests" name="testDelete" time="0.076">
           <failure message="Assertion failed: &#xa;&#xa;assert subject.save() != null&#xa;       |       |      |&#xa;       null    null   false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert subject.save() != null
@@ -465,10 +465,10 @@ assert subject.save() != null
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="1" hostname="LYUR" id="9" name="SubjectTests" package="gradadvising" tests="1" time="0.256" timestamp="2013-07-30T15:04:31">
+  <testsuite errors="0" failures="1" hostname="LYUR" id="9" name="SubjectTests" package="gradadvising" tests="1" time="0.272" timestamp="2013-08-01T14:43:32">
       <properties />
 
-      <testcase classname="gradadvising.SubjectTests" name="testSomething" time="0.122">
+      <testcase classname="gradadvising.SubjectTests" name="testSomething" time="0.128">
           <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
 	at gradadvising.SubjectTests.testSomething(SubjectTests.groovy:15)
 </failure>
@@ -482,16 +482,16 @@ assert subject.save() != null
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="2" hostname="LYUR" id="10" name="YearSemControllerTests" package="gradadvising" tests="8" time="0.976" timestamp="2013-07-30T15:04:32">
+  <testsuite errors="0" failures="2" hostname="LYUR" id="10" name="YearSemControllerTests" package="gradadvising" tests="8" time="0.854" timestamp="2013-08-01T14:43:32">
       <properties />
 
-      <testcase classname="gradadvising.YearSemControllerTests" name="testIndex" time="0.292" />
+      <testcase classname="gradadvising.YearSemControllerTests" name="testIndex" time="0.273" />
 
-      <testcase classname="gradadvising.YearSemControllerTests" name="testList" time="0.085" />
+      <testcase classname="gradadvising.YearSemControllerTests" name="testList" time="0.056" />
 
-      <testcase classname="gradadvising.YearSemControllerTests" name="testCreate" time="0.068" />
+      <testcase classname="gradadvising.YearSemControllerTests" name="testCreate" time="0.062" />
 
-      <testcase classname="gradadvising.YearSemControllerTests" name="testSave" time="0.078">
+      <testcase classname="gradadvising.YearSemControllerTests" name="testSave" time="0.084">
           <failure message="Assertion failed: &#xa;&#xa;assert model.yearSemInstance != null&#xa;       |     |               |&#xa;       [:]   null            false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert model.yearSemInstance != null
@@ -503,11 +503,11 @@ assert model.yearSemInstance != null
 
       </testcase>
 
-      <testcase classname="gradadvising.YearSemControllerTests" name="testShow" time="0.076" />
+      <testcase classname="gradadvising.YearSemControllerTests" name="testShow" time="0.053" />
 
-      <testcase classname="gradadvising.YearSemControllerTests" name="testEdit" time="0.058" />
+      <testcase classname="gradadvising.YearSemControllerTests" name="testEdit" time="0.051" />
 
-      <testcase classname="gradadvising.YearSemControllerTests" name="testUpdate" time="0.091">
+      <testcase classname="gradadvising.YearSemControllerTests" name="testUpdate" time="0.096">
           <failure message="Assertion failed: &#xa;&#xa;assert view == &quot;/yearSem/edit&quot;&#xa;       |    |&#xa;       null false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert view == &quot;/yearSem/edit&quot;
@@ -519,7 +519,7 @@ assert view == &quot;/yearSem/edit&quot;
 
       </testcase>
 
-      <testcase classname="gradadvising.YearSemControllerTests" name="testDelete" time="0.072" />
+      <testcase classname="gradadvising.YearSemControllerTests" name="testDelete" time="0.06" />
 
       <system-out><![CDATA[--Output from testIndex--
 --Output from testList--
@@ -542,10 +542,10 @@ assert view == &quot;/yearSem/edit&quot;
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="1" hostname="LYUR" id="11" name="YearSemTests" package="gradadvising" tests="1" time="0.066" timestamp="2013-07-30T15:04:33">
+  <testsuite errors="0" failures="1" hostname="LYUR" id="11" name="YearSemTests" package="gradadvising" tests="1" time="0.06" timestamp="2013-08-01T14:43:33">
       <properties />
 
-      <testcase classname="gradadvising.YearSemTests" name="testSomething" time="0.063">
+      <testcase classname="gradadvising.YearSemTests" name="testSomething" time="0.057">
           <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
 	at gradadvising.YearSemTests.testSomething(YearSemTests.groovy:15)
 </failure>

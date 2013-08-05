@@ -1,5 +1,5 @@
 Testsuite: gradadvising.YearSemControllerTests
-Tests run: 8, Failures: 2, Errors: 0, Time elapsed: 0.976 sec
+Tests run: 8, Failures: 2, Errors: 0, Time elapsed: 0.854 sec
 ------------- Standard Output ---------------
 --Output from testIndex--
 --Output from testList--
@@ -21,10 +21,10 @@ Tests run: 8, Failures: 2, Errors: 0, Time elapsed: 0.976 sec
 --Output from testDelete--
 ------------- ---------------- ---------------
 
-Testcase: testIndex took 0.292 sec
-Testcase: testList took 0.085 sec
-Testcase: testCreate took 0.069 sec
-Testcase: testSave took 0.077 sec
+Testcase: testIndex took 0.273 sec
+Testcase: testList took 0.056 sec
+Testcase: testCreate took 0.062 sec
+Testcase: testSave took 0.084 sec
 	FAILED
 Assertion failed: 
 
@@ -40,9 +40,9 @@ assert model.yearSemInstance != null
 
 	at gradadvising.YearSemControllerTests.testSave(YearSemControllerTests.groovy:40)
 
-Testcase: testShow took 0.076 sec
-Testcase: testEdit took 0.058 sec
-Testcase: testUpdate took 0.091 sec
+Testcase: testShow took 0.053 sec
+Testcase: testEdit took 0.051 sec
+Testcase: testUpdate took 0.095 sec
 	FAILED
 Assertion failed: 
 
@@ -58,4 +58,4 @@ assert view == "/yearSem/edit"
 
 	at gradadvising.YearSemControllerTests.testUpdate(YearSemControllerTests.groovy:108)
 
-Testcase: testDelete took 0.072 sec
+Testcase: testDelete took 0.06 sec

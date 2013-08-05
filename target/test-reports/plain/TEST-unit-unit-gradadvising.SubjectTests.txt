@@ -1,5 +1,5 @@
 Testsuite: gradadvising.SubjectTests
-Tests run: 1, Failures: 1, Errors: 0, Time elapsed: 0.256 sec
+Tests run: 1, Failures: 1, Errors: 0, Time elapsed: 0.272 sec
 ------------- Standard Output ---------------
 --Output from testSomething--
 ------------- ---------------- ---------------
@@ -7,7 +7,7 @@ Tests run: 1, Failures: 1, Errors: 0, Time elapsed: 0.256 sec
 --Output from testSomething--
 ------------- ---------------- ---------------
 
-Testcase: testSomething took 0.121 sec
+Testcase: testSomething took 0.128 sec
 	FAILED
 junit.framework.AssertionFailedError: Implement me
 junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me

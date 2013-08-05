@@ -1,5 +1,5 @@
 Testsuite: gradadvising.StudentTests
-Tests run: 1, Failures: 1, Errors: 0, Time elapsed: 0.25 sec
+Tests run: 1, Failures: 1, Errors: 0, Time elapsed: 0.249 sec
 ------------- Standard Output ---------------
 --Output from testSomething--
 ------------- ---------------- ---------------
@@ -7,9 +7,9 @@ Tests run: 1, Failures: 1, Errors: 0, Time elapsed: 0.25 sec
 --Output from testSomething--
 ------------- ---------------- ---------------
 
-Testcase: testSomething took 0.12 sec
+Testcase: testSomething took 0.13 sec
 	FAILED
-junit.framework.AssertionFailedError: Implement me
-junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
-	at gradadvising.StudentTests.testSomething(StudentTests.groovy:15)
+java.lang.AssertionError: Implement me
+junit.framework.AssertionFailedError: java.lang.AssertionError: Implement me
+	at gradadvising.StudentTests.testSomething(StudentTests.groovy:24)
 

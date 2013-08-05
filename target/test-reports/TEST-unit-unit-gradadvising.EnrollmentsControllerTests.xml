@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="2" hostname="LYUR" name="gradadvising.EnrollmentsControllerTests" tests="8" time="9.194" timestamp="2013-07-30T15:04:16">
+<testsuite errors="0" failures="2" hostname="LYUR" name="gradadvising.EnrollmentsControllerTests" tests="8" time="4.186" timestamp="2013-08-01T14:43:22">
   <properties />
-  <testcase classname="gradadvising.EnrollmentsControllerTests" name="testIndex" time="4.502" />
-  <testcase classname="gradadvising.EnrollmentsControllerTests" name="testList" time="2.412" />
-  <testcase classname="gradadvising.EnrollmentsControllerTests" name="testCreate" time="0.236" />
-  <testcase classname="gradadvising.EnrollmentsControllerTests" name="testSave" time="1.287">
+  <testcase classname="gradadvising.EnrollmentsControllerTests" name="testIndex" time="2.433" />
+  <testcase classname="gradadvising.EnrollmentsControllerTests" name="testList" time="0.651" />
+  <testcase classname="gradadvising.EnrollmentsControllerTests" name="testCreate" time="0.183" />
+  <testcase classname="gradadvising.EnrollmentsControllerTests" name="testSave" time="0.335">
     <failure message="Assertion failed: &#xa;&#xa;assert model.enrollmentsInstance != null&#xa;       |     |                   |&#xa;       [:]   null                false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert model.enrollmentsInstance != null
@@ -14,9 +14,9 @@ assert model.enrollmentsInstance != null
 	at gradadvising.EnrollmentsControllerTests.testSave(EnrollmentsControllerTests.groovy:40)
 </failure>
   </testcase>
-  <testcase classname="gradadvising.EnrollmentsControllerTests" name="testShow" time="0.192" />
-  <testcase classname="gradadvising.EnrollmentsControllerTests" name="testEdit" time="0.087" />
-  <testcase classname="gradadvising.EnrollmentsControllerTests" name="testUpdate" time="0.13">
+  <testcase classname="gradadvising.EnrollmentsControllerTests" name="testShow" time="0.081" />
+  <testcase classname="gradadvising.EnrollmentsControllerTests" name="testEdit" time="0.074" />
+  <testcase classname="gradadvising.EnrollmentsControllerTests" name="testUpdate" time="0.136">
     <failure message="Assertion failed: &#xa;&#xa;assert view == &quot;/enrollments/edit&quot;&#xa;       |    |&#xa;       null false&#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Assertion failed: 
 
 assert view == &quot;/enrollments/edit&quot;
@@ -26,7 +26,7 @@ assert view == &quot;/enrollments/edit&quot;
 	at gradadvising.EnrollmentsControllerTests.testUpdate(EnrollmentsControllerTests.groovy:108)
 </failure>
   </testcase>
-  <testcase classname="gradadvising.EnrollmentsControllerTests" name="testDelete" time="0.196" />
+  <testcase classname="gradadvising.EnrollmentsControllerTests" name="testDelete" time="0.146" />
   <system-out><![CDATA[--Output from testIndex--
 --Output from testList--
 --Output from testCreate--

@@ -1,5 +1,5 @@
 Testsuite: gradadvising.StudentControllerTests
-Tests run: 8, Failures: 5, Errors: 0, Time elapsed: 1.113 sec
+Tests run: 8, Failures: 5, Errors: 0, Time elapsed: 1.11 sec
 ------------- Standard Output ---------------
 --Output from testIndex--
 --Output from testList--
@@ -21,28 +21,28 @@ Tests run: 8, Failures: 5, Errors: 0, Time elapsed: 1.113 sec
 --Output from testDelete--
 ------------- ---------------- ---------------
 
-Testcase: testIndex took 0.36 sec
-Testcase: testList took 0.083 sec
-Testcase: testCreate took 0.066 sec
-Testcase: testSave took 0.085 sec
+Testcase: testIndex took 0.417 sec
+Testcase: testList took 0.064 sec
+Testcase: testCreate took 0.054 sec
+Testcase: testSave took 0.075 sec
 	FAILED
 Assertion failed: 
 
 assert response.redirectedUrl == '/student/show/1'
        |        |             |
        |        null          false
-       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@14fe17
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@19fc023
 
 junit.framework.AssertionFailedError: Assertion failed: 
 
 assert response.redirectedUrl == '/student/show/1'
        |        |             |
        |        null          false
-       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@14fe17
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@19fc023
 
 	at gradadvising.StudentControllerTests.testSave(StudentControllerTests.groovy:48)
 
-Testcase: testShow took 0.113 sec
+Testcase: testShow took 0.121 sec
 	FAILED
 Assertion failed: 
 
@@ -60,7 +60,7 @@ assert student.save() != null
 
 	at gradadvising.StudentControllerTests.testShow(StudentControllerTests.groovy:62)
 
-Testcase: testEdit took 0.102 sec
+Testcase: testEdit took 0.089 sec
 	FAILED
 Assertion failed: 
 
@@ -78,7 +78,7 @@ assert student.save() != null
 
 	at gradadvising.StudentControllerTests.testEdit(StudentControllerTests.groovy:80)
 
-Testcase: testUpdate took 0.088 sec
+Testcase: testUpdate took 0.082 sec
 	FAILED
 Assertion failed: 
 

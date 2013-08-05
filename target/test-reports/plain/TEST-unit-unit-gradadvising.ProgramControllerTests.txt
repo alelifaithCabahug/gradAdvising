@@ -1,5 +1,5 @@
 Testsuite: gradadvising.ProgramControllerTests
-Tests run: 8, Failures: 5, Errors: 0, Time elapsed: 1.277 sec
+Tests run: 8, Failures: 5, Errors: 0, Time elapsed: 1.197 sec
 ------------- Standard Output ---------------
 --Output from testIndex--
 --Output from testList--
@@ -21,28 +21,28 @@ Tests run: 8, Failures: 5, Errors: 0, Time elapsed: 1.277 sec
 --Output from testDelete--
 ------------- ---------------- ---------------
 
-Testcase: testIndex took 0.484 sec
-Testcase: testList took 0.057 sec
-Testcase: testCreate took 0.077 sec
-Testcase: testSave took 0.116 sec
+Testcase: testIndex took 0.457 sec
+Testcase: testList took 0.059 sec
+Testcase: testCreate took 0.069 sec
+Testcase: testSave took 0.108 sec
 	FAILED
 Assertion failed: 
 
 assert response.redirectedUrl == '/program/show/1'
        |        |             |
        |        null          false
-       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@fe55e8
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1f8c10e
 
 junit.framework.AssertionFailedError: Assertion failed: 
 
 assert response.redirectedUrl == '/program/show/1'
        |        |             |
        |        null          false
-       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@fe55e8
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1f8c10e
 
 	at gradadvising.ProgramControllerTests.testSave(ProgramControllerTests.groovy:48)
 
-Testcase: testShow took 0.113 sec
+Testcase: testShow took 0.098 sec
 	FAILED
 Assertion failed: 
 
@@ -58,7 +58,7 @@ assert program.save() != null
 
 	at gradadvising.ProgramControllerTests.testShow(ProgramControllerTests.groovy:62)
 
-Testcase: testEdit took 0.1 sec
+Testcase: testEdit took 0.077 sec
 	FAILED
 Assertion failed: 
 
@@ -74,7 +74,7 @@ assert program.save() != null
 
 	at gradadvising.ProgramControllerTests.testEdit(ProgramControllerTests.groovy:80)
 
-Testcase: testUpdate took 0.134 sec
+Testcase: testUpdate took 0.093 sec
 	FAILED
 Assertion failed: 
 
@@ -90,7 +90,7 @@ assert program.save() != null
 
 	at gradadvising.ProgramControllerTests.testUpdate(ProgramControllerTests.groovy:100)
 
-Testcase: testDelete took 0.08 sec
+Testcase: testDelete took 0.085 sec
 	FAILED
 Assertion failed: 
 

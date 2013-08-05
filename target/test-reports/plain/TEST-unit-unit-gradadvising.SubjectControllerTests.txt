@@ -1,5 +1,5 @@
 Testsuite: gradadvising.SubjectControllerTests
-Tests run: 8, Failures: 5, Errors: 0, Time elapsed: 1.148 sec
+Tests run: 8, Failures: 5, Errors: 0, Time elapsed: 1.013 sec
 ------------- Standard Output ---------------
 --Output from testIndex--
 --Output from testList--
@@ -21,28 +21,28 @@ Tests run: 8, Failures: 5, Errors: 0, Time elapsed: 1.148 sec
 --Output from testDelete--
 ------------- ---------------- ---------------
 
-Testcase: testIndex took 0.363 sec
-Testcase: testList took 0.067 sec
-Testcase: testCreate took 0.058 sec
-Testcase: testSave took 0.093 sec
+Testcase: testIndex took 0.34 sec
+Testcase: testList took 0.055 sec
+Testcase: testCreate took 0.064 sec
+Testcase: testSave took 0.078 sec
 	FAILED
 Assertion failed: 
 
 assert response.redirectedUrl == '/subject/show/1'
        |        |             |
        |        null          false
-       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1f43093
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@e041be
 
 junit.framework.AssertionFailedError: Assertion failed: 
 
 assert response.redirectedUrl == '/subject/show/1'
        |        |             |
        |        null          false
-       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@1f43093
+       org.codehaus.groovy.grails.plugins.testing.GrailsMockHttpServletResponse@e041be
 
 	at gradadvising.SubjectControllerTests.testSave(SubjectControllerTests.groovy:48)
 
-Testcase: testShow took 0.092 sec
+Testcase: testShow took 0.09 sec
 	FAILED
 Assertion failed: 
 
@@ -58,7 +58,7 @@ assert subject.save() != null
 
 	at gradadvising.SubjectControllerTests.testShow(SubjectControllerTests.groovy:62)
 
-Testcase: testEdit took 0.089 sec
+Testcase: testEdit took 0.076 sec
 	FAILED
 Assertion failed: 
 
@@ -74,7 +74,7 @@ assert subject.save() != null
 
 	at gradadvising.SubjectControllerTests.testEdit(SubjectControllerTests.groovy:80)
 
-Testcase: testUpdate took 0.103 sec
+Testcase: testUpdate took 0.106 sec
 	FAILED
 Assertion failed: 
 
@@ -90,7 +90,7 @@ assert subject.save() != null
 
 	at gradadvising.SubjectControllerTests.testUpdate(SubjectControllerTests.groovy:100)
 
-Testcase: testDelete took 0.154 sec
+Testcase: testDelete took 0.076 sec
 	FAILED
 Assertion failed: 
 

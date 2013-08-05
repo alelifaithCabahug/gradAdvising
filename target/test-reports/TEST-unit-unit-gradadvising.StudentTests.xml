@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="LYUR" name="gradadvising.StudentTests" tests="1" time="0.25" timestamp="2013-07-30T15:04:30">
+<testsuite errors="0" failures="1" hostname="LYUR" name="gradadvising.StudentTests" tests="1" time="0.249" timestamp="2013-08-01T14:43:31">
   <properties />
-  <testcase classname="gradadvising.StudentTests" name="testSomething" time="0.12">
-    <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
-	at gradadvising.StudentTests.testSomething(StudentTests.groovy:15)
+  <testcase classname="gradadvising.StudentTests" name="testSomething" time="0.13">
+    <failure message="java.lang.AssertionError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: java.lang.AssertionError: Implement me
+	at gradadvising.StudentTests.testSomething(StudentTests.groovy:24)
 </failure>
   </testcase>
   <system-out><![CDATA[--Output from testSomething--
