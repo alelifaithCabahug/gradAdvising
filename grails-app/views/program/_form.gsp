@@ -10,6 +10,14 @@
 	<g:textField name="programName" required="" value="${programInstance?.programName}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: programInstance, field: 'numberOfYears', 'error')} required">
+	<label for="numberOfYears">
+		<g:message code="program.numberOfYears.label" default="Number Of Years" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:field name="numberOfYears" type="number" value="${programInstance.numberOfYears}" required=""/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: programInstance, field: 'student', 'error')} ">
 	<label for="student">
 		<g:message code="program.student.label" default="Student" />

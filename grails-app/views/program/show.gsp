@@ -32,6 +32,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${programInstance?.numberOfYears}">
+				<li class="fieldcontain">
+					<span id="numberOfYears-label" class="property-label"><g:message code="program.numberOfYears.label" default="Number Of Years" /></span>
+					
+						<span class="property-value" aria-labelledby="numberOfYears-label"><g:fieldValue bean="${programInstance}" field="numberOfYears"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${programInstance?.student}">
 				<li class="fieldcontain">
 					<span id="student-label" class="property-label"><g:message code="program.student.label" default="Student" /></span>
