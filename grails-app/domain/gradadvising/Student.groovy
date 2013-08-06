@@ -23,7 +23,7 @@ class Student{
 		underGradCourse(blank:false)
 		bachelorsDegree(blank:false)
 		program(blank:false)
-		yearLevel()
+		yearLevel(min:0, max:5)
 		dateEnrolled()
 		withGPAof2Above()
 		withSuitableBackground()
