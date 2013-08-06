@@ -1,59 +1,40 @@
-<%@ page import="gradadvising.Student" %>
 
+<%@ page import="gradadvising.Student" %>
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'student.label', default: 'Student')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
-	
 	<body>
-		<br><br>
-	
-		<div align="right">	
-		<ul class="nav nav-pills" style="border: solid 1px #d3d3d3;">
-		
-		<li>
-		<a class="btn btn-small btn-info" href="http://localhost:8080/gradAdvising/Student/create">
-		<i class="icon-info-sign"></i> Add Student</a>
-		</li>
-		
-				<fieldset class="buttons">
-					<g:form action="searchStudent" controller="student" class="">
-					<g:textField name="idNumber" value="${params.input}" size="20" placeholder="Student Id No."/>
-					<g:submitButton name="search" class="buttons" value="Search" />
-					</g:form> 
-				</fieldset>
-		
-		
+		<a href="#list-student" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+		<div class="nav" role="navigation">
+			<ul>
+				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
+				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+			</ul>
 		</div>
-		
+		<div id="list-student" class="content scaffold-list" role="main">
+			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
-			<div class="alert alert-error">
-				<div class="message" role="status">${flash.message}</div>
-			</div>
+			<div class="message" role="status">${flash.message}</div>
 			</g:if>
-			
-			
-			<center><h3> Student List </h3></center>
-			<table class="table table-bordered">
+			<table>
 				<thead>
-				
 					<tr>
 					
-						<g:sortableColumn property="idNumber" title="${message(code: 'student.idNumber.label', default: 'ID Number')}" />
+						<g:sortableColumn property="idNumber" title="${message(code: 'student.idNumber.label', default: 'Id Number')}" />
 					
 						<g:sortableColumn property="studentName" title="${message(code: 'student.studentName.label', default: 'Student Name')}" />
 					
-						<g:sortableColumn property="underGradCourse" title="${message(code: 'student.underGradCourse.label', default: 'UnderGrad Course')}" />
+						<g:sortableColumn property="underGradCourse" title="${message(code: 'student.underGradCourse.label', default: 'Under Grad Course')}" />
 					
 						<g:sortableColumn property="bachelorsDegree" title="${message(code: 'student.bachelorsDegree.label', default: 'Bachelors Degree')}" />
 					
 						<th><g:message code="student.program.label" default="Program" /></th>
 					
-						<g:sortableColumn property="dateEnrolled" title="${message(code: 'student.dateEnrolled.label', default: 'Date Enrolled')}" />
+						<g:sortableColumn property="yearLevel" title="${message(code: 'student.yearLevel.label', default: 'Year Level')}" />
 					
 					</tr>
 				</thead>
@@ -71,7 +52,7 @@
 					
 						<td>${fieldValue(bean: studentInstance, field: "program")}</td>
 					
-						<td><g:formatDate date="${studentInstance.dateEnrolled}" /></td>
+						<td>${fieldValue(bean: studentInstance, field: "yearLevel")}</td>
 					
 					</tr>
 				</g:each>
