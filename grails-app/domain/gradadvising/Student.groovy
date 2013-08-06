@@ -10,6 +10,7 @@ class Student{
 	String bachelorsDegree
 	boolean withGPAof2Above
 	boolean withSuitableBackground
+	int yearLevel
 	
 	static belongsTo = [Program]
 	
@@ -22,6 +23,7 @@ class Student{
 		underGradCourse(blank:false)
 		bachelorsDegree(blank:false)
 		program(blank:false)
+		yearLevel()
 		dateEnrolled()
 		withGPAof2Above()
 		withSuitableBackground()
