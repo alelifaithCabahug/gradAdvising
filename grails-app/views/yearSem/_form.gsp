@@ -10,11 +10,11 @@
 	<g:textField name="year" required="" value="${yearSemInstance?.year}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: yearSemInstance, field: 'sem', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: yearSemInstance, field: 'sem', 'error')} ">
 	<label for="sem">
 		<g:message code="yearSem.sem.label" default="Sem" />
-		<span class="required-indicator">*</span>
+		
 	</label>
-	<g:textField name="sem" required="" value="${yearSemInstance?.sem}"/>
+	<g:select name="sem" from="${yearSemInstance.constraints.sem.inList}" value="${yearSemInstance?.sem}" valueMessagePrefix="yearSem.sem" noSelection="['': '']"/>
 </div>
 
