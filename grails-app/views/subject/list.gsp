@@ -21,11 +21,10 @@
 		</li>
 		
 		
-		<g:form action="searchSubject" controller="student" class="">
-					<g:textField name="lastname" value="${params.input}" size="20" placeholder="Search Subject"/>
+		<g:form action="searchSubject" controller="subject" class="">
+					<g:textField name="subjectCode" value="${params.input}" size="20" placeholder="Search Subject"/>
 					<g:submitButton name="search" class="buttons" value="Search" />
 		</g:form> 
-		
 		
 		</div>
 		

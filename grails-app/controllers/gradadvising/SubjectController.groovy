@@ -99,4 +99,22 @@ class SubjectController {
             redirect(action: "show", id: id)
         }
     }
+	def searchableService
+	def searchSubject(){
+		def subjectCode = params.subjectCode
+		
+		if(subjectCode){
+			def srchResults = searchableService.search(subjectCode)
+			def results = srchResults.results
+			if(results)
+			render(view: "list", model: [subjectInstanceList: results, subjectInstanceTotal: results.size()])	
+			else{
+				flash.message = message(code: 'SUBJECT NOT FOUND')
+				redirect(action:"list")
+			}
+		}else{
+				flash.message = message(code: 'empty.params')
+				redirect(action:"list")
+			}
+	}
 }

@@ -15,6 +15,14 @@
 				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
+			
+			<fieldset class="buttons">
+					<g:form action="searchStudent" controller="student" class="">
+					<g:textField name="idNumber" value="${params.input}" size="20" placeholder="Student Id No."/>
+					<g:submitButton name="search" class="buttons" value="Search" />
+					</g:form>
+			</fieldset>
+			
 		</div>
 		<div id="show-student" class="content scaffold-show" role="main">
 			<h1><g:message code="default.show.label" args="[entityName]" /></h1>

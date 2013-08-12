@@ -15,6 +15,12 @@
 				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
+			
+			<g:form action="searchSubject" controller="subject" class="">
+					<g:textField name="subjectCode" value="${params.input}" size="20" placeholder="Search Subject"/>
+					<g:submitButton name="search" class="buttons" value="Search" />
+			</g:form> 
+			
 		</div>
 		<div id="show-subject" class="content scaffold-show" role="main">
 			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
