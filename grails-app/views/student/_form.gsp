@@ -42,14 +42,6 @@
 	<g:select id="program" name="program.id" from="${gradadvising.Program.list()}" optionKey="id" required="" value="${studentInstance?.program?.id}" class="many-to-one"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'yearLevel', 'error')} required">
-	<label for="yearLevel">
-		<g:message code="student.yearLevel.label" default="Year Level" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:field name="yearLevel" type="number" value="${studentInstance.yearLevel}" required=""/>
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'dateEnrolled', 'error')} required">
 	<label for="dateEnrolled">
 		<g:message code="student.dateEnrolled.label" default="Date Enrolled" />

@@ -68,15 +68,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${studentInstance?.yearLevel}">
-				<li class="fieldcontain">
-					<span id="yearLevel-label" class="property-label"><g:message code="student.yearLevel.label" default="Year Level" /></span>
-					
-						<span class="property-value" aria-labelledby="yearLevel-label"><g:fieldValue bean="${studentInstance}" field="yearLevel"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${studentInstance?.dateEnrolled}">
 				<li class="fieldcontain">
 					<span id="dateEnrolled-label" class="property-label"><g:message code="student.dateEnrolled.label" default="Date Enrolled" /></span>

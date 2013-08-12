@@ -99,23 +99,4 @@ class StudentController {
             redirect(action: "show", id: id)
         }
     }
-	
-	def searchableService
-	def searchStudent(){
-		def idNumber = params.idNumber
-		
-		if(idNumber){
-			def srchResults = searchableService.search(idNumber)
-			def results = srchResults.results
-			if(results)
-			render(view: "list", model: [studentInstanceList: results, studentInstanceTotal: results.size()])	
-			else{
-				flash.message = message(code: 'Student not found!')
-				redirect(action:"list")
-			}
-		}else{
-				flash.message = message(code: 'empty.params')
-				redirect(action:"list")
-			}
-	}
 }

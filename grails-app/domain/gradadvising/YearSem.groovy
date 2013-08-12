@@ -5,8 +5,8 @@ class YearSem {
 	String sem
 	
 	 static constraints = {
-		year(blank:false, unique:true)
-		sem(blank:false)
+		year(blank:false)
+		sem(inList: ["1ST Semester","2ND Semester","Summer"])
     }
 	
 }
