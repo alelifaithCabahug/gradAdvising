@@ -38,6 +38,8 @@
 					
 						<g:sortableColumn property="bachelorsDegree" title="${message(code: 'student.bachelorsDegree.label', default: 'Bachelors Degree')}" />
 					
+						<g:sortableColumn property="yearLevel" title="${message(code: 'student.yearLevel.label', default: 'Year Level')}" />
+					
 						<th><g:message code="student.program.label" default="Program" /></th>
 					
 						<g:sortableColumn property="dateEnrolled" title="${message(code: 'student.dateEnrolled.label', default: 'Date Enrolled')}" />
@@ -55,6 +57,8 @@
 						<td>${fieldValue(bean: studentInstance, field: "underGradCourse")}</td>
 					
 						<td>${fieldValue(bean: studentInstance, field: "bachelorsDegree")}</td>
+						
+						<td>${fieldValue(bean: studentInstance, field: "yearLevel")}</td>
 					
 						<td>${fieldValue(bean: studentInstance, field: "program")}</td>
 					
