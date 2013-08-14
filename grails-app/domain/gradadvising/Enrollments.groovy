@@ -1,7 +1,19 @@
 package gradadvising
 
 class Enrollments {
-
-    static constraints = {
-    }
-}
+	YearSem yrsem
+	Student student
+	
+	static belongsTo = [student:Student]
+	//static hasMany = [grade:Grade]
+	
+	static constraints(){
+		student(unique:true)
+		yrsem()
+	}
+	
+	String toString(){
+		"enrollment: ${student.studentName} ${this.yrsem}"
+	}
+	
+	//getGPA to be implemented
