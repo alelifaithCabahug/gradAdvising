@@ -17,3 +17,4 @@ class Enrollments {
 	}
 	
 	//getGPA to be implemented
+}
