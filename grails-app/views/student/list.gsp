@@ -8,7 +8,6 @@
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<br><br>
 		<div align="right">	
 		<ul class="nav nav-pills" style="border: solid 1px #d3d3d3;">
 	
