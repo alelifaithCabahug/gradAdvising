@@ -8,6 +8,7 @@
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
+		<br><br>
 		<div align="right">	
 		<ul class="nav nav-pills" style="border: solid 1px #d3d3d3;">
 	
@@ -48,7 +49,7 @@
 					
 						<g:sortableColumn property="yearLevel" title="${message(code: 'student.yearLevel.label', default: 'Year Level')}" />
 					
-						<th><g:message code="student.program.label" default="Program" /></th>
+						<g:sortableColumn property="program" title="${message(code: 'program.program.label', default: 'Program')}" />
 					
 						<g:sortableColumn property="dateEnrolled" title="${message(code: 'student.dateEnrolled.label', default: 'Date Enrolled')}" />
 					
