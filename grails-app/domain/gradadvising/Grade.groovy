@@ -11,7 +11,7 @@ class Grade {
 	
 	static constraints = {
 		enrollments(blank:false)
-		grade(inList:['1.0','1.25','1.5','1.75','2.0','2.25','2.5','2.75','3.0','5.0'], blank:false)
+		grade(inList:['1.0','1.25','1.5','1.75','2.0','2.25','2.5','2.75','3.0','5.0', 'INC', 'DROPPED', 'WDRW'], blank:false)
 	}
 	
 	double getGrade()
