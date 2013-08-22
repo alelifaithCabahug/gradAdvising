@@ -39,16 +39,24 @@
 			<table class="table table-bordered">
 				<thead>
 				
-					<tr>					
-						<g:sortableColumn property="subjectCode" title="${message(code: 'subject.subjectCode.label', default: 'Subject Code')}" />
+					<tr>	
+						<th><g:message code="subject.subjectCode.label" default="Subject Code" /></th>
+						
+						<!-- <g:sortableColumn property="subjectCode" title="${message(code: 'subject.subjectCode.label', default: 'Subject Code')}" /> -->
+						
+						<th><g:message code="subject.subjectDescription.label" default="Descriptive Title" /></th>
 					
-						<g:sortableColumn property="subjectDescription" title="${message(code: 'subject.subjectDescription.label', default: 'Subject Description')}" />
+						<!-- <g:sortableColumn property="subjectDescription" title="${message(code: 'subject.subjectDescription.label', default: 'Subject Description')}" /> -->
+						
+						<th><g:message code="subject.unitLoad.label" default="Unit Load" /></th>
 					
-						<g:sortableColumn property="unitLoad" title="${message(code: 'subject.unitLoad.label', default: 'Unit Load')}" />
+						<!-- <g:sortableColumn property="unitLoad" title="${message(code: 'subject.unitLoad.label', default: 'Unit Load')}" /> -->
 					
-						<g:sortableColumn property="isCore" title="${message(code: 'subject.isCore.label', default: 'Core')}" />
+						<th><g:message code="subject.isCore.label" default="Core" /></th>
+						
+						<!-- <g:sortableColumn property="isCore" title="${message(code: 'subject.isCore.label', default: 'Core')}" /> -->
 					
-						<th><g:message code="subject.yrsem.label" default="Yrsem" /></th>
+						<th><g:message code="subject.yrsem.label" default="Year & Semester" /></th>
 					
 					</tr>
 				</thead>

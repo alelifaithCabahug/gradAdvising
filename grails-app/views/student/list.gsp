@@ -39,19 +39,19 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="idNumber" title="${message(code: 'student.idNumber.label', default: 'Id Number')}" />
+						<g:sortableColumn property="idNumber" title="${message(code: 'student.idNumber.label', default: 'ID Number')}" />
 					
 						<g:sortableColumn property="studentName" title="${message(code: 'student.studentName.label', default: 'Student Name')}" />
 					
-						<g:sortableColumn property="underGradCourse" title="${message(code: 'student.underGradCourse.label', default: 'Under Grad Course')}" />
+						<!-- <g:sortableColumn property="underGradCourse" title="${message(code: 'student.underGradCourse.label', default: 'Under Grad Course')}" /> -->
 					
-						<g:sortableColumn property="bachelorsDegree" title="${message(code: 'student.bachelorsDegree.label', default: 'Bachelors Degree')}" />
+						<!-- <g:sortableColumn property="bachelorsDegree" title="${message(code: 'student.bachelorsDegree.label', default: 'Bachelors Degree')}" /> -->
 					
-						<g:sortableColumn property="yearLevel" title="${message(code: 'student.yearLevel.label', default: 'Year Level')}" />
+						 <g:sortableColumn property="yearLevel" title="${message(code: 'student.yearLevel.label', default: 'Year Level')}" /> 
 					
-						<g:sortableColumn property="program" title="${message(code: 'program.program.label', default: 'Program')}" />
+						 <g:sortableColumn property="program" title="${message(code: 'program.program.label', default: 'Program')}" /> 
 					
-						<g:sortableColumn property="dateEnrolled" title="${message(code: 'student.dateEnrolled.label', default: 'Date Enrolled')}" />
+						<!-- <g:sortableColumn property="dateEnrolled" title="${message(code: 'student.dateEnrolled.label', default: 'Date Enrolled')}" /> -->
 					
 					</tr>
 				</thead>
@@ -63,15 +63,15 @@
 					
 						<td>${fieldValue(bean: studentInstance, field: "studentName")}</td>
 					
-						<td>${fieldValue(bean: studentInstance, field: "underGradCourse")}</td>
+						<!-- <td>${fieldValue(bean: studentInstance, field: "underGradCourse")}</td> -->
 					
-						<td>${fieldValue(bean: studentInstance, field: "bachelorsDegree")}</td>
+						<!-- <td>${fieldValue(bean: studentInstance, field: "bachelorsDegree")}</td> -->
 						
 						<td>${fieldValue(bean: studentInstance, field: "yearLevel")}</td>
 					
 						<td>${fieldValue(bean: studentInstance, field: "program")}</td>
 					
-						<td><g:formatDate date="${studentInstance.dateEnrolled}" /></td>
+						<!-- <td><g:formatDate date="${studentInstance.dateEnrolled}" /></td> -->
 					
 					</tr>
 				</g:each>
