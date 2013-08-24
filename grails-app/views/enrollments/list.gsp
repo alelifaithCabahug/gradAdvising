@@ -23,6 +23,7 @@
 			</g:if>
 			<table>
 			
+				<table class="table table-bordered">
 				<thead>
 					<tr>
 						
