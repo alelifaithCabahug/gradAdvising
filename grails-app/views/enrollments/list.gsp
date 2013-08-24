@@ -22,8 +22,13 @@
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
 			<table>
+			
 				<thead>
 					<tr>
+						
+						<g:sortableColumn property="student" title="${message(code: 'student.Student.label', default: 'Student')}" />
+					
+						<g:sortableColumn property="YrSem" title="${message(code: 'program.YrSem.label', default: 'YrSem')}" />
 					
 					</tr>
 				</thead>
