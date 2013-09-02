@@ -26,14 +26,13 @@
 				
 				<thead>
 				
-					<g:sortableColumn property="yrsem" title="${message(code: 'program.YrSem.label', default: 'YrSem')}" />
-					<g:sortableColumn property="program" title="${message(code: 'program.Program.label', default: 'Program')}" />
+					<th><g:message code="subject.yrsem.label" default="Year & Semester" /></th>
+					<th><g:message code="subject.program.label" default="Program" /></th>
 				
 				<table class="table table-bordered">
 					<tr>
 						
-						<g:sortableColumn property="student" title="${message(code: 'student.Student.label', default: 'Student')}" />
-					
+						
 						<!-- <g:sortableColumn property="YrSem" title="${message(code: 'program.YrSem.label', default: 'YrSem')}" /> --!>
 						
 							
