@@ -10,7 +10,11 @@ class YearSem {
     }
 	
 	String toString(){
+<<<<<<< HEAD
 		"{this.year} ${this.sem}"
+=======
+	"${this.year} ${sem}"
+>>>>>>> d2739500b215ec5232e00c397bd868a2f06d3b03
 	}
 	
 }

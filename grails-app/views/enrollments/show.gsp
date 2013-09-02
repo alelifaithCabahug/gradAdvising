@@ -23,6 +23,24 @@
 			</g:if>
 			<ol class="property-list enrollments">
 			
+				<g:if test="${enrollmentsInstance?.student}">
+				<li class="fieldcontain">
+					<span id="student-label" class="property-label"><g:message code="enrollments.student.label" default="Student" /></span>
+					
+						<span class="property-value" aria-labelledby="student-label"><g:link controller="student" action="show" id="${enrollmentsInstance?.student?.id}">${enrollmentsInstance?.student?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${enrollmentsInstance?.yrsem}">
+				<li class="fieldcontain">
+					<span id="yrsem-label" class="property-label"><g:message code="enrollments.yrsem.label" default="Yrsem" /></span>
+					
+						<span class="property-value" aria-labelledby="yrsem-label"><g:link controller="yearSem" action="show" id="${enrollmentsInstance?.yrsem?.id}">${enrollmentsInstance?.yrsem?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">
