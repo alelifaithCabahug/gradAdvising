@@ -12,6 +12,10 @@ class Student{
 	boolean withSuitableBackground
 	int yearLevel
 	
+	//attributes for login
+	String username
+	String password
+	
 	static belongsTo = [Program]
 	
 	static hasMany = [enrollments:Enrollments]
@@ -27,6 +31,8 @@ class Student{
 		dateEnrolled()
 		withGPAof2Above()
 		withSuitableBackground()
+		username(unique:true, blank:false)
+		password(blank:false)
     }
 	
 	static searchable = true
