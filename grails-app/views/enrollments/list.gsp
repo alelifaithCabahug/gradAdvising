@@ -29,11 +29,16 @@
 				
 				<table class="table table-bordered">
 					<tr>
+					
+						<g:sortableColumn property="student" title="${message(code: 'student.Student.label', default: 'Student')}" />
 						
+						<g:sortableColumn property="yearLevel" title="${message(code: 'student.yearLevel.label', default: 'Year Level')}" />
+					
+						<g:sortableColumn property="dateEnrolled" title="${message(code: 'student.dateEnrolled.label', default: 'Date Enrolled')}" />
+ 
 						
 						<!-- <g:sortableColumn property="YrSem" title="${message(code: 'program.YrSem.label', default: 'YrSem')}" /> --!>
 						
-							
 								
 =======
 					<tr>
