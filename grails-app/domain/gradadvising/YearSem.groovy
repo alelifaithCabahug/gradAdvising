@@ -9,4 +9,8 @@ class YearSem {
 		sem(inList: ["1ST Semester","2ND Semester","Summer"])
     }
 	
+	String toString(){
+	"${this.year} ${sem}"
+	}
+	
 }
