@@ -90,3 +90,17 @@
 	<g:select id="yrsem" name="yrsem.id" from="${gradadvising.YearSem.list()}" optionKey="id" required="" value="${studentInstance?.yrsem?.id}" class="many-to-one"/>
 </div>
 
+<tr>
+	<div class="fieldcontain ${hasErrors(bean: accountInstance, field: 'username', 'error')} ">
+	<td><label for="username">Username:</label></td>
+	<td><g:textField name="username"  value="${studentInstance?.username}"/></td>
+	</div>
+</tr>
+
+<tr>
+	<div class="fieldcontain ${hasErrors(bean: accountInstance, field: 'password', 'error')} ">
+		<td><label for="password">Password:</label></td>
+		<td><input type="password" name="password"  value="${studentInstance?.password}" /></td>
+	</div>
+</tr>
+
