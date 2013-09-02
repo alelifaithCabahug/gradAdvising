@@ -31,8 +31,9 @@ class Student{
 		dateEnrolled()
 		withGPAof2Above()
 		withSuitableBackground()
-		username(unique:true, blank:false)
-		password(blank:false)
+	
+		username(unique:true, blank:true)
+		password(blank:true)
     }
 	
 	static searchable = true
