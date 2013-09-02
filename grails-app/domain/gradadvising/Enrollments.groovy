@@ -3,9 +3,7 @@ package gradadvising
 class Enrollments {
 	YearSem yrsem
 	Student student
-	
 	static belongsTo = [student:Student]
-	//static hasMany = [grade:Grade]
 	
 	static constraints(){
 		student(unique:true)
@@ -16,5 +14,4 @@ class Enrollments {
 		"enrollment: ${student.studentName} ${this.yrsem}"
 	}
 	
-	//getGPA to be implemented
 }
