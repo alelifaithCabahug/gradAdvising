@@ -24,7 +24,7 @@
 			
 		<a class="btn btn-large btn-github" href="http://localhost:8080/gradAdvising/Student/create"
 			<i class=""></i>
-            Add <br>Student</a>
+           Enroll <br>Student</a>
 			
 		<a class="btn btn-large btn-github" href="http://localhost:8080/gradAdvising/program/list"
 			<i class=""></i>
