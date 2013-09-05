@@ -22,7 +22,7 @@
 		
         <div class="actions">
 			
-		<a class="btn btn-large btn-github" href="http://localhost:8080/gradAdvising/Student/create"
+		<a class="btn btn-large btn-github" href="http://localhost:8080/gradAdvising/Student"
 			<i class=""></i>
            Enroll <br>Student</a>
 			
@@ -30,19 +30,18 @@
 			<i class=""></i>
             Programme <br> <br> </a>
 	
+			
+		<a class="btn btn-large btn-github" href="http://localhost:8080/gradAdvising/grade"
+			<i class=""></i>
+            Add <br> Grade<br> </a>
 		<!-- xxx 09/01/13 --->
 	
-		<p>
-		<p>
-		<p>
-		</P>
-		
-		</div>
+		<!-- </div>
 		   <div class="shameless-self-promotion">
           &copy; C C D V
         </div>
+		</div> -->
 		
-       
 
 <!-- js for carousel -->
 

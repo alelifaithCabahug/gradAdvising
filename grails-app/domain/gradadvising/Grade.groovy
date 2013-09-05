@@ -40,6 +40,9 @@ class Grade {
 		else if( grade == "3.0")
 			return 3.0;
 		
+		else if ( grade == "WDRW")
+			return 0.0;
+		
 		else
 			return 5.0;
 		}
