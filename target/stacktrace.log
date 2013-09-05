@@ -44131,3 +44131,285 @@ insert into student (id, version, bachelors_degree, date_enrolled, id_number, pa
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
 	at java.lang.Thread.run(Thread.java:722)
+2013-09-04 22:21:09,407 [Thread-14] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalArgumentException: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	at org.codehaus.groovy.grails.validation.MinConstraint.setParameter(MinConstraint.java:67)
+	at org.codehaus.groovy.grails.validation.ConstrainedProperty.applyConstraint(ConstrainedProperty.java:1005)
+	at org.codehaus.groovy.grails.validation.ConstrainedPropertyBuilder.createNode(ConstrainedPropertyBuilder.java:132)
+	at groovy.util.BuilderSupport.doInvokeMethod(BuilderSupport.java:81)
+	at org.codehaus.groovy.grails.validation.ConstrainedPropertyBuilder.doInvokeMethod(ConstrainedPropertyBuilder.java:68)
+	at groovy.util.BuilderSupport.invokeMethod(BuilderSupport.java:64)
+	at groovy.lang.MetaClassImpl.invokeMethodOnGroovyObject(MetaClassImpl.java:1141)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:973)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:141)
+	at gradadvising.YearSem$__clinit__closure1$$EOGXTcRj.doCall(YearSem.groovy:8)
+	at gradadvising.YearSem$__clinit__closure1$$DOGXTcRj.doCall(Unknown Source)
+	at gradadvising.YearSem$__clinit__closure1.doCall(YearSem.groovy)
+	at gradadvising.YearSem$__clinit__closure1$$EOGXTcRj.doCall(YearSem.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReloadedTypeInvoker$2.invoke(ReloadedTypeInvoker.java:122)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1272)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1076)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.Closure.call(Closure.java:415)
+	at gradadvising.YearSem$__clinit__closure1.call(YearSem.groovy)
+	at groovy.lang.Closure.call(Closure.java:409)
+	at gradadvising.YearSem$__clinit__closure1.call(YearSem.groovy)
+	at org.codehaus.groovy.grails.validation.DefaultConstraintEvaluator.evaluateConstraints(DefaultConstraintEvaluator.java:104)
+	at org.codehaus.groovy.grails.validation.DefaultConstraintEvaluator.evaluate(DefaultConstraintEvaluator.java:300)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsDomainClass.refreshConstraints(DefaultGrailsDomainClass.java:787)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.refreshConstraints(DefaultGrailsApplication.java:390)
+	at org.codehaus.groovy.grails.commons.GrailsApplication$refreshConstraints.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:112)
+	at org.codehaus.groovy.grails.plugins.DomainClassGrailsPlugin$_closure3.doCall(DomainClassGrailsPlugin.groovy:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1249)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1076)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.Closure.call(Closure.java:415)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:768)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:717)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:732)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:405)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfFileChange(AbstractGrailsPluginManager.java:365)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.informPluginManager(GrailsProjectWatcher.java:242)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.access$400(GrailsProjectWatcher.java:46)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher$1.onNew(GrailsProjectWatcher.java:168)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.cacheFilesForDirectory(DirectoryWatcher.java:194)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.checkForNewFiles(DirectoryWatcher.java:171)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.run(DirectoryWatcher.java:151)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.run(GrailsProjectWatcher.java:177)
+2013-09-04 22:21:09,446 [Thread-14] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalArgumentException: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	at gradadvising.YearSem$__clinit__closure1$$EOGXTcRj.doCall(YearSem.groovy:8)
+2013-09-04 22:21:09,446 [Thread-14] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalArgumentException: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	at gradadvising.YearSem$__clinit__closure1$$EOGXTcRj.doCall(YearSem.groovy:8)
+2013-09-04 22:21:09,446 [Thread-14] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalArgumentException: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	at gradadvising.YearSem$__clinit__closure1$$EOGXTcRj.doCall(YearSem.groovy:8)
+2013-09-04 22:21:09,888 [Thread-14] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.validation.exceptions.ConstraintException: Exception thrown applying constraint [min] to class [class gradadvising.YearSem] for value [2000]: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	at org.codehaus.groovy.grails.validation.ConstrainedProperty.applyConstraint(ConstrainedProperty.java:1012)
+	at org.codehaus.groovy.grails.validation.ConstrainedPropertyBuilder.createNode(ConstrainedPropertyBuilder.java:132)
+	at groovy.util.BuilderSupport.doInvokeMethod(BuilderSupport.java:81)
+	at org.codehaus.groovy.grails.validation.ConstrainedPropertyBuilder.doInvokeMethod(ConstrainedPropertyBuilder.java:68)
+	at groovy.util.BuilderSupport.invokeMethod(BuilderSupport.java:64)
+	at groovy.lang.MetaClassImpl.invokeMethodOnGroovyObject(MetaClassImpl.java:1141)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:973)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:66)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:133)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:141)
+	at gradadvising.YearSem$__clinit__closure1$$EOGXTcRj.doCall(YearSem.groovy:8)
+	at gradadvising.YearSem$__clinit__closure1$$DOGXTcRj.doCall(Unknown Source)
+	at gradadvising.YearSem$__clinit__closure1.doCall(YearSem.groovy)
+	at gradadvising.YearSem$__clinit__closure1$$EOGXTcRj.doCall(YearSem.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReloadedTypeInvoker$2.invoke(ReloadedTypeInvoker.java:122)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1272)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1076)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.Closure.call(Closure.java:415)
+	at gradadvising.YearSem$__clinit__closure1.call(YearSem.groovy)
+	at groovy.lang.Closure.call(Closure.java:409)
+	at gradadvising.YearSem$__clinit__closure1.call(YearSem.groovy)
+	at org.codehaus.groovy.grails.validation.DefaultConstraintEvaluator.evaluateConstraints(DefaultConstraintEvaluator.java:104)
+	at org.codehaus.groovy.grails.validation.DefaultConstraintEvaluator.evaluate(DefaultConstraintEvaluator.java:300)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsDomainClass.refreshConstraints(DefaultGrailsDomainClass.java:787)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.refreshConstraints(DefaultGrailsApplication.java:390)
+	at org.codehaus.groovy.grails.commons.GrailsApplication$refreshConstraints.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:112)
+	at org.codehaus.groovy.grails.plugins.DomainClassGrailsPlugin$_closure3.doCall(DomainClassGrailsPlugin.groovy:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1249)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:233)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1076)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:906)
+	at groovy.lang.Closure.call(Closure.java:415)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.invokeOnChangeListener(DefaultGrailsPlugin.java:768)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:717)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.notifyOfEvent(DefaultGrailsPlugin.java:732)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfClassChange(AbstractGrailsPluginManager.java:405)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.informOfFileChange(AbstractGrailsPluginManager.java:365)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.informPluginManager(GrailsProjectWatcher.java:242)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.access$400(GrailsProjectWatcher.java:46)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher$1.onNew(GrailsProjectWatcher.java:168)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.cacheFilesForDirectory(DirectoryWatcher.java:194)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.checkForNewFiles(DirectoryWatcher.java:171)
+	at org.codehaus.groovy.grails.compiler.DirectoryWatcher.run(DirectoryWatcher.java:151)
+	at org.codehaus.groovy.grails.compiler.GrailsProjectWatcher.run(GrailsProjectWatcher.java:177)
+Caused by: java.lang.IllegalArgumentException: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	at gradadvising.YearSem$__clinit__closure1$$EOGXTcRj.doCall(YearSem.groovy:8)
+2013-09-04 22:21:09,889 [Thread-14] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalArgumentException: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	at gradadvising.YearSem$__clinit__closure1$$EOGXTcRj.doCall(YearSem.groovy:8)
+2013-09-04 22:21:09,889 [Thread-14] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.validation.exceptions.ConstraintException: Exception thrown applying constraint [min] to class [class gradadvising.YearSem] for value [2000]: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	at gradadvising.YearSem$__clinit__closure1$$EOGXTcRj.doCall(YearSem.groovy:8)
+Caused by: java.lang.IllegalArgumentException: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	... 1 more
+2013-09-04 22:21:09,889 [Thread-14] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.validation.exceptions.ConstraintException: Exception thrown applying constraint [min] to class [class gradadvising.YearSem] for value [2000]: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	at gradadvising.YearSem$__clinit__closure1$$EOGXTcRj.doCall(YearSem.groovy:8)
+Caused by: java.lang.IllegalArgumentException: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	... 1 more
+2013-09-04 22:21:09,890 [Thread-14] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalArgumentException: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	at gradadvising.YearSem$__clinit__closure1$$EOGXTcRj.doCall(YearSem.groovy:8)
+2013-09-04 22:21:09,890 [Thread-14] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.validation.exceptions.ConstraintException: Exception thrown applying constraint [min] to class [class gradadvising.YearSem] for value [2000]: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	at gradadvising.YearSem$__clinit__closure1$$EOGXTcRj.doCall(YearSem.groovy:8)
+Caused by: java.lang.IllegalArgumentException: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	... 1 more
+2013-09-04 22:25:12,956 [http-bio-8080-exec-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.RuntimeException: org.codehaus.groovy.grails.validation.exceptions.ConstraintException: Exception thrown applying constraint [min] to class [class gradadvising.YearSem] for value [2000]: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	at org.codehaus.groovy.grails.web.mapping.filter.UrlMappingsFilter.checkDevelopmentReloadingState(UrlMappingsFilter.java:310)
+	at org.codehaus.groovy.grails.web.mapping.filter.UrlMappingsFilter.doFilterInternal(UrlMappingsFilter.java:212)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.codehaus.groovy.grails.web.sitemesh.GrailsPageFilter.obtainContent(GrailsPageFilter.java:200)
+	at org.codehaus.groovy.grails.web.sitemesh.GrailsPageFilter.doFilter(GrailsPageFilter.java:151)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at javax.servlet.FilterChain$doFilter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:120)
+	at org.grails.plugin.resource.DevModeSanityFilter.doFilter(DevModeSanityFilter.groovy:44)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.codehaus.groovy.grails.web.servlet.mvc.GrailsWebRequestFilter.doFilterInternal(GrailsWebRequestFilter.java:69)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.codehaus.groovy.grails.web.filters.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:66)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1002)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:585)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.codehaus.groovy.grails.validation.exceptions.ConstraintException: Exception thrown applying constraint [min] to class [class gradadvising.YearSem] for value [2000]: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	at gradadvising.YearSem$__clinit__closure1$$EOGXTcRj.doCall(YearSem.groovy:8)
+Caused by: java.lang.IllegalArgumentException: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	... 1 more
+2013-09-04 22:25:12,958 [http-bio-8080-exec-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.validation.exceptions.ConstraintException: Exception thrown applying constraint [min] to class [class gradadvising.YearSem] for value [2000]: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	at gradadvising.YearSem$__clinit__closure1$$EOGXTcRj.doCall(YearSem.groovy:8)
+Caused by: java.lang.IllegalArgumentException: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	... 1 more
+2013-09-04 22:25:12,959 [http-bio-8080-exec-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalArgumentException: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	at gradadvising.YearSem$__clinit__closure1$$EOGXTcRj.doCall(YearSem.groovy:8)
+2013-09-04 22:25:12,959 [http-bio-8080-exec-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.RuntimeException: org.codehaus.groovy.grails.validation.exceptions.ConstraintException: Exception thrown applying constraint [min] to class [class gradadvising.YearSem] for value [2000]: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.codehaus.groovy.grails.validation.exceptions.ConstraintException: Exception thrown applying constraint [min] to class [class gradadvising.YearSem] for value [2000]: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	at gradadvising.YearSem$__clinit__closure1$$EOGXTcRj.doCall(YearSem.groovy:8)
+Caused by: java.lang.IllegalArgumentException: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	... 1 more
+2013-09-04 22:25:12,960 [http-bio-8080-exec-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.RuntimeException: org.codehaus.groovy.grails.validation.exceptions.ConstraintException: Exception thrown applying constraint [min] to class [class gradadvising.YearSem] for value [2000]: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.codehaus.groovy.grails.validation.exceptions.ConstraintException: Exception thrown applying constraint [min] to class [class gradadvising.YearSem] for value [2000]: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	at gradadvising.YearSem$__clinit__closure1$$EOGXTcRj.doCall(YearSem.groovy:8)
+Caused by: java.lang.IllegalArgumentException: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	... 1 more
+2013-09-04 22:25:12,960 [http-bio-8080-exec-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.validation.exceptions.ConstraintException: Exception thrown applying constraint [min] to class [class gradadvising.YearSem] for value [2000]: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	at gradadvising.YearSem$__clinit__closure1$$EOGXTcRj.doCall(YearSem.groovy:8)
+Caused by: java.lang.IllegalArgumentException: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	... 1 more
+2013-09-04 22:25:12,960 [http-bio-8080-exec-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalArgumentException: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	at gradadvising.YearSem$__clinit__closure1$$EOGXTcRj.doCall(YearSem.groovy:8)
+2013-09-04 22:25:12,961 [http-bio-8080-exec-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.RuntimeException: org.codehaus.groovy.grails.validation.exceptions.ConstraintException: Exception thrown applying constraint [min] to class [class gradadvising.YearSem] for value [2000]: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.codehaus.groovy.grails.validation.exceptions.ConstraintException: Exception thrown applying constraint [min] to class [class gradadvising.YearSem] for value [2000]: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	at gradadvising.YearSem$__clinit__closure1$$EOGXTcRj.doCall(YearSem.groovy:8)
+Caused by: java.lang.IllegalArgumentException: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	... 1 more
+2013-09-04 22:25:13,327 [http-bio-8080-exec-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.RuntimeException: org.codehaus.groovy.grails.validation.exceptions.ConstraintException: Exception thrown applying constraint [min] to class [class gradadvising.YearSem] for value [2000]: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.codehaus.groovy.grails.validation.exceptions.ConstraintException: Exception thrown applying constraint [min] to class [class gradadvising.YearSem] for value [2000]: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	at gradadvising.YearSem$__clinit__closure1$$EOGXTcRj.doCall(YearSem.groovy:8)
+Caused by: java.lang.IllegalArgumentException: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	... 1 more
+2013-09-04 22:25:13,327 [http-bio-8080-exec-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.validation.exceptions.ConstraintException: Exception thrown applying constraint [min] to class [class gradadvising.YearSem] for value [2000]: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	at gradadvising.YearSem$__clinit__closure1$$EOGXTcRj.doCall(YearSem.groovy:8)
+Caused by: java.lang.IllegalArgumentException: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	... 1 more
+2013-09-04 22:25:13,328 [http-bio-8080-exec-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.IllegalArgumentException: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	at gradadvising.YearSem$__clinit__closure1$$EOGXTcRj.doCall(YearSem.groovy:8)
+2013-09-04 22:25:13,328 [http-bio-8080-exec-1] ERROR StackTrace  - Full Stack Trace:
+java.lang.RuntimeException: org.codehaus.groovy.grails.validation.exceptions.ConstraintException: Exception thrown applying constraint [min] to class [class gradadvising.YearSem] for value [2000]: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.codehaus.groovy.grails.validation.exceptions.ConstraintException: Exception thrown applying constraint [min] to class [class gradadvising.YearSem] for value [2000]: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	at gradadvising.YearSem$__clinit__closure1$$EOGXTcRj.doCall(YearSem.groovy:8)
+Caused by: java.lang.IllegalArgumentException: Parameter for constraint [min] of property [year] of class [class gradadvising.YearSem] must be the same type as property: [java.lang.String]
+	... 1 more
