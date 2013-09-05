@@ -91,16 +91,16 @@
 </div>
 
 <tr>
-	<div class="fieldcontain ${hasErrors(bean: accountInstance, field: 'username', 'error')} ">
-	<td><label for="username">Username:</label></td>
-	<td><g:textField name="username"  value="${studentInstance?.username}"/></td>
+	<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'sUsername', 'error')} ">
+	<td><label for="sUsername">Username:</label></td>
+	<td><g:textField name=sUsername"  value="${studentInstance?.sUsername}"/></td>
 	</div>
 </tr>
 
 <tr>
-	<div class="fieldcontain ${hasErrors(bean: accountInstance, field: 'password', 'error')} ">
-		<td><label for="password">Password:</label></td>
-		<td><input type="password" name="password"  value="${studentInstance?.password}" /></td>
+	<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'sPassword', 'error')} ">
+		<td><label for="sPassword">Password:</label></td>
+		<td><input type="password" name="sPassword"  value="${studentInstance?.sPassword}" /></td>
 	</div>
 </tr>
 

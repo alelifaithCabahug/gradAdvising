@@ -13,8 +13,8 @@ class Student{
 	int yearLevel
 	
 	//attributes for login
-	String username
-	String password
+	String sUsername
+	String sPassword
 	
 	static belongsTo = [Program]
 	
@@ -32,8 +32,8 @@ class Student{
 		withGPAof2Above()
 		withSuitableBackground()
 	
-		username(unique:true, blank:true)
-		password(blank:true)
+		sUsername(unique:true, blank:true)
+		sPassword(blank:true)
     }
 	
 	static searchable = true
