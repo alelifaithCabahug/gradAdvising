@@ -7,14 +7,14 @@
 		<g:message code="yearSem.year.label" default="Year" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="year" type="number" min="2000" max="2050" value="${yearSemInstance.year}" required=""/>
+	<g:textField name="year" required="" value="${yearSemInstance?.year}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: yearSemInstance, field: 'sem', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: yearSemInstance, field: 'sem', 'error')} ">
 	<label for="sem">
 		<g:message code="yearSem.sem.label" default="Sem" />
-		<span class="required-indicator">*</span>
+		
 	</label>
-	<g:field name="sem" type="number" min="1" max="3" value="${yearSemInstance.sem}" required=""/>
+	<g:select name="sem" from="${yearSemInstance.constraints.sem.inList}" value="${yearSemInstance?.sem}" valueMessagePrefix="yearSem.sem" noSelection="['': '']"/>
 </div>
 
