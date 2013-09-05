@@ -9,7 +9,7 @@ class Program {
 	
     static constraints = {
 		programName(blank:false, unique:true)
-		numberOfYears(blank:false)
+		numberOfYears(min:1, max:5)
     }
 	
 	static searchable = true
