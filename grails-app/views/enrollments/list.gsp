@@ -22,7 +22,6 @@
 			</g:if>
 			<table>
 				<thead>
-<<<<<<< HEAD
 				
 					<th><g:message code="subject.yrsem.label" default="Year & Semester" /></th>
 					<th><g:message code="subject.program.label" default="Program" /></th>
@@ -40,14 +39,9 @@
 						<!-- <g:sortableColumn property="YrSem" title="${message(code: 'program.YrSem.label', default: 'YrSem')}" /> --!>
 						
 								
-=======
 					<tr>
+				
 					
-						<th><g:message code="enrollments.student.label" default="Student" /></th>
-					
-						<th><g:message code="enrollments.yrsem.label" default="Yrsem" /></th>
-					
->>>>>>> a50a9333155758b51ae56d47969adb3aff6f4f95
 					</tr>
 				</thead>
 				<tbody>
