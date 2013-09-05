@@ -11,7 +11,7 @@ class Subject {
     static constraints = {
 		subjectCode(blank:false, unique:true)
 		subjectDescription(blank:false)
-		unitLoad()
+		unitLoad(min:1, max:6)
 		isCore()
 		yrsem()
     }
@@ -23,5 +23,6 @@ class Subject {
 	
 	String toString(){
 	"${this.subjectCode}"
+
 	}
 }
