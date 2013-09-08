@@ -74,12 +74,37 @@
 	<g:checkBox name="withSuitableBackground" value="${studentInstance?.withSuitableBackground}" />
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'sUsername', 'error')} ">
+	<label for="sUsername">
+		<g:message code="student.sUsername.label" default="SU sername" />
+		
+	</label>
+	<g:textField name="sUsername" value="${studentInstance?.sUsername}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'sPassword', 'error')} ">
+	<label for="sPassword">
+		<g:message code="student.sPassword.label" default="SP assword" />
+		
+	</label>
+	<g:textField name="sPassword" value="${studentInstance?.sPassword}"/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'enrollments', 'error')} ">
 	<label for="enrollments">
 		<g:message code="student.enrollments.label" default="Enrollments" />
 		
 	</label>
-	<g:select name="enrollments" from="${gradadvising.Enrollments.list()}" multiple="multiple" optionKey="id" size="5" value="${studentInstance?.enrollments*.id}" class="many-to-many"/>
+	
+<ul class="one-to-many">
+<g:each in="${studentInstance?.enrollments?}" var="e">
+    <li><g:link controller="enrollments" action="show" id="${e.id}">${e?.encodeAsHTML()}</g:link></li>
+</g:each>
+<li class="add">
+<g:link controller="enrollments" action="create" params="['student.id': studentInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'enrollments.label', default: 'Enrollments')])}</g:link>
+</li>
+</ul>
+
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'yrsem', 'error')} required">
@@ -89,18 +114,4 @@
 	</label>
 	<g:select id="yrsem" name="yrsem.id" from="${gradadvising.YearSem.list()}" optionKey="id" required="" value="${studentInstance?.yrsem?.id}" class="many-to-one"/>
 </div>
-
-<tr>
-	<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'sUsername', 'error')} ">
-	<td><label for="sUsername">Username:</label></td>
-	<td><g:textField name=sUsername"  value="${studentInstance?.sUsername}"/></td>
-	</div>
-</tr>
-
-<tr>
-	<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'sPassword', 'error')} ">
-		<td><label for="sPassword">Password:</label></td>
-		<td><input type="password" name="sPassword"  value="${studentInstance?.sPassword}" /></td>
-	</div>
-</tr>
 
