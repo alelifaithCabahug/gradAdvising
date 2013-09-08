@@ -1,4 +1,3 @@
-
 <%@ page import="gradadvising.Program" %>
 <!DOCTYPE html>
 <html>
@@ -8,12 +7,18 @@
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 		
-		
 	<body>
 		<br><br>
+		
+		<div class="container-fluid">
+		<div class="row-fluid">
+		<div class="span2">
+		</div>
+		
+		<div class="span8">
 	
 		<div align="right">	
-		<ul class="nav nav-pills" style="border: solid 1px #d3d3d3;">
+		<ul class="nav nav-pills" style="border: solid 0px #d3d3d3;">
 		
 		<li>
 		<a class="btn btn-small btn-info" href="http://localhost:8080/gradAdvising/Program/create">
@@ -21,7 +26,7 @@
 		</li>
 
 		<div id="list-program" class="content scaffold-list" role="main">
-			<center><h1><g:message code="default.list.label" args="[entityName]" /></h1></center>
+			<center><h1>Listing</h1></center>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>

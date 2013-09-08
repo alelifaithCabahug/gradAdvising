@@ -1,7 +1,5 @@
 <%@ page import="gradadvising.Program" %>
 
-
-
 <div class="fieldcontain ${hasErrors(bean: programInstance, field: 'programName', 'error')} required">
 	<label for="programName">
 		<g:message code="program.programName.label" default="Program Name" />
@@ -12,17 +10,18 @@
 
 <div class="fieldcontain ${hasErrors(bean: programInstance, field: 'numberOfYears', 'error')} required">
 	<label for="numberOfYears">
-		<g:message code="program.numberOfYears.label" default="Number Of Years" />
+		<g:message code="program.numberOfYears.label" default="Duration Period" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:field name="numberOfYears" type="number" value="${programInstance.numberOfYears}" required=""/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: programInstance, field: 'student', 'error')} ">
+<!-- HIDDEN -->
+
+<!-- <div class="fieldcontain ${hasErrors(bean: programInstance, field: 'student', 'error')} ">
 	<label for="student">
 		<g:message code="program.student.label" default="Student" />
-		
-	</label>
+		</label>
 	
 <ul class="one-to-many">
 <g:each in="${programInstance?.student?}" var="s">
@@ -41,5 +40,5 @@
 		
 	</label>
 	<g:select name="subject" from="${gradadvising.Subject.list()}" multiple="multiple" optionKey="id" size="5" value="${programInstance?.subject*.id}" class="many-to-many"/>
-</div>
+</div> -->
 
