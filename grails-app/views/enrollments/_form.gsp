@@ -18,3 +18,8 @@
 	<g:select id="yrsem" name="yrsem.id" from="${gradadvising.YearSem.list()}" optionKey="id" required="" value="${enrollmentsInstance?.yrsem?.id}" class="many-to-one"/>
 </div>
 
+	<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'Program', 'error')} ">
+							<label for="Program">
+						<g:message code="student.Program.label" default="Program" />
+		
+					</label>

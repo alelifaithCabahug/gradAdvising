@@ -24,8 +24,13 @@
 				<thead>
 				
 					<th><g:message code="subject.yrsem.label" default="Year & Semester" /></th>
+					
 					<th><g:message code="subject.program.label" default="Program" /></th>
-				
+						<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'Program', 'error')} ">
+							<label for="Program">
+						<g:message code="student.Program.label" default="Program" />
+		
+					</label>
 				<table class="table table-bordered">
 					<tr>
 					
