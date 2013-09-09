@@ -22,6 +22,7 @@
 			</g:if>
 			<table>
 				<thead>
+					<table class="table table-bordered">
 					<tr>
 					
 						<g:sortableColumn property="idNumber" title="${message(code: 'student.idNumber.label', default: 'Id Number')}" />
