@@ -24,13 +24,19 @@
 				<thead>
 				
 					<th><g:message code="subject.yrsem.label" default="Year & Semester" /></th>
+					<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'yrsem', 'error')} required">
+						<label for="yrsem">
+							<g:message code="student.yrsem.label" default="Yrsem" />
+							<span class="required-indicator">*</span>
+						</label>
+						<g:select id="yrsem" name="yrsem.id" from="${gradadvising.YearSem.list()}" optionKey="id" required="" value="${studentInstance?.yrsem?.id}" class="many-to-one"/>
+					</div>
+
+					
 					
 					<th><g:message code="subject.program.label" default="Program" /></th>
-						<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'Program', 'error')} ">
-							<label for="Program">
-						<g:message code="student.Program.label" default="Program" />
-		
-					</label>
+					
+					
 				<table class="table table-bordered">
 					<tr>
 					
