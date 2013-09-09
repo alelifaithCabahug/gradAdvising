@@ -1,0 +1,99 @@
+html{
+		background-image: url(../images/loginBackground.jpg);
+		background-repeat: no-repeat;
+		background-size: 30em 25em;
+		background-color: black;
+		background-position: center;
+		color: white;
+		}
+		
+		h2{
+		font-family: "Segoe UI Light";
+		color: silver;
+		text-align: center;
+		}
+		h3{
+		font-family: "Segoe UI Light";
+		color: #806517;
+		font-size:1.5em;
+		}
+		
+		.loginContent{
+		
+		width:30em;
+		margin-left: 40em;
+		margin-top: 13em;
+		
+		}
+		
+		table{
+		border-collapse: separate;
+		border-spacing: 50px 0px;
+		}
+		
+		input{
+		background-color: gray;
+		font-size: 1em;
+		color: white;
+		height: 2.5em;
+		width: 14em;
+		box-shadow:inset 0 0 10px #000000;
+		
+		  -moz-border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	        border-radius: 0.5em;
+			border: 0;
+			
+		}
+		
+		.buttons{
+		background-color:  #E41B17;
+		width: 7em;
+		height: 2em;
+		margin-left: 11.5em;
+		margin-right: 1em;
+		}
+		
+		.buttons:hover{
+		background-color:silver;
+		width: 7em;
+		height: 2em;
+		color:white;
+		text-shadow: 1px 1px gray;
+		
+		}
+		
+		
+		.homeB{
+		text-decoration: none;
+		color: white;
+		font-family: "Segoe UI Light";
+		font-size: 1em;
+		margin-left: 3em;
+		
+		}
+		
+		.homeB:hover{
+		text-decoration: none;
+		color: red;
+		font-family: "Segoe UI Light";
+		font-size: 1em;
+		
+		}
+		
+		.message{
+		font-family: "Segoe UI Light";
+		background-color:white;
+		opacity:0.80;
+		box-shadow:inset 0 0 10px #000000;
+		color: black;
+		font-size: 2em;
+		height: 1.5em;
+		position: absolute;
+		animation-delay: 5s;
+		text-align: center;
+				  -moz-border-radius: 0.5em;
+		-webkit-border-radius: 0.5em;
+				border-radius: 0.5em;
+		}
+		
