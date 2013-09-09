@@ -99,28 +99,6 @@ class EnrollmentsController {
             redirect(action: "show", id: params.id)
         }
     }
-
-	def academic_transcript_pdf
-
-    enrollment = Enrollment.find(params[:id])
-
-    pdf = Prawn::Document.new(:left_margin => 20, :right_margin => 20, :top_margin => 30, :bottom_margin => 30)
-
-    x_start_position = 5
-    default_margin = 22
-    default_margin_x = 40
-    current_x = x_start_position
-    font_width = 5.7
-
-    pdf.image("", :at => [pdf.bounds.right - 65, pdf.cursor],
-              :vposition => :top,
-              :scale => 0.3
-    )
-    pdf.bounding_box([0, pdf.cursor], :width => pdf.bounds.right - 85, :height => 50) do
-      pdf.font('Arial', :size => 14) do
-        pdf.text('Mindanao State University
-                Iligan Institute if Technology
-                School of Computer Studies', :align => :center)
-      end
+}
 
 
