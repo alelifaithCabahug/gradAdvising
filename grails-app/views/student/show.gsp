@@ -15,14 +15,6 @@
 				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
-			
-			<fieldset class="buttons">
-					<g:form action="searchStudent" controller="student" class="">
-					<g:textField name="idNumber" value="${params.input}" size="20" placeholder="Student Id No."/>
-					<g:submitButton name="search" class="buttons" value="Search" />
-					</g:form>
-			</fieldset>
-			
 		</div>
 		<div id="show-student" class="content scaffold-show" role="main">
 			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
@@ -76,7 +68,6 @@
 				</li>
 				</g:if>
 			
-			
 				<g:if test="${studentInstance?.yearLevel}">
 				<li class="fieldcontain">
 					<span id="yearLevel-label" class="property-label"><g:message code="student.yearLevel.label" default="Year Level" /></span>
@@ -109,6 +100,24 @@
 					<span id="withSuitableBackground-label" class="property-label"><g:message code="student.withSuitableBackground.label" default="With Suitable Background" /></span>
 					
 						<span class="property-value" aria-labelledby="withSuitableBackground-label"><g:formatBoolean boolean="${studentInstance?.withSuitableBackground}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${studentInstance?.sUsername}">
+				<li class="fieldcontain">
+					<span id="sUsername-label" class="property-label"><g:message code="student.sUsername.label" default="SU sername" /></span>
+					
+						<span class="property-value" aria-labelledby="sUsername-label"><g:fieldValue bean="${studentInstance}" field="sUsername"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${studentInstance?.sPassword}">
+				<li class="fieldcontain">
+					<span id="sPassword-label" class="property-label"><g:message code="student.sPassword.label" default="SP assword" /></span>
+					
+						<span class="property-value" aria-labelledby="sPassword-label"><g:fieldValue bean="${studentInstance}" field="sPassword"/></span>
 					
 				</li>
 				</g:if>

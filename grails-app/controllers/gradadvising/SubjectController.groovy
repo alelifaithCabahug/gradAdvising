@@ -99,6 +99,7 @@ class SubjectController {
             redirect(action: "show", id: id)
         }
     }
+	
 	def searchableService
 	def searchSubject(){
 		def subjectCode = params.subjectCode

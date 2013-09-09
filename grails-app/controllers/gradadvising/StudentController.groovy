@@ -99,6 +99,7 @@ class StudentController {
             redirect(action: "show", id: id)
         }
     }
+	
 	def searchableService
 	def searchStudent(){
 		def idNumber = params.idNumber
