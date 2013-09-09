@@ -98,5 +98,34 @@ class AdviserController extends AdviserBaseController{
             redirect(action: "show", id: id)
         }
     }
+	
+	def login = {
+		if (request.method == "GET") {
+			session.username = null
+			def adviser = new Adviser()
+		}
+		else {
+			def adviser = Adviser.findByUsernameAndPassword(params.username,params.password)
+			if (adviser) {
+				session.username = adviser.username
+				//redirect(controller:'room')
+				def redirectParams =session.originalRequestParams?session.originalRequestParams:[controller:'program', action:"index"]
+				redirect(redirectParams)
+		}
+
+		else {
+			flash.message = 'Please enter a valid username and password'
+			render(view:"login")
+			return
+		}
+
+		}
+	}
+	
+	def logout = {
+		session.username = null
+		flash.message = 'Successfully logged out'
+		redirect(controller:'adviser', action:'login')
+	}
 
 }
