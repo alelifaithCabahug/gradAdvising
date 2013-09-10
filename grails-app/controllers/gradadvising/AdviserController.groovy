@@ -4,6 +4,7 @@ import org.springframework.dao.DataIntegrityViolationException
 
 class AdviserController extends AdviserBaseController{
 
+	def beforeInterceptor = [action:this.&auth,except:['login']]
 	
     def index() {
         redirect(action: "list", params: params)
