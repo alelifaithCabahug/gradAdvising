@@ -23,18 +23,26 @@
 			<table>
 				<thead>
 				
-					<th><g:message code="subject.yrsem.label" default="Year & Semester" /></th>
+					<th>
 					<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'yrsem', 'error')} required">
 						<label for="yrsem">
 							<g:message code="student.yrsem.label" default="Yrsem" />
 							<span class="required-indicator">*</span>
-						</label>
-						<g:select id="yrsem" name="yrsem.id" from="${gradadvising.YearSem.list()}" optionKey="id" required="" value="${studentInstance?.yrsem?.id}" class="many-to-one"/>
-					</div>
+					</label>
+				<g:select id="yrsem" name="yrsem.id" from="${gradadvising.YearSem.list()}" optionKey="id" required="" value="${studentInstance?.yrsem?.id}" class="many-to-one"/>
+				</div>
+				</th>
 
+					<th>
+					<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'program', 'error')} required">
+						<label for="program">
+							<g:message code="student.program.label" default="Program" />
+							<span class="required-indicator">*</span>
+					</label>
+				<g:select id="program" name="program.id" from="${gradadvising.Program.list()}" optionKey="id" required="" value="${studentInstance?.program?.id}" class="many-to-one"/>
+				</div>	
 					
-					
-					<th><g:message code="subject.program.label" default="Program" /></th>
+					</th>
 					
 					
 				<table class="table table-bordered">
