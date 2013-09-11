@@ -11,15 +11,21 @@
 	
 	<body>
 		<br><br>
+		
+		<div class="container-fluid">
+		<div class="row-fluid">
+		<div class="span2">
+		</div>
+		
+		<div class="span8">
 	
 		<div align="right">	
-		<ul class="nav nav-pills" style="border: solid 1px #d3d3d3;">
+		<ul class="nav nav-pills" style="border: solid 0px #d3d3d3;">
 		
 		<li>
 		<a class="btn btn-small btn-info" href="http://localhost:8080/gradAdvising/Subject/create">
 		<i class="icon-info-sign"></i> Add Subject</a>
 		</li>
-		
 		
 		<g:form action="searchSubject" controller="subject" class="">
 					<g:textField name="subjectCode" value="${params.input}" size="20" placeholder="Search Subject"/>
