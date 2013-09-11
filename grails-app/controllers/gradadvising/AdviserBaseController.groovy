@@ -1,8 +1,6 @@
 package gradadvising
 
-abstract class AdviserBaseController extends AdviserBaseController {
-
-	def beforeInterceptor = [action:this.&auth,except:['login']]
+abstract class AdviserBaseController{
 
     def auth() {
 		if(!session.username) {
