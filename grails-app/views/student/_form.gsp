@@ -92,18 +92,13 @@
 		</div>
 
 		<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'withGPAof2Above', 'error')} ">
-			<label for="withGPAof2Above">
-			<g:message code="student.withGPAof2Above.label" default="With GPA of2 Above" />
-			</label>
+			<g:message code="student.withGPAof2Above.label" default="2.0 and above GPA" />
 			<g:checkBox name="withGPAof2Above" value="${studentInstance?.withGPAof2Above}" />
 		</div>
 
 		<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'withSuitableBackground', 'error')} ">
-			<label for="withSuitableBackground">
-			<g:message code="student.withSuitableBackground.label" default="With Suitable Background" />
-			</label>
+			<g:message code="student.withSuitableBackground.label" default="Suitable Background" /></label>
 			<g:checkBox name="withSuitableBackground" value="${studentInstance?.withSuitableBackground}" />
-		</div>
 	</div>
 	
 </div>
