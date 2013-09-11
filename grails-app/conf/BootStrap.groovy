@@ -8,10 +8,5 @@ class BootStrap {
 			}
 		def destroy = {
 	}
-}class BootStrap {
-
-    def init = { servletContext ->
-    }
-    def destroy = {
-    }
 }
+
