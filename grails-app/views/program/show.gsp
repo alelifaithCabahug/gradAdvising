@@ -11,7 +11,7 @@
 		<br><br>
 	
 		<div align="right">	
-		<ul class="nav nav-pills" style="border: solid 1px #d3d3d3;">
+		<ul class="nav nav-pills" style="border: solid 0px #d3d3d3;">
 	
 		<li class="active"><a href="http://localhost:8080/gradAdvising/program/list">Program Listing</a></li>
 		
