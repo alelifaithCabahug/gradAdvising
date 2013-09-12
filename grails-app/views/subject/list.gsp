@@ -46,9 +46,9 @@
 				<thead>
 				
 					<tr>	
-						<th><g:message code="subject.subjectCode.label" default="Subject Code" /></th>
+						<!-- <th><g:message code="subject.subjectCode.label" default="Subject Code" /></th> -->
 						
-						<!-- <g:sortableColumn property="subjectCode" title="${message(code: 'subject.subjectCode.label', default: 'Subject Code')}" /> -->
+						<g:sortableColumn property="subjectCode" title="${message(code: 'subject.subjectCode.label', default: 'Subject Code')}" />
 						
 						<th><g:message code="subject.subjectDescription.label" default="Descriptive Title" /></th>
 					
@@ -61,7 +61,7 @@
 						<th><g:message code="subject.isCore.label" default="Core" /></th>
 						
 						<!-- <g:sortableColumn property="isCore" title="${message(code: 'subject.isCore.label', default: 'Core')}" /> -->
-					
+						
 						<th><g:message code="subject.yrsem.label" default="Year & Semester" /></th>
 					
 					</tr>

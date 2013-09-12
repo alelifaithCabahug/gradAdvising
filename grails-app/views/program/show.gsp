@@ -45,7 +45,7 @@
 			
 				<g:if test="${programInstance?.student}">
 				<li class="fieldcontain">
-					<span id="student-label" class="property-label"><g:message code="program.student.label" default="Student" /></span>
+					<h3<span id="student-label" class="property-label"><g:message code="program.student.label" default="Student Enrolled" /></span></h3>
 						<g:each in="${programInstance.student}" var="s">
 						<span class="property-value" aria-labelledby="student-label"><g:link controller="student" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></span>
 						</g:each>
@@ -54,7 +54,7 @@
 			
 				<g:if test="${programInstance?.subject}">
 				<li class="fieldcontain">
-					<span id="subject-label" class="property-label"><g:message code="program.subject.label" default="Subject" /></span>
+					<h3><span id="subject-label" class="property-label"><g:message code="program.subject.label" default="Subject" /></span></h3>
 						<g:each in="${programInstance.subject}" var="s">
 						<span class="property-value" aria-labelledby="subject-label"><g:link controller="subject" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></span>
 						</g:each>

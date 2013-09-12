@@ -26,7 +26,7 @@
 		</li>
 
 		<div id="list-program" class="content scaffold-list" role="main">
-			<center><h1>Listing</h1></center>
+			<center><h3>Listing</h3></center>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
