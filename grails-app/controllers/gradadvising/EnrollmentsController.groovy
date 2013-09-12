@@ -3,7 +3,7 @@ package gradadvising
 import org.springframework.dao.DataIntegrityViolationException
 class EnrollmentsController extends AdviserBaseController {
 	
-	def beforeInterceptor = [action:this.&auth,except:['login']]
+	def beforeInterceptor = [action:this.&auth,except:[]]
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
