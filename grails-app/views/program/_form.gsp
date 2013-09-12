@@ -16,9 +16,7 @@
 	<g:field name="numberOfYears" type="number" value="${programInstance.numberOfYears}" required=""/>
 </div>
 
-<!-- HIDDEN -->
-
-<!-- <div class="fieldcontain ${hasErrors(bean: programInstance, field: 'student', 'error')} ">
+ <div class="fieldcontain ${hasErrors(bean: programInstance, field: 'student', 'error')} ">
 	<label for="student">
 		<g:message code="program.student.label" default="Student" />
 		</label>
@@ -40,5 +38,5 @@
 		
 	</label>
 	<g:select name="subject" from="${gradadvising.Subject.list()}" multiple="multiple" optionKey="id" size="5" value="${programInstance?.subject*.id}" class="many-to-many"/>
-</div> -->
+</div>
 
