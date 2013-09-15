@@ -1,4 +1,3 @@
-
 <%@ page import="gradadvising.Enrollments" %>
 <!DOCTYPE html>
 <html>
@@ -8,12 +7,16 @@
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<a href="#list-enrollments" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-			</ul>
+	<br><br>
+			<div class="container-fluid">
+		<div class="row-fluid">
+		<div class="span2">
+		</div>
+		
+		<div class="span8">
+	
+		<div align="right">	
+		<ul class="nav nav-pills" style="border: solid 0px #d3d3d3;">
 		</div>
 		<div id="list-enrollments" class="content scaffold-list" role="main">
 			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
