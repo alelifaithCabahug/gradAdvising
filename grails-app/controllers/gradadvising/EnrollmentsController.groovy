@@ -1,9 +1,8 @@
 package gradadvising
 
 import org.springframework.dao.DataIntegrityViolationException
-class EnrollmentsController extends AdviserBaseController {
-	
-	def beforeInterceptor = [action:this.&auth,except:[]]
+
+class EnrollmentsController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
@@ -11,8 +10,8 @@ class EnrollmentsController extends AdviserBaseController {
         redirect(action: "list", params: params)
     }
 
-    def list() {
-        params.max = Math.min(params.max ? params.int('max') : 10, 100)
+    def list(Integer max) {
+        params.max = Math.min(max ?: 10, 100)
         [enrollmentsInstanceList: Enrollments.list(params), enrollmentsInstanceTotal: Enrollments.count()]
     }
 
@@ -27,25 +26,14 @@ class EnrollmentsController extends AdviserBaseController {
             return
         }
 
-		flash.message = message(code: 'default.created.message', args: [message(code: 'enrollments.label', default: 'Enrollments'), enrollmentsInstance.id])
+        flash.message = message(code: 'default.created.message', args: [message(code: 'enrollments.label', default: 'Enrollments'), enrollmentsInstance.id])
         redirect(action: "show", id: enrollmentsInstance.id)
     }
 
-    def show() {
-        def enrollmentsInstance = Enrollments.get(params.id)
+    def show(Long id) {
+        def enrollmentsInstance = Enrollments.get(id)
         if (!enrollmentsInstance) {
-			flash.message = message(code: 'default.not.found.message', args: [message(code: 'enrollments.label', default: 'Enrollments'), params.id])
-            redirect(action: "list")
-            return
-        }
-
-        [enrollments: enrollmentsInstance]
-    }
-
-    def edit() {
-        def enrollmentsInstance = Enrollments.get(params.id)
-        if (!enrollmentsInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'enrollments.label', default: 'Enrollments'), params.id])
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'enrollments.label', default: 'Enrollments'), id])
             redirect(action: "list")
             return
         }
@@ -53,16 +41,26 @@ class EnrollmentsController extends AdviserBaseController {
         [enrollmentsInstance: enrollmentsInstance]
     }
 
-    def update() {
-        def enrollmentsInstance = Enrollments.get(params.id)
+    def edit(Long id) {
+        def enrollmentsInstance = Enrollments.get(id)
         if (!enrollmentsInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'enrollments.label', default: 'Enrollments'), params.id])
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'enrollments.label', default: 'Enrollments'), id])
             redirect(action: "list")
             return
         }
 
-        if (params.version) {
-            def version = params.version.toLong()
+        [enrollmentsInstance: enrollmentsInstance]
+    }
+
+    def update(Long id, Long version) {
+        def enrollmentsInstance = Enrollments.get(id)
+        if (!enrollmentsInstance) {
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'enrollments.label', default: 'Enrollments'), id])
+            redirect(action: "list")
+            return
+        }
+
+        if (version != null) {
             if (enrollmentsInstance.version > version) {
                 enrollmentsInstance.errors.rejectValue("version", "default.optimistic.locking.failure",
                           [message(code: 'enrollments.label', default: 'Enrollments')] as Object[],
@@ -79,28 +77,26 @@ class EnrollmentsController extends AdviserBaseController {
             return
         }
 
-		flash.message = message(code: 'default.updated.message', args: [message(code: 'enrollments.label', default: 'Enrollments'), enrollmentsInstance.id])
+        flash.message = message(code: 'default.updated.message', args: [message(code: 'enrollments.label', default: 'Enrollments'), enrollmentsInstance.id])
         redirect(action: "show", id: enrollmentsInstance.id)
     }
 
-    def delete() {
-        def enrollmentsInstance = Enrollments.get(params.id)
+    def delete(Long id) {
+        def enrollmentsInstance = Enrollments.get(id)
         if (!enrollmentsInstance) {
-			flash.message = message(code: 'default.not.found.message', args: [message(code: 'enrollments.label', default: 'Enrollments'), params.id])
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'enrollments.label', default: 'Enrollments'), id])
             redirect(action: "list")
             return
         }
 
         try {
             enrollmentsInstance.delete(flush: true)
-			flash.message = message(code: 'default.deleted.message', args: [message(code: 'enrollments.label', default: 'Enrollments'), params.id])
+            flash.message = message(code: 'default.deleted.message', args: [message(code: 'enrollments.label', default: 'Enrollments'), id])
             redirect(action: "list")
         }
         catch (DataIntegrityViolationException e) {
-			flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'enrollments.label', default: 'Enrollments'), params.id])
-            redirect(action: "show", id: params.id)
+            flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'enrollments.label', default: 'Enrollments'), id])
+            redirect(action: "show", id: id)
         }
     }
 }
-
-

@@ -2,6 +2,7 @@
 <%@ page import="org.springframework.util.ClassUtils" %>
 <%@ page import="grails.plugin.searchable.internal.lucene.LuceneUtils" %>
 <%@ page import="grails.plugin.searchable.internal.util.StringQueryUtils" %>
+
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -90,8 +91,11 @@
         }
     </script>
   </head>
+  
   <body onload="focusQueryInput();">
-    (Overriden view)
+  
+    <!-- (Overriden view) -->
+	
   <div id="header">
     <h1><a href="http://grails.org/Searchable+Plugin" target="_blank">Grails <span>Searchable</span> Plugin</a></h1>
     <g:form url='[controller: "searchable", action: "index"]' id="searchableForm" name="searchableForm" method="get">

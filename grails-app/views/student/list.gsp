@@ -39,7 +39,7 @@
 		<!-- xxxx (c) Cabahug--->
 		
 		<div id="list-program" class="content scaffold-list" role="main">
-			<center><h1>Student List</h1></center>
+			<center><h3>Student List</h3></center>
 			<g:if test="${flash.message}">
 			<div class="alert alert-error" role="status">${flash.message}</div>
 			</g:if>

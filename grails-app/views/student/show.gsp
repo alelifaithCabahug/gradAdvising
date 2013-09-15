@@ -8,10 +8,15 @@
 	</head>
 	
 	<body>
-		<br><br>
+		<div class="container-fluid">
+		<div class="row-fluid">
+		<div class="span1">
+		</div>
+		
+		<div class="span10">
 
-		<div align="right">	
-		<ul class="nav nav-pills" style="border: solid 0px #d3d3d3;">
+		<div>	
+		<ul class="nav nav-pills" style="border: solid 0px #d3d3d3;"> 
 	
 		<g:if test="${flash.message}">
 			<div class="alert alert-info">
@@ -22,35 +27,28 @@
 			<div class="container-fluid">
 			<div class="hero-unit">
 
-	<h2>Student Information</h2> 
-	<table border="0" cellpadding="50">
+	<h2>Student Information</h2>
 	
-	<div class="span4">
+	<table border="0" cellpadding="0">
 	<td>
-			<h3>ID Number   </h3><g:fieldValue bean="${studentInstance}" field="idNumber"/><br>
-			<h3>Student Name: </h3><g:fieldValue bean="${studentInstance}" field="studentName"/><br>
-			<h3>Under Graduate: </h3><g:fieldValue bean="${studentInstance}" field="underGradCourse"/>
+			<b>ID Number:</b>			<g:fieldValue bean="${studentInstance}" field="idNumber"/><br>
+			<b>Student Name:</b>		<g:fieldValue bean="${studentInstance}" field="studentName"/><br>
+			<b>Under Graduate:</b>		<g:fieldValue bean="${studentInstance}" field="underGradCourse"/><br>
+			<b>Bachelor's Degree:</b> 	<g:fieldValue bean="${studentInstance}" field="bachelorsDegree"/><br>
 	</td>
-	</div>
+	<td>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	<b>Program Enrolled:</b>	<g:link controller="program" action="show" id="${studentInstance?.program?.id}">${studentInstance?.program?.encodeAsHTML()}</g:link><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<b>Year LvL:</b>			<g:fieldValue bean="${studentInstance}" field="yearLevel"/><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<b>Date Enrolled:</b>		<g:formatDate date="${studentInstance?.dateEnrolled}"/><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<b>Year & Semester:</b>		<g:link controller="yearSem" action="show" id="${studentInstance?.yrsem?.id}">${studentInstance?.yrsem?.encodeAsHTML()}</g:link></br>
+	</td>
+	</table>
 	
-	<div class="span4">
-	<td>
-			<h3>Bachelor's Degree: </h3><g:fieldValue bean="${studentInstance}" field="bachelorsDegree"/><br>
-			<h3>Program Enrolled: </h3><g:link controller="program" action="show" id="${studentInstance?.program?.id}">${studentInstance?.program?.encodeAsHTML()}</g:link><br>
-			<h3>Year LvL: </h3><g:fieldValue bean="${studentInstance}" field="yearLevel"/>
-	</td>
-	</div>
-	
-	<div class="span4">
-	<td>
-			<h3>Date Enrolled: </h3><g:formatDate date="${studentInstance?.dateEnrolled}"/><br>
-			<h3>Year & Semester: </h3><g:link controller="yearSem" action="show" id="${studentInstance?.yrsem?.id}">${studentInstance?.yrsem?.encodeAsHTML()}</g:link><br>
-			<h3></h3>
-	</td>
-	</div>
 	
 	<!-- enrollements -->
-			
+	
+	<div class="span4">
+	<td>		
 				<g:if test="${studentInstance?.enrollments}">
 				<li class="fieldcontain">
 					<span id="enrollments-label" class="property-label"><g:message code="student.enrollments.label" default="Enrollments" /></span>
@@ -60,19 +58,23 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${studentInstance?.yrsem}">
+				<!-- <g:if test="${studentInstance?.yrsem}">
 				<li class="fieldcontain">
 					<span id="yrsem-label" class="property-label"><g:message code="student.yrsem.label" default="Yrsem" /></span>
 						<span class="property-value" aria-labelledby="yrsem-label"></span>
 				</li>
-				</g:if>
+				</g:if> -->
 				
 			</ol>
-			
+		</td>
+	</div>
+	
+	
+	<!-- edit/delete -->		
 			<g:form>
 				<fieldset class="buttons">
 					<g:hiddenField name="id" value="${studentInstance?.id}" />
-					<g:link class="edit" action="edit" id="${studentInstance?.id}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
+					<g:link class="edit" action="edit" id="${studentInstance?.id}"><g:message code="default.button.edit.label" default="Update" /></g:link>
 					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
 				</fieldset>
 			</g:form>
