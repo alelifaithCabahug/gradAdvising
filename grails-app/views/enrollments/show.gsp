@@ -32,6 +32,17 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${enrollmentsInstance?.subject}">
+				<li class="fieldcontain">
+					<span id="subject-label" class="property-label"><g:message code="enrollments.subject.label" default="Subject" /></span>
+					
+						<g:each in="${enrollmentsInstance.subject}" var="s">
+						<span class="property-value" aria-labelledby="subject-label"><g:link controller="subject" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${enrollmentsInstance?.yrsem}">
 				<li class="fieldcontain">
 					<span id="yrsem-label" class="property-label"><g:message code="enrollments.yrsem.label" default="Yrsem" /></span>

@@ -25,44 +25,11 @@
 			</g:if>
 			<table>
 				<thead>
-				
-					<th>
-					<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'yrsem', 'error')} required">
-						<label for="yrsem">
-							<g:message code="student.yrsem.label" default="Yrsem" />
-							<span class="required-indicator">*</span>
-					</label>
-				<g:select id="yrsem" name="yrsem.id" from="${gradadvising.YearSem.list()}" optionKey="id" required="" value="${studentInstance?.yrsem?.id}" class="many-to-one"/>
-				</div>
-				</th>
-
-					<th>
-					<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'program', 'error')} required">
-						<label for="program">
-							<g:message code="student.program.label" default="Program" />
-							<span class="required-indicator">*</span>
-					</label>
-				<g:select id="program" name="program.id" from="${gradadvising.Program.list()}" optionKey="id" required="" value="${studentInstance?.program?.id}" class="many-to-one"/>
-				</div>	
-					
-					</th>
-					
-					
-				<table class="table table-bordered">
 					<tr>
 					
-						<g:sortableColumn property="student" title="${message(code: 'student.Student.label', default: 'Student')}" />
-						
-						<g:sortableColumn property="yearLevel" title="${message(code: 'student.yearLevel.label', default: 'Year Level')}" />
+						<th><g:message code="enrollments.student.label" default="Student" /></th>
 					
-						<g:sortableColumn property="dateEnrolled" title="${message(code: 'student.dateEnrolled.label', default: 'Date Enrolled')}" />
- 
-						
-						<!-- <g:sortableColumn property="YrSem" title="${message(code: 'program.YrSem.label', default: 'YrSem')}" /> --!>
-						
-								
-					<tr>
-				
+						<th><g:message code="enrollments.yrsem.label" default="Yrsem" /></th>
 					
 					</tr>
 				</thead>
