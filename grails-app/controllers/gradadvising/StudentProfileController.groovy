@@ -35,4 +35,23 @@ class StudentProfileController extends StudentBaseController{
 		flash.message = 'Successfully logged out'
 		redirect(controller:'studentProfile', action:'login')
 	}
+	
+	def showProfile(Long id) {
+		 
+		def username = session.sUsername
+		def studentInstance = Student.get(id)
+		def loggedInStudent = Student.findBySUsername(username)
+	
+		if(!studentInstance){
+			flash.message = "Access Denied! Please log in."
+			redirect(action:"login")
+			return
+		}
+	
+		if(studentInstance.id == loggedInStudent.id){
+			//println studentInstance.studentName
+			render(view:"showProfile", model:[studentInstance: studentInstance])
+			return
+			}	 
+    }
 }

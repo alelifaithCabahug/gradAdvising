@@ -10,6 +10,10 @@
 		  <li><a href="http://localhost:8080/gradAdvising/student">Student &raquo</a></li>
 		  <li></li>
 		 <li></li>
+		 <g:if test="${session.username}">
+				<li><g:link class="text" action="logout" controller="adviser">LOGOUT</g:link></li>	
+				</g:if>
+		  
 		  
 		  <form class="navbar-search pull-right">
 			<input type="text" class="search-query" placeholder="Search">
@@ -25,6 +29,7 @@
   <center>
   <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
 	<ol class="breadcrumb">
+		<a href="http://localhost:8080/gradAdvising/adviser/list">Adviser</a> |
 		<a href="http://localhost:8080/gradAdvising/student/list">Enrollee</a> |
 		<a href="http://localhost:8080/gradAdvising/yearSem/list">Year & Sem</a> |
 		<a href="http://localhost:8080/gradAdvising/grade/create">Grade</a> |
