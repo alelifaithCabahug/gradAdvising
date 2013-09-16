@@ -9,12 +9,6 @@
 	</head>
 	<body>
 		
-			
-		<li>
-		<a class="btn btn-small btn-info" href="http://localhost:8080/gradAdvising/Program/create">
-		<i class="icon-info-sign"></i> New Adviser</a>
-		</li>
-
 		</div>
 		
 		<br><br>
@@ -28,6 +22,11 @@
 		<div align="right">	
 		<ul class="nav nav-pills" style="border: solid 0px #d3d3d3;">
 		</div>
+		<li>
+		<a class="btn btn-small btn-info" href="http://localhost:8080/gradAdvising/Program/create">
+		<i class="icon-info-sign"></i> New Adviser</a>
+		</li>
+
 		<div id="list-adviser" class="content scaffold-list" role="main">
 			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
