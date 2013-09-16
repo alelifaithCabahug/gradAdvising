@@ -20,7 +20,7 @@
 			
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
-			</g:if>
+			</g:if>z
 			<g:hasErrors bean="${studentInstance}">
 			<ul class="errors" role="alert">
 				<g:eachError bean="${studentInstance}" var="error">
