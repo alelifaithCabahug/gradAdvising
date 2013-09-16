@@ -16,12 +16,25 @@
 		</li>
 
 		</div>
+		
+		<br><br>
+			<div class="container-fluid">
+		<div class="row-fluid">
+		<div class="span2">
+		</div>
+		
+		<div class="span8">
+	
+		<div align="right">	
+		<ul class="nav nav-pills" style="border: solid 0px #d3d3d3;">
+		</div>
 		<div id="list-adviser" class="content scaffold-list" role="main">
 			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
 			<table>
+				<table class="table table-bordered">
 				<thead>
 					<tr>
 					
