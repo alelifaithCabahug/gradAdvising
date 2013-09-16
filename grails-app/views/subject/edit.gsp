@@ -6,20 +6,22 @@
 		<g:set var="entityName" value="${message(code: 'subject.label', default: 'Subject')}" />
 		<title><g:message code="default.edit.label" args="[entityName]" /></title>
 	</head>
+	
 	<body>
-		<a href="#edit-subject" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-			</ul>
+		<div class="container-fluid">
+		<div class="row-fluid">
+		<div class="span2">
 		</div>
+		
+		<div class="span8">
+		
 		<div id="edit-subject" class="content scaffold-edit" role="main">
-			<h1><g:message code="default.edit.label" args="[entityName]" /></h1>
+			<h1>Subject</h1>
+			
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
+			
 			<g:hasErrors bean="${subjectInstance}">
 			<ul class="errors" role="alert">
 				<g:eachError bean="${subjectInstance}" var="error">
@@ -27,6 +29,7 @@
 				</g:eachError>
 			</ul>
 			</g:hasErrors>
+			
 			<g:form method="post" >
 				<g:hiddenField name="id" value="${subjectInstance?.id}" />
 				<g:hiddenField name="version" value="${subjectInstance?.version}" />
@@ -38,6 +41,7 @@
 					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" formnovalidate="" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
 				</fieldset>
 			</g:form>
+			
 		</div>
 	</body>
 </html>
