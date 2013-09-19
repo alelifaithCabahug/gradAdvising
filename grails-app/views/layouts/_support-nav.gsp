@@ -15,9 +15,9 @@
 				</g:if>
 		  
 		  
-		  <form class="navbar-search pull-right">
-			<input type="text" class="search-query" placeholder="Search">
-		  </form>
+		 <g:form url='[controller: "searchable", action: "index"]' id="searchableForm" name="searchableForm" method="get">
+			<g:textField name="q" value="${params.q}" size="50"/> <input type="submit" value="Search" />
+		</g:form>
 		  
         </ul>
 		

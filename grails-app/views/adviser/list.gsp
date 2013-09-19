@@ -19,12 +19,12 @@
 			<ul class="nav nav-pills" style="border: solid 0px #d3d3d3;">
 			
 		<li>
-		<a class="btn btn-small btn-info" href="http://localhost:8080/gradAdvising/Program/create">
+		<a class="btn btn-small btn-info" href="http://localhost:8080/gradAdvising/Adviser/create">
 		<i class="icon-info-sign"></i> New Adviser</a>
 		</li>
 		
 		<div id="list-adviser" class="content scaffold-list" role="main">
-			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
+			<h1><g:message code="Advisers" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
