@@ -23,22 +23,22 @@
 			</g:if>
 			<ol class="property-list enrollments">
 			
+				<g:if test="${enrollmentsInstance?.grade}">
+				<li class="fieldcontain">
+					<span id="grade-label" class="property-label"><g:message code="enrollments.grade.label" default="Grade" /></span>
+					
+						<g:each in="${enrollmentsInstance.grade}" var="g">
+						<span class="property-value" aria-labelledby="grade-label"><g:link controller="grade" action="show" id="${g.id}">${g?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${enrollmentsInstance?.student}">
 				<li class="fieldcontain">
 					<span id="student-label" class="property-label"><g:message code="enrollments.student.label" default="Student" /></span>
 					
 						<span class="property-value" aria-labelledby="student-label"><g:link controller="student" action="show" id="${enrollmentsInstance?.student?.id}">${enrollmentsInstance?.student?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${enrollmentsInstance?.subject}">
-				<li class="fieldcontain">
-					<span id="subject-label" class="property-label"><g:message code="enrollments.subject.label" default="Subject" /></span>
-					
-						<g:each in="${enrollmentsInstance.subject}" var="s">
-						<span class="property-value" aria-labelledby="subject-label"><g:link controller="subject" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></span>
-						</g:each>
 					
 				</li>
 				</g:if>

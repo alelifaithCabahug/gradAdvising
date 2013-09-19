@@ -2,20 +2,29 @@
 
 
 
+<div class="fieldcontain ${hasErrors(bean: enrollmentsInstance, field: 'grade', 'error')} ">
+	<label for="grade">
+		<g:message code="enrollments.grade.label" default="Grade" />
+		
+	</label>
+	
+<ul class="one-to-many">
+<g:each in="${enrollmentsInstance?.grade?}" var="g">
+    <li><g:link controller="grade" action="show" id="${g.id}">${g?.encodeAsHTML()}</g:link></li>
+</g:each>
+<li class="add">
+<g:link controller="grade" action="create" params="['enrollments.id': enrollmentsInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'grade.label', default: 'Grade')])}</g:link>
+</li>
+</ul>
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: enrollmentsInstance, field: 'student', 'error')} required">
 	<label for="student">
 		<g:message code="enrollments.student.label" default="Student" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select id="student" name="student.id" from="${gradadvising.Student.list()}" optionKey="id" required="" value="${enrollmentsInstance?.student?.id}" class="many-to-one"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: enrollmentsInstance, field: 'subject', 'error')} ">
-	<label for="subject">
-		<g:message code="enrollments.subject.label" default="Subject" />
-		
-	</label>
-	<g:select name="subject" from="${gradadvising.Subject.list()}" multiple="multiple" optionKey="id" size="5" value="${enrollmentsInstance?.subject*.id}" class="many-to-many"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: enrollmentsInstance, field: 'yrsem', 'error')} required">

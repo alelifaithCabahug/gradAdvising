@@ -1,6 +1,5 @@
 package gradadvising
 
-
 class Grade {
 
 	Subject subject
