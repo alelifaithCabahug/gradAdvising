@@ -46,23 +46,23 @@
 						<table  >
 							<tr class='prop'>
 								<td valign='top' class='name'>
-								<h3>Susername:</h3>
+								<h3>Username:</h3>
 								</td>
 								<td valign='top' class='value '>
-									<input type="text" maxlength='8'
-										name='username'
-										value='${studentProfile?.Susername}'>
+									<input type="text" 
+										name='sUsername'
+										value='${student?.Susername}'>
 									</input>
 								</td>
 							</tr>
 							<tr class='prop'>
 								<td valign='top' class='name'>
-								<h3>Spassword:</h3>
+								<h3>Password:</h3>
 								</td>
 								<td valign='top' class='value '>
-									<input type="password" maxlength='8'
-									name='password'
-									value='${studentProfile?.Spassword}'>
+									<input type="password" 
+									name='sPassword'
+									value='${student?.Spassword}'>
 									</input>
 								
 								</td>
