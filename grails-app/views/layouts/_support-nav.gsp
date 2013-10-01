@@ -5,9 +5,9 @@
 		<a class="brand" href=""><img width="110" height="40" src="${resource(dir: 'images', file: 'scs-logo.png')}"></a>
 		
         <ul class="nav">
-		  <li><a href="http://localhost:8080/gradAdvising/program">Programs</a></li>
+		  <li><a href="http://localhost:8080/gradAdvising/student">Student</a></li>
           <li><a href="http://localhost:8080/gradAdvising/subject">Courses</a></li>
-		  <li><a href="http://localhost:8080/gradAdvising/student">Student &raquo</a></li>
+		  <li><a href="http://localhost:8080/gradAdvising/program">Programs &raquo</a></li>
 		  <li></li>
 		 <li></li>
 		 <g:if test="${session.username}">
