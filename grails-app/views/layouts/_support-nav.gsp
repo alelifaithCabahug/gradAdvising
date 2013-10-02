@@ -13,6 +13,10 @@
 		 <g:if test="${session.username}">
 				<li><g:link class="text" action="logout" controller="adviser">LOGOUT</g:link></li>	
 				</g:if>
+				
+		 <g:if test="${session.sUsername}">
+				<li><g:link class="text" action="logout" controller="studentProfile">LOGOUT</g:link></li>	
+				</g:if>
 		  
 		  
 		 <g:form url='[controller: "searchable", action: "index"]' id="searchableForm" name="searchableForm" method="get">
