@@ -125,6 +125,8 @@ class AdviserController extends AdviserBaseController{
 	
 	def logout = {
 		session.username = null
+		session.sUsername = null
+		
 		flash.message = 'Successfully logged out'
 		redirect(controller:'adviser', action:'login')
 	}

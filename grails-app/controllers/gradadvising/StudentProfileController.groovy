@@ -32,6 +32,8 @@ class StudentProfileController extends StudentBaseController{
 	
 	def logout = {
 		session.sUsername = null
+		session.username = null
+		
 		flash.message = 'Successfully logged out'
 		redirect(controller:'studentProfile', action:'login')
 	}
