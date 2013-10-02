@@ -120,6 +120,7 @@
 						<g:actionSubmit class="btn btn-small btn-info" value="Log in" />
 						<a href="http://localhost:8080/gradAdvising"><i class="icon-home"></i></a>
 						<!-- <g:link class="" action="index" controller="program">HOME</g:link> -->
+						<g:link class="" action="login" controller="studentProfile">Log in as STUDENT</g:link>
 					</div>
 					
 			</g:form>

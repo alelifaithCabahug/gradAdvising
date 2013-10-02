@@ -69,8 +69,12 @@
 							</tr>
 						</table>
 					</div>
+
 					<div  align="center">
-						<g:actionSubmit class="" value="Log in" />
+						<g:actionSubmit class="btn btn-small btn-info" value="Log in" />
+						<a href="http://localhost:8080/gradAdvising"><i class="icon-home"></i></a>
+						<!-- <g:link class="" action="index" controller="program">HOME</g:link> -->
+						<g:link class="" action="login" controller="adviser">Log in as ADVISER</g:link>
 					</div>
 			</g:form>
 		</div>
