@@ -13,7 +13,7 @@ class Grade {
 		grade(inList:['1.0','1.25','1.5','1.75','2.0','2.25','2.5','2.75','3.0','5.0', 'INC', 'DROPPED', 'WDRW'], blank:false)
 	}
 	
-	double getGrade()
+	double getEquivalentGrade()
 	{
 		if( grade == "1.0")
 			return 1.0;
@@ -41,9 +41,11 @@ class Grade {
 		
 		else if ( grade == "WDRW")
 			return 0.0;
-		
+
 		else
 			return 5.0;
 		}
+		
+		
 		
 }

@@ -24,11 +24,19 @@
 				<thead>
 					<tr>
 					
+						<th><g:message code="grade.enrollments.label" default="Enrollments" /></th>
+					
+						<th><g:message code="grade.subject.label" default="Subject" /></th>
+					
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${gradeInstanceList}" status="i" var="gradeInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					
+						<td><g:link action="show" id="${gradeInstance.id}">${fieldValue(bean: gradeInstance, field: "enrollments")}</g:link></td>
+					
+						<td>${fieldValue(bean: gradeInstance, field: "subject")}</td>
 					
 					</tr>
 				</g:each>
