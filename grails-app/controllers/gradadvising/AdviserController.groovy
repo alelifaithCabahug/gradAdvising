@@ -109,11 +109,12 @@ class AdviserController extends AdviserBaseController{
 		else {
 			def adviser = Adviser.findByUsernameAndPassword(params.username,params.password)
 			if (adviser) {
+				if(session.sUsername)
+					session.sUsername == null
+					
 				session.username = adviser.username
-				//redirect(controller:'program')
 				redirect(uri: "/")
-				//def redirectParams =session.originalRequestParams?session.originalRequestParams:[controller:'program', action:"index"]
-				//redirect(redirectParams)
+				
 		}
 
 		else {
