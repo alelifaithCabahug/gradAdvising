@@ -1,7 +1,7 @@
 package gradadvising
 
 class StudentProfileController extends StudentBaseController{
-	def beforeInterceptor = [action:this.&auth, except:['login']]
+	def beforeInterceptor = [action:this.&auth, except:['login', 'showProfile']]
 	
 	static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
     def index() { }

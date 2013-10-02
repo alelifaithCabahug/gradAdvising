@@ -10,5 +10,10 @@ abstract class AdviserBaseController{
 		redirect(controller:'adviser',action:'login')
 		return false
 		}
+		if(!session.username && session.sUsername) {
+		session.sUsername = null
+		redirect(controller:'adviser',action:'login')
+		return false
+		}
 	}
 }

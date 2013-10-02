@@ -21,7 +21,8 @@
         	<br></br>
 		
         <div class="actions">
-			
+		
+		<g:if test="${session.username}">
 		<a class="btn btn-large btn-github" href="http://localhost:8080/gradAdvising/Student"
 			<i class=""></i>
            Enroll <br>Student</a>
@@ -34,6 +35,13 @@
 		<a class="btn btn-large btn-github" href="http://localhost:8080/gradAdvising/grade"
 			<i class=""></i>
             Add <br> Grade<br> </a>
+		</g:if>
+		
+		<g:if test="${!session.username}">
+		<a class="btn btn-large btn-github" href="http://localhost:8080/gradAdvising/adviser/login"
+			<i class=""></i>
+           LOGIN</a>
+		</g:if>
 		<!-- xxx 09/01/13 --->
 	
 		<!-- </div>
