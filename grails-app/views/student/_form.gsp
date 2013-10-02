@@ -8,14 +8,14 @@
 
 			<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'sUsername', 'error')} ">
 				<label for="sUsername">
-				<g:message code="student.sUsername.label" default="SU sername" />
+				<g:message code="student.sUsername.label" default="Username" />
 				</label>
 				<g:textField name="sUsername" placeholder="name.familyname" value="${studentInstance?.sUsername}"/>
 			</div>
 
 			<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'sPassword', 'error')} ">
 				<label for="sPassword">
-				<g:message code="student.sPassword.label" default="SP assword" />
+				<g:message code="student.sPassword.label" default="Password" />
 				</label>
 				<g:textField name="sPassword" placeholder="xxxxxx" value="${studentInstance?.sPassword}"/>
 			</div>

@@ -12,7 +12,7 @@
 		<!-- <link rel="stylesheet" href="${resource(dir: 'css', file: 'login.css')}" type="text/css"> -->
 		<!-- <link rel="stylesheet" href="${resource(dir: 'css', file: 'animate.css')}" type="text/css"> -->
 		
-		<title>Adviser's</title>
+		<title>Advising</title>
 		
 		<style type="text/css">
       /* Override some defaults */
@@ -87,7 +87,7 @@
 		<div class="login-form">
 		
 		<h2>Adviser's Log</h2>
-			<center>This page is restricted for system School Adviser's only.</center>
+			<!-- <center>This page is restricted for system School Adviser's only.</center> -->
 			
 			<p>
 			
@@ -116,11 +116,10 @@
 									placeholder='password'>
 								</div>
 					
-					<div  align="center">
-						<g:actionSubmit class="btn btn-small btn-info" value="Log in" />
+					<div align="">
 						<a href="http://localhost:8080/gradAdvising"><i class="icon-home"></i></a>
-						<!-- <g:link class="" action="index" controller="program">HOME</g:link> -->
-						<g:link class="" action="login" controller="studentProfile">Log in as STUDENT</g:link>
+						<g:actionSubmit class="btn btn-small btn-info" value="Log in" />
+						<g:link class="btn btn-small btn-success" action="login" controller="studentProfile">Student Login</g:link>
 					</div>
 					
 			</g:form>
