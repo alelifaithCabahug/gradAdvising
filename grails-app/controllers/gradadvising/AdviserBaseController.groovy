@@ -3,7 +3,7 @@ package gradadvising
 abstract class AdviserBaseController{
 
     def auth() {
-		if(!session.username) {
+		if(!session.username && !session.sUsername) {
 		def originalRequestParams = [controller:controllerName,action:actionName]
 		originalRequestParams.putAll(params)
 		session.originalRequestParams = originalRequestParams
@@ -12,6 +12,8 @@ abstract class AdviserBaseController{
 		}
 		if(!session.username && session.sUsername) {
 		session.sUsername = null
+		
+		
 		redirect(controller:'adviser',action:'login')
 		return false
 		}
