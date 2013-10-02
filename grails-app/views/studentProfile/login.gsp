@@ -1,80 +1,126 @@
+<!doctype html>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-		<link rel="stylesheet" href="${resource(dir: 'css', file: 'login.css')}" type="text/css">
-		<link rel="stylesheet" href="${resource(dir: 'css', file: 'animate.css')}" type="text/css">
-		<title>Log in</title>
-		<style type="text/css">
+		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'Pixel-Wolf_icon.png')}" type="image/x-icon">
 		
-		</style>
+		<link rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap.css')}" type="text/css"> <!--  THIS LINE IS THE ACTIVE CSS -->
+		
+		<link rel="stylesheet" href="${resource(dir: 'css', file: 'site.css')}" type="text/css">  
+		<link rel="stylesheet" href="${resource(dir: 'css', file: 'prettify.css')}" type="text/css"> 
+		<link rel="stylesheet" href="${resource(dir: 'css', file: 'font-awesome.css')}" type="text/css">
+		<!-- <link rel="stylesheet" href="${resource(dir: 'css', file: 'login.css')}" type="text/css"> -->
+		<!-- <link rel="stylesheet" href="${resource(dir: 'css', file: 'animate.css')}" type="text/css"> -->
+		
+		<title>Advising</title>
+		
+		<style type="text/css">
+      /* Override some defaults */
+      html, body {
+        background-color: #eee;
+      }
+      body {
+        padding-top: 40px; 
+      }
+      .container {
+        width: 300px;
+      }
+
+      /* The white background content wrapper */
+      .container > .content {
+        background-color: #fff;
+        padding: 20px;
+        margin: 0 -20px; 
+        -webkit-border-radius: 10px 10px 10px 10px;
+           -moz-border-radius: 10px 10px 10px 10px;
+                border-radius: 10px 10px 10px 10px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+                box-shadow: 0 1px 2px rgba(0,0,0,.15);
+      }
+
+	  .login-form {
+		margin-left: 65px;
+	  }
+	
+	  legend {
+		margin-right: -50px;
+		font-weight: bold;
+	  	color: #404040;
+	  }
+    </style>
+
+	</head>
+	
+	<!--scripts-->
+		
 		<script src="${resource(dir:'js', file:'jquery-2.0.0.js')}"</script>
 		<script src="${resource(dir:'js', file:'jquery-2.0.0.min.js')}"</script>
-		
 		<script type="text/JavaScript">
 			<!--
 			// PRELOADING IMAGES
 			$(document).ready(function() {
-				
 				 window.setTimeout("fadeMyDiv();", 3000); //call fade in 3 seconds
-				
 			}
 			)
 			function fadeMyDiv() {
 			   $("#fade").fadeOut("slow");
 			}
 		</script>
-	</head>
+	
+	<!-- end of scripts -->
 	
 	<body>
+	
+	<body>
+	
 	<g:if test="${flash.message}">
 		<div id="fade" class="animated fadeInDown">
-			<div class="message" align="center">
+			<div class="alert alert-info" align="center">
 					${flash.message}
 			</div>
 		</div>
 	</g:if>
-		<div class="loginContent">
-		<h2>STUDENT </h2>
-			<h2>This page is for Students only.</h2>		
-				<g:hasErrors bean="${studentProfile}">
-					<div class="errors">
-					<g:renderErrors bean="${studentProfile}" as="list" />
-					</div>
-				</g:hasErrors>
+
+	<div class="container">
+	<div class="content">
+    <div class="row">
+        
+		<div class="login-form">
+		
+		<h2>Student's Log</h2>
+			<!-- <center>This page is for Students only.</center> -->
+			
+	<g:hasErrors bean="${studentProfile}">
+			<div class="errors">
+			<g:renderErrors bean="${studentProfile}" as="list" />
+			</div>
+	</g:hasErrors>
+				
 				<g:form controller="studentProfile" method="post" >
+				
 					<div class="dialog" >
-						<table  >
-							<tr class='prop'>
-								<td valign='top' class='name'>
-								<h3>Username:</h3>
-								</td>
-								<td valign='top' class='value '>
+					
+						<div class="clearfix">
 									<input type="text" 
 										name='sUsername'
-										value='${student?.Susername}'>
+										value='${student?.Susername}'
+										placeholder='username'>
 									</input>
-								</td>
-							</tr>
-							<tr class='prop'>
-								<td valign='top' class='name'>
-								<h3>Password:</h3>
-								</td>
-								<td valign='top' class='value '>
+						</div>
+						
+						<div class="clearfix">
 									<input type="password" 
 									name='sPassword'
-									value='${student?.Spassword}'>
+									value='${student?.Spassword}'
+									placeholder='password'>
 									</input>
-								
-								</td>
-							</tr>
-						</table>
-					</div>
+						</div>
 
-					<div  align="center">
-						<g:actionSubmit class="btn btn-small btn-info" value="Log in" />
+					<div align="">
 						<a href="http://localhost:8080/gradAdvising"><i class="icon-home"></i></a>
-						<!-- <g:link class="" action="index" controller="program">HOME</g:link> -->
-						<g:link class="" action="login" controller="adviser">Log in as ADVISER</g:link>
+						<g:actionSubmit class="btn btn-small btn-success" value="Log in" />
+						<g:link class="btn btn-small btn-info" action="login" controller="adviser">Adviser Login</g:link>
 					</div>
 			</g:form>
 		</div>
