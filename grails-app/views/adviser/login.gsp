@@ -71,27 +71,28 @@
 	<!-- end of scripts -->
 
 	<body>
+	
+	<g:if test="${flash.message}">
+		<div id="fade" class="animated fadeInDown">
+			<div class="alert alert-info" align="center">
+					${flash.message}
+			</div>
+		</div>
+	</g:if>
 
 	<div class="container">
 	<div class="content">
     <div class="row">
         
 		<div class="login-form">
-	
-	<g:if test="${flash.message}">
-		<div id="fade" class="animated fadeInDown">
-			<div class="message" align="center">
-					${flash.message}
-			</div>
-		</div>
-	</g:if>
-	
-
+		
 		<h2>Adviser's Log</h2>
-			This page is restricted for system School Adviser's only.
+			<center>This page is restricted for system School Adviser's only.</center>
+			
+			<p>
 			
 				<g:hasErrors bean="${adviser}">
-					<div class="errors">
+					<div class="alert alert-error">
 					<g:renderErrors bean="${adviser}" as="list" />
 					</div>
 				</g:hasErrors>
@@ -117,6 +118,7 @@
 					
 					<div  align="center">
 						<g:actionSubmit class="btn btn-small btn-info" value="Log in" />
+						<a href="http://localhost:8080/gradAdvising"><i class="icon-home"></i></a>
 						<!-- <g:link class="" action="index" controller="program">HOME</g:link> -->
 					</div>
 					

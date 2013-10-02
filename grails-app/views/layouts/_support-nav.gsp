@@ -2,7 +2,7 @@
     <div class="navbar-inner">
       <div class="container">
 	  
-		<a class="brand" href=""><img width="110" height="40" src="${resource(dir: 'images', file: 'scs-logo.png')}"></a>
+		<a class="brand" href="http://localhost:8080/gradAdvising"><img width="110" height="40" src="${resource(dir: 'images', file: 'scs-logo.png')}"></a>
 		
         <ul class="nav">
 		  <li><a href="http://localhost:8080/gradAdvising/student">Student</a></li>
