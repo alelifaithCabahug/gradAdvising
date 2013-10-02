@@ -9,6 +9,6 @@ abstract class AdviserBaseController{
 		session.originalRequestParams = originalRequestParams
 		redirect(controller:'adviser',action:'login')
 		return false
-	}
+		}
 	}
 }

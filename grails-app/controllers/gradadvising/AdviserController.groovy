@@ -103,15 +103,17 @@ class AdviserController extends AdviserBaseController{
 	def login = {
 		if (request.method == "GET") {
 			session.username = null
+
 			def adviser = new Adviser()
 		}
 		else {
 			def adviser = Adviser.findByUsernameAndPassword(params.username,params.password)
 			if (adviser) {
 				session.username = adviser.username
-				//redirect(controller:'room')
-				def redirectParams =session.originalRequestParams?session.originalRequestParams:[controller:'program', action:"index"]
-				redirect(redirectParams)
+				//redirect(controller:'program')
+				redirect(uri: "/")
+				//def redirectParams =session.originalRequestParams?session.originalRequestParams:[controller:'program', action:"index"]
+				//redirect(redirectParams)
 		}
 
 		else {

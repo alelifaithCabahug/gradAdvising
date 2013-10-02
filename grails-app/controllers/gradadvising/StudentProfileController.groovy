@@ -1,7 +1,7 @@
 package gradadvising
 
 class StudentProfileController extends StudentBaseController{
-	def beforeInterceptor = [action:this.&auth, except:['login','showProfile']]
+	def beforeInterceptor = [action:this.&auth, except:['login']]
 	
 	static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
     def index() { }
@@ -22,6 +22,12 @@ class StudentProfileController extends StudentBaseController{
 		}
 
 		else {
+		log.warn	"Shields up! Somebody's trying " +
+					"to hack through our rock-solid " +
+					"DEFCON 1 security -- " +
+					"User ID - $params.userId, " +
+					"Password - $params.password"
+					
 			flash.message = 'Please enter a valid username and password'
 			render(view:"login")
 			return
