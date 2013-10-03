@@ -41,8 +41,8 @@
 		<a href="http://localhost:8080/gradAdvising/adviser/list">Adviser</a> |
 		<a href="http://localhost:8080/gradAdvising/student/list">Enrollee</a> |
 		<a href="http://localhost:8080/gradAdvising/yearSem/list">Year & Sem</a> |
-		<a href="http://localhost:8080/gradAdvising/grade/create">Grade</a> |
-		<a href="http://localhost:8080/gradAdvising/enrollments/create">Enrollments</a> |
+		<a href="http://localhost:8080/gradAdvising/grade/list">Grade</a> |
+		<a href="http://localhost:8080/gradAdvising/enrollments/list">Enrollments</a> |
 		<a href="http://localhost:8080/gradAdvising/program/list">Programs</a> |
 		<a href="http://localhost:8080/gradAdvising/subject/list">Subject</a> |
 		</g:if>
