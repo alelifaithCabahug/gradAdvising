@@ -65,28 +65,42 @@
 	
 	<!-- Tables for enrolled subjects with grades -->
 	
+<g:each in="${studentInstance.enrollments}" var="enr">
+	
 	<p>
 	<br>
 	<br>
 	
 	<div id="container" style="background-color:#e0f3f8; clear:both; width:300px; float:center; margin-left:30px">
 	
+	TERM: ${enr.yrsem} 
+	
 	<table border="1">
 		<tr>
 			<td>Subject</td>
 			<td>Grade</td>
 		</tr>
+		
+		<g:each in="${enr.grade}" status="i" var="subjects">
 		<tr>
-			<td>samp</td>
-			<td><center>1.0</center></td>
+			<td>${subjects.subject}</td>
+			<td><center>${subjects.grade}</center></td>
 		</tr>
+		</g:each>
 	</table>
+	
+	
+			<a class="btn btn-small" href="http://localhost:8080/gradAdvising/grade/create">Add Grade</a>
+			</a>
 
 	</div>
+</g:each>
 	
 	
 	
-	
+	<br>
+	<br>
+	<p>
 	<!-- edit/delete -->		
 			<g:form>
 				<fieldset class="buttons">
