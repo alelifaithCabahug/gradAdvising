@@ -29,7 +29,7 @@ class EnrollmentsController extends AdviserBaseController{
         }
 
         flash.message = message(code: 'default.created.message', args: [message(code: 'enrollments.label', default: 'Enrollments'), enrollmentsInstance.id])
-        redirect(action: "show", id: enrollmentsInstance.id)
+        redirect(controller: "student", action: "list")
     }
 
     def show(Long id) {

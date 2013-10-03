@@ -29,7 +29,7 @@ class GradeController extends AdviserBaseController {
         }
 
 		flash.message = message(code: 'default.created.message', args: [message(code: 'grade.label', default: 'Grade'), gradeInstance.id])
-        redirect(action: "show", id: gradeInstance.id)
+        redirect(controller: "student", action: "list")
     }
 
     def show() {
