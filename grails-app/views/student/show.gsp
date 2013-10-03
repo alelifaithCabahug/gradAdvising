@@ -42,7 +42,9 @@
 	</td>
 	</table>
 	
-	<!-- enrollements -->
+	<a class="btn" href="http://localhost:8080/gradAdvising/enrollments/create">Add Semester</a>
+
+	<!-- enrollements 
 	<td>		
 				<g:if test="${studentInstance?.enrollments}">
 				<li class="fieldcontain">
@@ -53,15 +55,15 @@
 				</li>
 				</g:if>
 			
-				<!-- <g:if test="${studentInstance?.yrsem}">
+				 <g:if test="${studentInstance?.yrsem}">
 				<li class="fieldcontain">
 					<span id="yrsem-label" class="property-label"><g:message code="student.yrsem.label" default="Yrsem" /></span>
 						<span class="property-value" aria-labelledby="yrsem-label"></span>
 				</li>
-				</g:if> -->
+				</g:if> 
 				
 			</ol>
-		</td>
+		</td> -->
 	
 	<!-- Tables for enrolled subjects with grades -->
 	
@@ -71,15 +73,14 @@
 	<br>
 	<br>
 	
-	<div id="container" style="background-color:#e0f3f8; clear:both; width:300px; float:center; margin-left:30px">
+	<div id="container" style="background-color:#e0f3f8; width:300px; float:center; margin-left:200px">
 	
-	TERM: ${enr.yrsem} 
+	<center>
+	<h4> ${enr.yrsem} </h4>
 	
 	<table border="1">
-		<tr>
-			<td>Subject</td>
-			<td>Grade</td>
-		</tr>
+		<g:sortableColumn property="column" title="${message(code: 'user.id.label', default: 'Subject Name')}" />
+		<g:sortableColumn property="column" title="${message(code: 'user.id.label', default: 'Grade')}" />
 		
 		<g:each in="${enr.grade}" status="i" var="subjects">
 		<tr>
@@ -89,24 +90,27 @@
 		</g:each>
 	</table>
 	
-	
+			
 			<a class="btn btn-small" href="http://localhost:8080/gradAdvising/grade/create">Add Grade</a>
 			</a>
 
 	</div>
 </g:each>
+
+	</center>
 	
 	
 	
 	<br>
 	<br>
 	<p>
+	
 	<!-- edit/delete -->		
 			<g:form>
 				<fieldset class="buttons">
 					<g:hiddenField name="id" value="${studentInstance?.id}" />
-					<g:link class="edit" action="edit" id="${studentInstance?.id}"><g:message code="default.button.edit.label" default="Update" /></g:link>
-					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
+					<g:link class="btn" action="edit" id="${studentInstance?.id}"><g:message code="default.button.edit.label" default="Update" /></g:link>
+					<g:actionSubmit class="btn btn-danger" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
 				</fieldset>
 			</g:form>
 			
