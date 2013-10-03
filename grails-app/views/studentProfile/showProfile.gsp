@@ -8,12 +8,13 @@
 	</head>
 	
 	<body>
-		<div class="container-fluid">
+	
+	<div class="container-fluid">
 		<div class="row-fluid">
-		<div class="span1">
+		<div class="span2">
 		</div>
 		
-		<div class="span10">
+		<div class="span8">
 
 		<div>	
 		<ul class="nav nav-pills" style="border: solid 0px #d3d3d3;"> 
@@ -24,9 +25,6 @@
 			</div>
 			</g:if>
 		
-			<div class="container-fluid">
-			<div class="hero-unit">
-
 	<h2>Student Information</h2>
 	
 	<table border="0" cellpadding="0">
@@ -44,10 +42,7 @@
 	</td>
 	</table>
 	
-	
 	<!-- enrollements -->
-	
-	<div class="span4">
 	<td>		
 				<g:if test="${studentInstance?.enrollments}">
 				<li class="fieldcontain">
@@ -67,9 +62,45 @@
 				
 			</ol>
 		</td>
+	
+	<!-- Tables for enrolled subjects with grades -->
+	
+<g:each in="${studentInstance.enrollments}" var="enr">
+	
+	<p>
+	<br>
+	<br>
+	
+	<div id="container" style="background-color:#e0f3f8; clear:both; width:300px; float:center; margin-left:30px">
+	
+	TERM: ${enr.yrsem} 
+	
+	<table border="1">
+		<tr>
+			<td>Subject</td>
+			<td>Grade</td>
+		</tr>
+		
+		<g:each in="${enr.grade}" status="i" var="subjects">
+		<tr>
+			<td>${subjects.subject}</td>
+			<td><center>${subjects.grade}</center></td>
+		</tr>
+		</g:each>
+	</table>
+	
+	
+			<!--<a class="btn btn-small" href="http://localhost:8080/gradAdvising/grade/create">Add Grade</a>
+			</a>-->
+
 	</div>
+</g:each>
 	
 	
+	
+	<br>
+	<br>
+	<p>
 	<!-- edit/delete -->		
 			<g:form>
 				<fieldset class="buttons">
