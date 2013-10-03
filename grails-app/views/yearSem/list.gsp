@@ -46,7 +46,7 @@
 				<tbody>
 				<g:each in="${yearSemInstanceList}" status="i" var="yearSemInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-						<td><g:link action="show" id="${yearSemInstance.id}">${fieldValue(bean: yearSemInstance, field: "year")}</g:link></td>
+						<td>${fieldValue(bean: yearSemInstance, field: "year")}</td>
 						<td>${fieldValue(bean: yearSemInstance, field: "sem")}</td>
 					</tr>
 				</g:each>
