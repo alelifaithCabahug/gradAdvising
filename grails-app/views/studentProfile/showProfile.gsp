@@ -35,33 +35,13 @@
 			<b>Bachelor's Degree:</b> 	<g:fieldValue bean="${studentInstance}" field="bachelorsDegree"/><br>
 	</td>
 	<td>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	<b>Program Enrolled:</b>	<g:link controller="program" action="show" id="${studentInstance?.program?.id}">${studentInstance?.program?.encodeAsHTML()}</g:link><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	<b>Program Enrolled:</b>	${studentInstance?.program?.encodeAsHTML()}<br>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<b>Year LvL:</b>			<g:fieldValue bean="${studentInstance}" field="yearLevel"/><br>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<b>Date Enrolled:</b>		<g:formatDate date="${studentInstance?.dateEnrolled}"/><br>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<b>Year & Semester:</b>		<g:link controller="yearSem" action="show" id="${studentInstance?.yrsem?.id}">${studentInstance?.yrsem?.encodeAsHTML()}</g:link></br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<b>Year & Semester:</b>		${studentInstance?.yrsem?.encodeAsHTML()}</br>
 	</td>
 	</table>
 	
-	<!-- enrollements -->
-	<td>		
-				<g:if test="${studentInstance?.enrollments}">
-				<li class="fieldcontain">
-					<span id="enrollments-label" class="property-label"><g:message code="student.enrollments.label" default="Enrollments" /></span>
-						<g:each in="${studentInstance.enrollments}" var="e">
-						<span class="property-value" aria-labelledby="enrollments-label"><g:link controller="enrollments" action="show" id="${e.id}">${e?.encodeAsHTML()}</g:link></span>
-						</g:each>
-				</li>
-				</g:if>
-			
-				<!-- <g:if test="${studentInstance?.yrsem}">
-				<li class="fieldcontain">
-					<span id="yrsem-label" class="property-label"><g:message code="student.yrsem.label" default="Yrsem" /></span>
-						<span class="property-value" aria-labelledby="yrsem-label"></span>
-				</li>
-				</g:if> -->
-				
-			</ol>
-		</td>
 	
 	<!-- Tables for enrolled subjects with grades -->
 	
@@ -75,6 +55,7 @@
 	
 	TERM: ${enr.yrsem} 
 	
+	
 	<table border="1">
 		<tr>
 			<td>Subject</td>
@@ -87,8 +68,9 @@
 			<td><center>${subjects.grade}</center></td>
 		</tr>
 		</g:each>
-	</table>
 	
+	</table>
+		<align="right">GPA: ${enr.getGPA()} &nbsp;&nbsp;&nbsp;</a>
 	
 			<!--<a class="btn btn-small" href="http://localhost:8080/gradAdvising/grade/create">Add Grade</a>
 			</a>-->
