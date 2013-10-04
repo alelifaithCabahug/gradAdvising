@@ -6,24 +6,29 @@
 		<g:set var="entityName" value="${message(code: 'student.label', default: 'Student')}" />
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
-	
-	<body>
-	
-	<div class="container-fluid">
-		<div class="row-fluid">
-		<div class="span2">
-		</div>
+	<br><br>
 		
-		<div class="span8">
-
-		<div>	
-		<ul class="nav nav-pills" style="border: solid 0px #d3d3d3;"> 
+		<div align="center">	
+		<ul class="nav nav-pills" style="border: solid 0px #0000FF;">
 	
+		<li class="active"><a href="http://localhost:8080/gradAdvising/student/list">Student List</a></li>
+		
 		<g:if test="${flash.message}">
 			<div class="alert alert-info">
 			<div class="message" role="status">${flash.message}</div>
 			</div>
 			</g:if>
+   
+		
+			<div class="container-fluid">
+		
+			<div class="span12">
+			<div class="hero-unit">
+	
+		<div class="container-fluid">
+		<div class="row-fluid">
+		<div class="span2">
+		</div>
 		
 	<h2>Student Information</h2>
 	
@@ -73,7 +78,7 @@
 	<br>
 	<br>
 	
-	<div id="container" style="background-color:#e0f3f8; width:300px; float:center; margin-left:200px">
+	<div id="container" style="background-color:#e0f3f8; width:300px; float:center; margin-left:50px">
 	
 	<center>
 	<h4> ${enr.yrsem} </h4>
