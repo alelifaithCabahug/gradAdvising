@@ -1,7 +1,8 @@
 <%@ page import="gradadvising.Grade" %>
+<%@ page import="gradadvising.Enrollments" %>
 
 
-
+<g:if test="${!params.enrollmentId}">
 <div class="fieldcontain ${hasErrors(bean: gradeInstance, field: 'enrollments', 'error')} required">
 	<label for="enrollments">
 		<g:message code="grade.enrollments.label" default="Enrollments" />
@@ -9,6 +10,21 @@
 	</label>
 	<g:select id="enrollments" name="enrollments.id" from="${gradadvising.Enrollments.list()}" optionKey="id" required="" value="${gradeInstance?.enrollments?.id}" class="many-to-one"/>
 </div>
+</g:if>
+
+
+<g:if test="${params.enrollmentId}">
+<div class="fieldcontain ${hasErrors(bean: gradeInstance, field: 'enrollments', 'error')} required">
+	<label for="enrollments">
+		<g:message code="grade.enrollments.label" default="Enrollments" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:hiddenField id="enrollments" name="enrollments.id" value="${params.enrollmentId}"/>${Enrollments.get(params.enrollmentId)}
+	
+	</div>
+	&nbsp;
+
+</g:if>
 
 <div class="fieldcontain ${hasErrors(bean: gradeInstance, field: 'grade', 'error')} required">
 	<label for="grade">

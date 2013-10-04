@@ -95,7 +95,8 @@
 		</g:each>
 	</table>
 			<align="left">GPA: ${enr.getGPA()} &nbsp;&nbsp;&nbsp;</a>
-			<a class="btn btn-small" href="http://localhost:8080/gradAdvising/grade/create">Add Grade</a>
+			<g:link class="btn" controller="grade" action="create" id="${enr?.id}">Add Grade</g:link></br>
+	
 			</a>
 
 	</div>

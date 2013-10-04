@@ -17,7 +17,8 @@ class GradeController extends AdviserBaseController {
         [gradeInstanceList: Grade.list(params), gradeInstanceTotal: Grade.count()]
     }
 
-    def create() {
+    def create(Long id) {
+		params.enrollmentId = id
         [gradeInstance: new Grade(params)]
     }
 
