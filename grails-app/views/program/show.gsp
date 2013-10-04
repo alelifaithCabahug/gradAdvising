@@ -31,14 +31,14 @@
 			
 				<g:if test="${programInstance?.programName}">
 				<li class="fieldcontain">
-					<h3><span id="programName-label" class="property-label"><g:message code="program.programName.label" default="Program Name" /></span></h3>
+					<h3><span id="programName-label" class="property-label"><g:message code="program.programName.label" default="Program Name:" /></span></h3>
 					<span class="property-value" aria-labelledby="programName-label"><g:fieldValue bean="${programInstance}" field="programName"/></span>
 				</li>
 				</g:if>
 			
 				<g:if test="${programInstance?.numberOfYears}">
 				<li class="fieldcontain">
-					<h3><span id="numberOfYears-label" class="property-label"><g:message code="program.numberOfYears.label" default="Program Duration" /></span></h3>
+					<h3><span id="numberOfYears-label" class="property-label"><g:message code="program.numberOfYears.label" default="Program Duration:" /></span></h3>
 					<span class="property-value" aria-labelledby="numberOfYears-label"><g:fieldValue bean="${programInstance}" field="numberOfYears"/></span>
 				</li>
 				</g:if>
