@@ -89,8 +89,12 @@
 		</tr>
 		</g:each>
 	</table>
+<<<<<<< HEAD
 	
 			
+=======
+			<align="left">GPA: ${enr.getGPA()} &nbsp;&nbsp;&nbsp;</a>
+>>>>>>> Modified getGPA(Student/show.gsp)
 			<a class="btn btn-small" href="http://localhost:8080/gradAdvising/grade/create">Add Grade</a>
 			</a>
 

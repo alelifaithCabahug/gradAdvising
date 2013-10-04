@@ -7,9 +7,6 @@ class Enrollments {
 	static belongsTo = [student:Student]
 	static hasMany = [grade:Grade]
 	
-	//static hasMany = [subject:Subject]
-	
-	
 	static constraints(){
 		student(blank:false, unique:true)
 		yrsem(blank:false)
@@ -23,10 +20,10 @@ class Enrollments {
 	double getGPA()
 	{
 		double result = 0;
-		int totalLoad = 0;
+		double totalLoad = 0;
 		grade.each()
 		{
-			result = it.subject.unitLoad * it.grade
+			result = it.subject.unitLoad * it.getEquivalentGrade()
 			totalLoad += it.subject.unitLoad
 		}
 		return result/totalLoad;
