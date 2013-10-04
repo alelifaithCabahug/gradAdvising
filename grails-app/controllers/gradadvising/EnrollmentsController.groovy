@@ -17,9 +17,15 @@ class EnrollmentsController extends AdviserBaseController{
         [enrollmentsInstanceList: Enrollments.list(params), enrollmentsInstanceTotal: Enrollments.count()]
     }
 
-    def create() {
+     def create(Long id) {
+
+		def studentId = id
+		params.studentId = studentId
+		
         [enrollmentsInstance: new Enrollments(params)]
+		
     }
+
 
     def save() {
         def enrollmentsInstance = new Enrollments(params)
