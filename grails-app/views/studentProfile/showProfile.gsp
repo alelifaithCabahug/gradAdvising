@@ -71,27 +71,9 @@
 	
 	</table>
 		<align="right">GPA: ${enr.getGPA()} &nbsp;&nbsp;&nbsp;</a>
-	
-			<!--<a class="btn btn-small" href="http://localhost:8080/gradAdvising/grade/create">Add Grade</a>
-			</a>-->
-
 	</div>
 </g:each>
 	
-	
-	
-	<br>
-	<br>
-	<p>
-	<!-- edit/delete -->		
-			<g:form>
-				<fieldset class="buttons">
-					<g:hiddenField name="id" value="${studentInstance?.id}" />
-					<g:link class="edit" action="edit" id="${studentInstance?.id}"><g:message code="default.button.edit.label" default="Update" /></g:link>
-					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
-				</fieldset>
-			</g:form>
-			
 		</div>
 	</body>
 </html>

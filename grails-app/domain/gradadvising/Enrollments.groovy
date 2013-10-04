@@ -26,6 +26,6 @@ class Enrollments {
 			result = (double)it.subject.unitLoad * it.getEquivalentGrade()
 			totalLoad += (double)it.subject.unitLoad
 		}
-		return result/totalLoad;
+		return (result/totalLoad).round(2);
 	}
 }
