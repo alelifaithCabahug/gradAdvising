@@ -151,6 +151,7 @@
       </ul>
     </g:if>
 
+	&nbsp;
     <g:if test="${haveResults}">
       <div class="results">
         <g:each var="result" in="${searchResult.results}" status="index">
