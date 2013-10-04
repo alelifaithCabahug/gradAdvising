@@ -98,9 +98,7 @@
 	
   <div id="header">
     <h1><a href="http://grails.org/Searchable+Plugin" target="_blank">Grails <span>Searchable</span> Plugin</a></h1>
-    <g:form url='[controller: "searchable", action: "index"]' id="searchableForm" name="searchableForm" method="get">
-        <g:textField name="q" value="${params.q}" size="50"/> <input type="submit" value="Search" />
-    </g:form>
+    
     <div style="clear: both; display: none;" class="hint">See <a href="http://lucene.apache.org/java/docs/queryparsersyntax.html">Lucene query syntax</a> for advanced queries</div>
   </div>
   <div id="main">
@@ -159,8 +157,8 @@
           <div class="result">
             <g:set var="className" value="${ClassUtils.getShortName(result.getClass())}" />
             <g:set var="link" value="${createLink(controller: className[0].toLowerCase() + className[1..-1], action: 'show', id: result.id)}" />
-            <div class="name"><a href="${link}">${className} #${result.id}</a></div>
-            <g:set var="desc" value="${result.toString()}" />
+            <div class="name"><a href="${link}"> ${result.toString()}</a></div>
+            <g:set var="desc" value="${className} ${result.toString()}" />
             <g:if test="${desc.size() > 120}"><g:set var="desc" value="${desc[0..120] + '...'}" /></g:if>
             <div class="desc">${desc.encodeAsHTML()}</div>
             <div class="displayLink">${link}</div>
