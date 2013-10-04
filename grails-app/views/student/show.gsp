@@ -46,9 +46,9 @@
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<b>Year & Semester:</b>		<g:link controller="yearSem" action="show" id="${studentInstance?.yrsem?.id}">${studentInstance?.yrsem?.encodeAsHTML()}</g:link></br>
 	</td>
 	</table>
-	
-	<a class="btn" href="http://localhost:8080/gradAdvising/enrollments/create">Add Semester</a>
 
+	<g:link class="btn" controller="enrollments" action="create" id="${studentInstance?.id}">Add Semester</g:link></br>
+	</td>
 	<!-- enrollements 
 	<td>		
 				<g:if test="${studentInstance?.enrollments}">
