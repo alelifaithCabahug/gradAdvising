@@ -7,23 +7,26 @@
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<a href="#create-adviser" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-			</ul>
+		<div class="container-fluid">
+		<div class="row-fluid">
+		<div class="span2">
 		</div>
-		<div id="create-adviser" class="content scaffold-create" role="main">
-			<h1><g:message code="default.create.label" args="[entityName]" /></h1>
+		
+		<div class="span8">
+
+		<div id="create-student" class="content scaffold-create" role="main">
+			<center><h2>New Adviser</h2></center>
+			
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
+			
 			<g:hasErrors bean="${adviserInstance}">
 			<ul class="errors" role="alert">
 				<g:eachError bean="${adviserInstance}" var="error">
 				<li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
 				</g:eachError>
+			
 			</ul>
 			</g:hasErrors>
 			<g:form action="save" >
