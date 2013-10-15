@@ -108,8 +108,15 @@
 	</table>
 			
 			<align="left">GPA: ${enr.getGPA()} &nbsp;&nbsp;&nbsp;</a>
+<<<<<<< HEAD
 			<!--<g:link class="btn" controller="grade" action="create" id="${enr?.id}">Add Grade</g:link>-->
 			<g:link class="btn" controller="enrollments" action="edit" id="${enr?.id}">Edit Enrollment</g:link></br>
+=======
+			<g:link class="btn" controller="grade" action="create" id="${enr?.id}">Add Grade</g:link></br>
+	
+			</a>
+
+>>>>>>> d328850223ac99c3ab8032ddd4f62c767dffead5
 	</div>
 </g:each>
 
