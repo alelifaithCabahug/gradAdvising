@@ -3,6 +3,8 @@ package gradadvising
 class Enrollments {
 	YearSem yrsem
 	Student student
+	String yrSemString
+	String studentGPA
 	
 	static belongsTo = [student:Student]
 	static hasMany = [grade:Grade, subject:Subject]
@@ -11,6 +13,8 @@ class Enrollments {
 		student(blank:false, unique:true)
 		yrsem(blank:false)
 		subject(unique:true)
+		yrSemString(blank:true)
+		studentGPA(blank:true)
 	}
 	
 	String toString(){
@@ -39,6 +43,8 @@ class Enrollments {
 		return (result/totalLoad).round(2);
 		
 	}
+	
+	
 	
 	
 }

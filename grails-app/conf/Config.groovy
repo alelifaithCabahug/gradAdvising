@@ -59,13 +59,17 @@ grails.exceptionresolver.params.exclude = ['password']
 // configure auto-caching of queries by default (if false you can cache individual queries with 'cache: true')
 grails.hibernate.cache.queries = false
 
+
+
 environments {
     development {
         grails.logging.jul.usebridge = true
+		jasper.dir.reports = 'web-app/reports'
     }
     production {
         grails.logging.jul.usebridge = false
         // TODO: grails.serverURL = "http://www.changeme.com"
+		jasper.dir.reports = 'web-app/reports'
     }
 }
 

@@ -26,6 +26,7 @@ class GradeController extends AdviserBaseController {
 
     def save() {
         def gradeInstance = new Grade(params)
+		gradeInstance.enrollments.studentGPA = (String)gradeInstance.enrollments.getGPA()
         if (!gradeInstance.save(flush: true)) {
             render(view: "create", model: [gradeInstance: gradeInstance])
             return
@@ -61,6 +62,8 @@ class GradeController extends AdviserBaseController {
 
     def update() {
         def gradeInstance = Grade.get(params.id)
+		gradeInstance.enrollments.studentGPA = (String)gradeInstance.enrollments.getGPA()
+       
         if (!gradeInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'grade.label', default: 'Grade'), params.id])
             redirect(action: "list")

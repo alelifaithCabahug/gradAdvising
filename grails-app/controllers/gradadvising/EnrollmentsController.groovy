@@ -31,6 +31,8 @@ class EnrollmentsController extends AdviserBaseController{
 
     def save() {
         def enrollmentsInstance = new Enrollments(params)
+		enrollmentsInstance.yrSemString = enrollmentsInstance.yrsem.toString()
+		
 		
 		def checkedSubjects = params.list('marked_subjects')
 		def selectedSubjects = Subject.getAll(checkedSubjects)
@@ -69,6 +71,8 @@ class EnrollmentsController extends AdviserBaseController{
 
     def update(Long id, Long version) {
         def enrollmentsInstance = Enrollments.get(id)
+		enrollmentsInstance.yrSemString = enrollmentsInstance.yrsem.toString()
+	
 		
 		def checkedSubjects = params.list('marked_subjects')
 		def selectedSubjects = Subject.getAll(checkedSubjects)
