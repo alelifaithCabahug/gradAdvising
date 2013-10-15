@@ -50,6 +50,8 @@
 	</table>
 
 	<g:link class="btn" controller="enrollments" action="create" params="[studentId: studentInstance?.id]">Add Enrollment</g:link></br>
+	<g:link class="btn" controller="report" action="showEvaluation" id="${studentInstance?.id}">Evaluation of Records</g:link></br>
+	
 	</td>
 	<!-- enrollements 
 	<td>		

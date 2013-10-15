@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f1ebfc78-28a1-4f51-9f07-03db68c911ee">
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     student."id" AS student_id,
+     student."version" AS student_version,
+     student."bachelors_degree" AS student_bachelors_degree,
+     student."date_enrolled" AS student_date_enrolled,
+     student."id_number" AS student_id_number,
+     student."program_id" AS student_program_id,
+     student."s_password" AS student_s_password,
+     student."s_username" AS student_s_username,
+     student."student_name" AS student_student_name,
+     student."under_grad_course" AS student_under_grad_course,
+     student."withgpaof2above" AS student_withgpaof2above,
+     student."with_suitable_background" AS student_with_suitable_background,
+     student."year_level" AS student_year_level,
+     student."yrsem_id" AS student_yrsem_id
+FROM
+     "public"."student" student]]>
+	</queryString>
+	<field name="student_id" class="java.lang.Long"/>
+	<field name="student_version" class="java.lang.Long"/>
+	<field name="student_bachelors_degree" class="java.lang.String"/>
+	<field name="student_date_enrolled" class="java.sql.Timestamp"/>
+	<field name="student_id_number" class="java.lang.String"/>
+	<field name="student_program_id" class="java.lang.Long"/>
+	<field name="student_s_password" class="java.lang.String"/>
+	<field name="student_s_username" class="java.lang.String"/>
+	<field name="student_student_name" class="java.lang.String"/>
+	<field name="student_under_grad_course" class="java.lang.String"/>
+	<field name="student_withgpaof2above" class="java.lang.Boolean"/>
+	<field name="student_with_suitable_background" class="java.lang.Boolean"/>
+	<field name="student_year_level" class="java.lang.Integer"/>
+	<field name="student_yrsem_id" class="java.lang.Long"/>
+	<group name="student_id">
+		<groupExpression><![CDATA[$F{student_id}]]></groupExpression>
+		<groupHeader>
+			<band height="33">
+				<staticText>
+					<reportElement uuid="f1d257cd-3e23-4be2-bafd-a20224b157c0" mode="Opaque" x="0" y="0" width="100" height="32" forecolor="#666666" backcolor="#E6E6E6"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[student_id]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="9bc51d73-f1bc-4b54-bd6b-e3c7ef4f97bf" mode="Opaque" x="100" y="0" width="455" height="32" forecolor="#006699" backcolor="#E6E6E6"/>
+					<textElement>
+						<font size="24" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{student_id}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="83a65da0-71ea-418c-b326-c69267eb358d" x="-20" y="32" width="595" height="1" forecolor="#666666"/>
+				</line>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement uuid="b3d0616a-4e50-433e-b809-3bcd8346eb00" mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699"/>
+				<staticText>
+					<reportElement uuid="4be57ea5-1357-4176-93cb-1249078e7e01" x="20" y="20" width="234" height="43" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TITLE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="7a888f3c-58fe-4068-b99e-b5ad975c1c08" x="395" y="43" width="180" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Add a description here]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement uuid="00b1d090-130b-4add-8383-198737007717" x="-20" y="20" width="595" height="1" forecolor="#666666"/>
+			</line>
+			<staticText>
+				<reportElement uuid="c479176d-7f97-4845-875a-fb07a858e192" mode="Opaque" x="0" y="0" width="42" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[student_version]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e3cb614b-e945-4e6e-9b79-17468b99b770" mode="Opaque" x="42" y="0" width="42" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[student_bachelors_degree]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2793e442-0553-42e7-8dca-e2913e9a634d" mode="Opaque" x="84" y="0" width="42" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[student_date_enrolled]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="af373f28-8810-49c7-92f1-82ddeac00d06" mode="Opaque" x="126" y="0" width="42" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[student_id_number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="aaaea8c8-62bc-4cbf-bb08-06d519552ed1" mode="Opaque" x="168" y="0" width="42" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[student_program_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c3dde008-4a93-4e3c-8e69-f91f8d82f6bd" mode="Opaque" x="210" y="0" width="42" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[student_s_password]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4b356d84-4fc7-4a1f-b51b-1511f038a244" mode="Opaque" x="252" y="0" width="42" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[student_s_username]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="50b232de-6e33-4b28-9a8d-77adf0fa8c85" mode="Opaque" x="294" y="0" width="42" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[student_student_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0d0fdaae-4573-4470-8f7a-548669558c92" mode="Opaque" x="336" y="0" width="42" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[student_under_grad_course]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c55a6a8c-0737-4f64-8282-d98e0bd9a19f" mode="Opaque" x="378" y="0" width="42" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[student_withgpaof2above]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="461986f5-976e-4e3c-a74b-d00f6ec97a0f" mode="Opaque" x="420" y="0" width="42" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[student_with_suitable_background]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="002145f8-3d48-4345-b015-2b2a90c9ca66" mode="Opaque" x="462" y="0" width="42" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[student_year_level]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c9392c61-8ae5-4d7c-9f8f-6ed6013118b9" mode="Opaque" x="504" y="0" width="42" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[student_yrsem_id]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement uuid="038d7cc5-4a0c-4c79-8e07-3a7306de4756" positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="98caa41c-d9a3-467d-9b98-c72b497790e4" x="0" y="0" width="42" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_version}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="8db5782b-20c1-41c5-9e25-261e54c406ff" x="42" y="0" width="42" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_bachelors_degree}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="742b9ed0-2f4a-437f-8f0c-67612d5a4a9d" x="84" y="0" width="42" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_date_enrolled}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="41b1040d-e320-45e6-bc1f-70b2f42f57e9" x="126" y="0" width="42" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_id_number}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="44a02743-68e5-4358-8a1e-166b7cc3aea5" x="168" y="0" width="42" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_program_id}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="8e9f093a-a416-4772-9d1b-bc136ee6f647" x="210" y="0" width="42" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_s_password}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="85ad343a-815c-41d1-a4eb-f11119386735" x="252" y="0" width="42" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_s_username}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="4cbe8cc8-47bf-465b-a90c-b189bce2d639" x="294" y="0" width="42" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_student_name}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="4cbd18b3-6bdd-4d88-ac82-98ce9902f01a" x="336" y="0" width="42" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_under_grad_course}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="3bdcc851-7276-4c2b-b5d3-d088050a0a40" x="378" y="0" width="42" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_withgpaof2above}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="dbb6c63d-41d7-47e9-a642-57f3738a6122" x="420" y="0" width="42" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_with_suitable_background}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="0c60395e-b194-4c5b-9503-3065eaf8d163" x="462" y="0" width="42" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_year_level}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="a9044634-26e1-44ae-aca2-830b79e111ea" x="504" y="0" width="42" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_yrsem_id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement uuid="eda2fb82-3580-4664-9483-71b567897553" mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="d6e10e1d-a76d-4ad9-9691-adc1d4c07e82" mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="6b3f7364-46d2-42de-8cd0-3b12a8974138" x="0" y="4" width="100" height="13"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
