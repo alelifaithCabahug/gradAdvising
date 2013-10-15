@@ -19,10 +19,8 @@ class GradeController extends AdviserBaseController {
 
     def create(Long id) {
 		params.enrollmentId = id
-<<<<<<< HEAD
 		params.subjectID = params.subjectID
-=======
->>>>>>> d328850223ac99c3ab8032ddd4f62c767dffead5
+
         [gradeInstance: new Grade(params)]
     }
 

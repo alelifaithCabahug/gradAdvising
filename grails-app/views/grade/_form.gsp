@@ -1,9 +1,6 @@
 <%@ page import="gradadvising.Grade" %>
 <%@ page import="gradadvising.Enrollments" %>
-<<<<<<< HEAD
 <%@ page import="gradadvising.Subject" %>
-=======
->>>>>>> d328850223ac99c3ab8032ddd4f62c767dffead5
 
 
 <g:if test="${!params.enrollmentId}">
