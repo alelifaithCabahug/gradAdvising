@@ -8,6 +8,7 @@ class Subject {
 	boolean isCore
 	YearSem yrsem
 	
+	
     static constraints = {
 		subjectCode(blank:false, unique:true)
 		subjectDescription(blank:false)
@@ -16,13 +17,18 @@ class Subject {
 		yrsem()
     }
 	
-	static belongsTo = [Student, Program]
-	static hasMany = [student:Student, program:Program]
+	
+	//static hasMany = [student:Student]
 	
 	static searchable = true
 	
 	String toString(){
 	"${this.subjectCode}"
-
+	}
+	
+	
+	
+	Grade findSubjectGrade(Long enrollmentId){
+		def gradeResult = Grade.find("from Grade as g where g.subject.id=:subjectId and g.enrollments.id=:enrollmentId", [subjectId: (Long)(this.id),enrollmentId: (Long) enrollmentId])
 	}
 }

@@ -1,3 +1,4 @@
+
 <%@ page import="gradadvising.Program" %>
 <!DOCTYPE html>
 <html>
@@ -6,7 +7,6 @@
 		<g:set var="entityName" value="${message(code: 'program.label', default: 'Program')}" />
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
-		
 	<body>
 		<br><br>
 	
@@ -27,7 +27,7 @@
 			<div class="span8">
 			<div class="hero-unit">
 			
-			<!-- <h3> Program Info </h3> -->
+				<!-- <h3> Program Info </h3> -->
 			
 				<g:if test="${programInstance?.programName}">
 				<li class="fieldcontain">
@@ -60,15 +60,14 @@
 						</g:each>
 				</li>
 				</g:if>
-			
+			</ol>
 			<g:form>
 				<fieldset class="buttons">
 					<g:hiddenField name="id" value="${programInstance?.id}" />
-					<g:link class="btn" action="edit" id="${programInstance?.id}"><g:message code="default.button.edit.label" default='Update' /></g:link>
-					<!-- <g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" /> -->
+					<g:link class="btn" action="edit" id="${programInstance?.id}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
+					<g:actionSubmit class="btn btn-danger" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
 				</fieldset>
 			</g:form>
-			
-	</div>
+		</div>
 	</body>
 </html>

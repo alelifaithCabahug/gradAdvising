@@ -1,4 +1,5 @@
 <%@ page import="gradadvising.Student" %>
+<%@ page import="gradadvising.Grade" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -32,6 +33,7 @@
 		
 	<h2>Student Information</h2>
 	
+
 	<table border="0" cellpadding="0">
 	<td>
 			<b>ID Number:</b>			<g:fieldValue bean="${studentInstance}" field="idNumber"/><br>
@@ -47,7 +49,7 @@
 	</td>
 	</table>
 
-	<g:link class="btn" controller="enrollments" action="create" id="${studentInstance?.id}">Add Semester</g:link></br>
+	<g:link class="btn" controller="enrollments" action="create" params="[studentId: studentInstance?.id]">Add Enrollment</g:link></br>
 	</td>
 	<!-- enrollements 
 	<td>		
@@ -87,17 +89,27 @@
 		<g:sortableColumn property="column" title="${message(code: 'user.id.label', default: 'Subject Name')}" />
 		<g:sortableColumn property="column" title="${message(code: 'user.id.label', default: 'Grade')}" />
 		
-		<g:each in="${enr.grade}" status="i" var="subjects">
-		<tr>
-			<td>${subjects.subject}</td>
-			<td><center>${subjects.grade}</center></td>
-		</tr>
+		<g:each in="${enr.subject}" status="i" var="sub">
+			
+			<g:set var="studId" value="${studentInstance.id}" />
+			<g:set var="enrId" value="${enr.id}" />
+				<tr>
+				
+					<td>${sub.subjectCode}</td>
+					<td><center>${sub.findSubjectGrade(enrId)}</center></td>
+					<g:if test="${!sub.findSubjectGrade(enrId)}">
+					<td><g:link class="btn" controller="grade" action="create" id="${enr?.id}" params="[subjectID: sub.id]">Add Grade</g:link></td>
+					</g:if>
+					<g:if test="${sub.findSubjectGrade(enrId)}">
+					<td><g:link class="btn" controller="grade" action="edit" id="${(sub.findSubjectGrade(enrId)).id}" params="[subjectID: sub.id, enrollmentId: enr.id]">Edit Grade</g:link></td>
+					</g:if>
+				</tr>
 		</g:each>
 	</table>
+			
 			<align="left">GPA: ${enr.getGPA()} &nbsp;&nbsp;&nbsp;</a>
-			<a class="btn btn-small" href="http://localhost:8080/gradAdvising/grade/create">Add Grade</a>
-			</a>
-
+			<!--<g:link class="btn" controller="grade" action="create" id="${enr?.id}">Add Grade</g:link>-->
+			<g:link class="btn" controller="enrollments" action="edit" id="${enr?.id}">Edit Enrollment</g:link></br>
 	</div>
 </g:each>
 

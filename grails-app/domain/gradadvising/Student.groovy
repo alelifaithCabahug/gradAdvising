@@ -41,4 +41,27 @@ class Student{
 	String toString(){
 	"${this.idNumber} ${studentName}"
 	}
+	
+	def getNotEnrolledYearSem(){
+		
+		def enrolledSem = this.enrollments.yrsem
+		def yrSemList = YearSem.list()
+		def notEnrolledSem = yrSemList.id-enrolledSem.id
+		def result = notEnrolledSem.collect{YearSem.get(it)}
+		return result
+	}
+	
+	def getSubjectWithNoGrades(){
+
+		//def subjectsGrade = Grade.findAll("from Grade as g where g.enrollments.student.id=:studentId", [studentId:this.id])
+		//def sub = subjectsGrade.subject
+		//println " try ${sub}"
+		def subjectsWithGrade = (enrollments.grade.subject).flatten()
+		
+		def studentSubjects = (program.subject)
+
+		def subjectsWithNoGrade = studentSubjects.id-subjectsWithGrade.id
+		def result = subjectsWithNoGrade.collect{Subject.get(it)}
+		return result
+	}
 }

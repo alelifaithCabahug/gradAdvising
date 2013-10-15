@@ -1,22 +1,9 @@
 <%@ page import="gradadvising.Enrollments" %>
 <%@ page import="gradadvising.Student" %>
+<%@ page import="gradadvising.Program" %>
 
-<!--
-<div class="fieldcontain ${hasErrors(bean: enrollmentsInstance, field: 'grade', 'error')} ">
-	<label for="grade">
-		<g:message code="enrollments.grade.label" default="Grade" />	
-	</label>
--->	
-<ul class="one-to-many">
-<g:each in="${enrollmentsInstance?.grade?}" var="g">
-    <li><g:link controller="grade" action="show" id="${g.id}">${g?.encodeAsHTML()}</g:link></li>
-</g:each>
-<li class="add">
-<g:link controller="grade" action="create" params="['enrollments.id': enrollmentsInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'grade.label', default: 'Grade')])}</g:link>
-</li>
-</ul>
 
-</div>
+<g:set var="studentI" value="${Student.get(params.studentId)}" />
 
 <g:if test="${!params.studentId}">
 <div class="fieldcontain ${hasErrors(bean: enrollmentsInstance, field: 'student', 'error')} required">
@@ -34,23 +21,53 @@
 		<g:message code="enrollments.student.label" default="Student" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:hiddenField id="student" name="student.id" value="${params.studentId}"/>${Student.get(params.studentId)}
-	
+	<g:hiddenField id="student" name="student.id" value="${params.studentId}"/>${Student.get(params.studentId)}	
 	</div>
 	&nbsp;
-
 </g:if>
 
 	
-
-
-
-
 <div class="fieldcontain ${hasErrors(bean: enrollmentsInstance, field: 'yrsem', 'error')} required">
 	<label for="yrsem">
 		<g:message code="enrollments.yrsem.label" default="Yrsem" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="yrsem" name="yrsem.id" from="${gradadvising.YearSem.list()}" optionKey="id" required="" value="${enrollmentsInstance?.yrsem?.id}" class="many-to-one"/>
+	
+	<!--<g:select id="yrsem" name="yrsem.id" from="${gradadvising.YearSem.list()}" optionKey="id" required="" value="${enrollmentsInstance?.yrsem?.id}" class="many-to-one"/>
+-->
+	<g:select id="yrsem" name="yrsem.id" from="${studentI.getNotEnrolledYearSem()}" optionKey="id" required="" value="${enrollmentsInstance?.yrsem?.id}" class="many-to-one"/>
+	</div>
+
+
+<!--
+<div class="fieldcontain ${hasErrors(bean: enrollmentsInstance, field: 'subject', 'error')} ">
+	<label for="subject">
+		<g:message code="enrollments.subject.label" default="Subject" />	
+	</label>
+	<g:select name="subject" from="${Student.get(params.studentId).program.subject}" multiple="multiple" optionKey="id" size="5" value="${enrollmentsInstance?.subject*.id}" class="many-to-many"/>
 </div>
+-->
+
+<div class="fieldcontain ${hasErrors(bean: enrollmentsInstance, field: 'subject', 'error')} ">
+	<label for="subject">
+		<g:message code="enrollments.subject.label" default="Subject" />	
+	</label>
+		<table>
+			<tr>
+				<td>Select All</td>
+				<td><g:checkBox id="select_all" name="select_all" value="" onclick="selectAll();" /></td>
+			</tr>
+			
+			<g:each in="${studentI.getSubjectWithNoGrades()}"  var="subjectInstance">
+			<tr>
+				<td>${subjectInstance.subjectCode}</td>
+				<td>
+					<g:checkBox id="${subjectInstance.id}" name="marked_subjects" value="${subjectInstance.id}" checked="${false}" />	
+				</td>
+				<br>
+			</tr>
+			</g:each>
+		</table>
+</div>
+
 

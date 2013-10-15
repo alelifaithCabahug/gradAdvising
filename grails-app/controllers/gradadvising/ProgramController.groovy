@@ -23,6 +23,12 @@ class ProgramController extends AdviserBaseController{
 
     def save() {
         def programInstance = new Program(params)
+		
+		def checkedSubjects = params.list('marked_subjects')
+		def selectedSubjects = Subject.getAll(checkedSubjects)
+		programInstance.subject=selectedSubjects
+		
+
         if (!programInstance.save(flush: true)) {
             render(view: "create", model: [programInstance: programInstance])
             return
@@ -51,11 +57,16 @@ class ProgramController extends AdviserBaseController{
             return
         }
 
+		
         [programInstance: programInstance]
     }
 
     def update(Long id, Long version) {
         def programInstance = Program.get(id)
+		
+		def checkedSubjects = params.list('marked_subjects')
+		def selectedSubjects = Subject.getAll(checkedSubjects)
+		
         if (!programInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'program.label', default: 'Program'), id])
             redirect(action: "list")
@@ -73,6 +84,7 @@ class ProgramController extends AdviserBaseController{
         }
 
         programInstance.properties = params
+		programInstance.subject=selectedSubjects
 
         if (!programInstance.save(flush: true)) {
             render(view: "edit", model: [programInstance: programInstance])

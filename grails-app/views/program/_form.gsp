@@ -1,4 +1,7 @@
 <%@ page import="gradadvising.Program" %>
+<%@ page import="gradadvising.Subject" %>
+
+
 
 <div class="fieldcontain ${hasErrors(bean: programInstance, field: 'programName', 'error')} required">
 	<label for="programName">
@@ -10,16 +13,17 @@
 
 <div class="fieldcontain ${hasErrors(bean: programInstance, field: 'numberOfYears', 'error')} required">
 	<label for="numberOfYears">
-		<g:message code="program.numberOfYears.label" default="Duration Period" />
+		<g:message code="program.numberOfYears.label" default="Number Of Years" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="numberOfYears" type="number" value="${programInstance.numberOfYears}" required=""/>
+	<g:field name="numberOfYears" type="number" min="1" max="5" value="${programInstance.numberOfYears}" required=""/>
 </div>
 
- <div class="fieldcontain ${hasErrors(bean: programInstance, field: 'student', 'error')} ">
+<div class="fieldcontain ${hasErrors(bean: programInstance, field: 'student', 'error')} ">
 	<label for="student">
 		<g:message code="program.student.label" default="Student" />
-		</label>
+		
+	</label>
 	
 <ul class="one-to-many">
 <g:each in="${programInstance?.student?}" var="s">
@@ -35,8 +39,22 @@
 <div class="fieldcontain ${hasErrors(bean: programInstance, field: 'subject', 'error')} ">
 	<label for="subject">
 		<g:message code="program.subject.label" default="Subject" />
-		
 	</label>
-	<g:select name="subject" from="${gradadvising.Subject.list()}" multiple="multiple" optionKey="id" size="5" value="${programInstance?.subject*.id}" class="many-to-many"/>
-</div>
 
+		<table>
+			<tr>
+				<td>Select All</td>
+				<td><g:checkBox id="select_all" name="select_all" value="" onclick="selectAll();" /></td>
+			</tr>
+			
+			<g:each in="${gradadvising.Subject.list()}"  var="subjectInstance">
+			<tr>
+				<td>${subjectInstance.subjectCode}</td>
+				<td>
+					<g:checkBox id="${subjectInstance.id}" name="marked_subjects" value="${subjectInstance.id}" checked="${false}" />	
+				</td>
+				<br>
+			</tr>
+			</g:each>
+		</table>
+</div>

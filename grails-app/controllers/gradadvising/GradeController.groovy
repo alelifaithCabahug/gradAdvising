@@ -17,7 +17,9 @@ class GradeController extends AdviserBaseController {
         [gradeInstanceList: Grade.list(params), gradeInstanceTotal: Grade.count()]
     }
 
-    def create() {
+    def create(Long id) {
+		params.enrollmentId = id
+		params.subjectID = params.subjectID
         [gradeInstance: new Grade(params)]
     }
 
@@ -29,7 +31,7 @@ class GradeController extends AdviserBaseController {
         }
 
 		flash.message = message(code: 'default.created.message', args: [message(code: 'grade.label', default: 'Grade'), gradeInstance.id])
-        redirect(controller: "student", action: "list")
+        redirect(controller: "student", action: "show", id:gradeInstance.enrollments.student.id)
     }
 
     def show() {
@@ -43,8 +45,10 @@ class GradeController extends AdviserBaseController {
         [gradeInstance: gradeInstance]
     }
 
-    def edit() {
-        def gradeInstance = Grade.get(params.id)
+    def edit(Long id) {
+		params.enrollmentId = params.enrollmentId
+		params.subjectID = params.subjectID
+        def gradeInstance = Grade.get(id)
         if (!gradeInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'grade.label', default: 'Grade'), params.id])
             redirect(action: "list")
@@ -81,7 +85,7 @@ class GradeController extends AdviserBaseController {
         }
 
 		flash.message = message(code: 'default.updated.message', args: [message(code: 'grade.label', default: 'Grade'), gradeInstance.id])
-        redirect(action: "show", id: gradeInstance.id)
+        redirect(action: "show", id: gradeInstance.enrollments.student.id, controller:"student")
     }
 
     def delete() {

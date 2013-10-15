@@ -3,8 +3,9 @@
       <div class="container">
 	  
 		<a class="brand" href="http://localhost:8080/gradAdvising"><img width="110" height="40" src="${resource(dir: 'images', file: 'scs-logo.png')}"></a>
+		
+		<ul class="nav">
 		<g:if test="${session.username}">
-        <ul class="nav">
 		  <li><a href="http://localhost:8080/gradAdvising/student">Student</a></li>
           <li><a href="http://localhost:8080/gradAdvising/subject">Courses</a></li>
 		  <li><a href="http://localhost:8080/gradAdvising/program">Programs &raquo</a></li>
@@ -18,13 +19,14 @@
 		
 		<!--link for student log-out -->
 		 <g:if test="${session.sUsername}">
-				<g:link class="text" action="logout" controller="studentProfile">LOGOUT</g:link>	
+				<li><g:link class="text" action="logout" controller="studentProfile">LOGOUT</g:link>	</li>
 				</g:if>
 		  
-		  
+		<div class="searchBox"> 
 		 <g:form url='[controller: "searchable", action: "index"]' id="searchableForm" name="searchableForm" method="get">
-			<g:textField name="q" value="${params.q}" size="50"/> <input type="submit" value="Search" />
+			<g:textField name="q" value="${params.q}" size="50"/> <input class="btn" type="submit" value="Search" />
 		</g:form>
+		</div>
 		  
         </ul>
 		

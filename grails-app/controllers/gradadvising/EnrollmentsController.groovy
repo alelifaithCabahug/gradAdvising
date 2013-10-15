@@ -17,10 +17,12 @@ class EnrollmentsController extends AdviserBaseController{
         [enrollmentsInstanceList: Enrollments.list(params), enrollmentsInstanceTotal: Enrollments.count()]
     }
 
-     def create(Long id) {
+     def create() {
 
-		def studentId = id
+		def studentId = params.studentId
 		params.studentId = studentId
+		
+		println studentId
 		
         [enrollmentsInstance: new Enrollments(params)]
 		
@@ -29,13 +31,18 @@ class EnrollmentsController extends AdviserBaseController{
 
     def save() {
         def enrollmentsInstance = new Enrollments(params)
+		
+		def checkedSubjects = params.list('marked_subjects')
+		def selectedSubjects = Subject.getAll(checkedSubjects)
+		enrollmentsInstance.subject=selectedSubjects
+		
         if (!enrollmentsInstance.save(flush: true)) {
             render(view: "create", model: [enrollmentsInstance: enrollmentsInstance])
             return
         }
 
         flash.message = message(code: 'default.created.message', args: [message(code: 'enrollments.label', default: 'Enrollments'), enrollmentsInstance.id])
-        redirect(controller: "student", action: "list")
+        redirect(controller: "student", action: "show", id:enrollmentsInstance.student.id)
     }
 
     def show(Long id) {
@@ -62,6 +69,10 @@ class EnrollmentsController extends AdviserBaseController{
 
     def update(Long id, Long version) {
         def enrollmentsInstance = Enrollments.get(id)
+		
+		def checkedSubjects = params.list('marked_subjects')
+		def selectedSubjects = Subject.getAll(checkedSubjects)
+		
         if (!enrollmentsInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'enrollments.label', default: 'Enrollments'), id])
             redirect(action: "list")
@@ -79,6 +90,7 @@ class EnrollmentsController extends AdviserBaseController{
         }
 
         enrollmentsInstance.properties = params
+		enrollmentsInstance.subject=selectedSubjects
 
         if (!enrollmentsInstance.save(flush: true)) {
             render(view: "edit", model: [enrollmentsInstance: enrollmentsInstance])
@@ -86,11 +98,12 @@ class EnrollmentsController extends AdviserBaseController{
         }
 
         flash.message = message(code: 'default.updated.message', args: [message(code: 'enrollments.label', default: 'Enrollments'), enrollmentsInstance.id])
-        redirect(action: "show", id: enrollmentsInstance.id)
+        redirect(action: "show", id: enrollmentsInstance.student.id, controller:"student")
     }
 
     def delete(Long id) {
         def enrollmentsInstance = Enrollments.get(id)
+		def studentId = enrollmentsInstance.student.id
         if (!enrollmentsInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'enrollments.label', default: 'Enrollments'), id])
             redirect(action: "list")
@@ -100,7 +113,7 @@ class EnrollmentsController extends AdviserBaseController{
         try {
             enrollmentsInstance.delete(flush: true)
             flash.message = message(code: 'default.deleted.message', args: [message(code: 'enrollments.label', default: 'Enrollments'), id])
-            redirect(action: "list")
+            redirect(action: "show", controller:"student", id:studentId)
         }
         catch (DataIntegrityViolationException e) {
             flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'enrollments.label', default: 'Enrollments'), id])

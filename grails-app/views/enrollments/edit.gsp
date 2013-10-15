@@ -5,6 +5,17 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'enrollments.label', default: 'Enrollments')}" />
 		<title><g:message code="default.edit.label" args="[entityName]" /></title>
+		<script type="text/javascript">
+			function selectAll(){//this function is used to check or uncheck all checkboxes
+				var select = document.getElementById("select_all");
+				var checkboxes = document.forms['enrollmentsForm'].elements['marked_subjects'];
+				if (select.checked){
+					for (i = 0; i < checkboxes.length; i++) checkboxes[i].checked = true;
+				}else{
+					for (i = 0; i < checkboxes.length; i++) checkboxes[i].checked = false;
+				}
+			}//this function works fine
+</script>
 	</head>
 	
 	<body>
@@ -30,11 +41,11 @@
 			</ul>
 			</g:hasErrors>
 			
-			<g:form method="post" >
+			<g:form name="enrollmentsForm" method="post" >
 				<g:hiddenField name="id" value="${enrollmentsInstance?.id}" />
 				<g:hiddenField name="version" value="${enrollmentsInstance?.version}" />
 				<fieldset class="form">
-					<g:render template="form"/>
+					<g:render template="formForEdit"/>
 				</fieldset>
 				<fieldset class="buttons">
 					<g:actionSubmit class="save" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" />

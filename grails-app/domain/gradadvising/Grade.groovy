@@ -13,6 +13,10 @@ class Grade {
 		grade(inList:['1.0','1.25','1.5','1.75','2.0','2.25','2.5','2.75','3.0','5.0', 'INC', 'DROPPED', 'WDRW'], blank:false)
 	}
 	
+	String toString(){
+		return grade
+	}
+	
 	double getEquivalentGrade()
 	{
 		if( grade == "1.0")

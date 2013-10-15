@@ -8,42 +8,62 @@
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
 	<body>
-	
-		<div class="container-fluid">
-		
-			<div class="span8">
-			<div class="hero-unit">
-			
-			<h1>Enrollment</h1>
-			
+		<a href="#show-enrollments" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+		<div class="nav" role="navigation">
+			<ul>
+				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
+				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
+				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+			</ul>
+		</div>
+		<div id="show-enrollments" class="content scaffold-show" role="main">
+			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
+			<ol class="property-list enrollments">
 			
 				<g:if test="${enrollmentsInstance?.grade}">
 				<li class="fieldcontain">
 					<span id="grade-label" class="property-label"><g:message code="enrollments.grade.label" default="Grade" /></span>
+					
 						<g:each in="${enrollmentsInstance.grade}" var="g">
 						<span class="property-value" aria-labelledby="grade-label"><g:link controller="grade" action="show" id="${g.id}">${g?.encodeAsHTML()}</g:link></span>
 						</g:each>
+					
 				</li>
 				</g:if>
 			
 				<g:if test="${enrollmentsInstance?.student}">
 				<li class="fieldcontain">
 					<span id="student-label" class="property-label"><g:message code="enrollments.student.label" default="Student" /></span>
+					
 						<span class="property-value" aria-labelledby="student-label"><g:link controller="student" action="show" id="${enrollmentsInstance?.student?.id}">${enrollmentsInstance?.student?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${enrollmentsInstance?.subject}">
+				<li class="fieldcontain">
+					<span id="subject-label" class="property-label"><g:message code="enrollments.subject.label" default="Subject" /></span>
+					
+						<g:each in="${enrollmentsInstance.subject}" var="s">
+						<span class="property-value" aria-labelledby="subject-label"><g:link controller="subject" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
 				</li>
 				</g:if>
 			
 				<g:if test="${enrollmentsInstance?.yrsem}">
 				<li class="fieldcontain">
 					<span id="yrsem-label" class="property-label"><g:message code="enrollments.yrsem.label" default="Yrsem" /></span>
+					
 						<span class="property-value" aria-labelledby="yrsem-label"><g:link controller="yearSem" action="show" id="${enrollmentsInstance?.yrsem?.id}">${enrollmentsInstance?.yrsem?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>
 			
+			</ol>
 			<g:form>
 				<fieldset class="buttons">
 					<g:hiddenField name="id" value="${enrollmentsInstance?.id}" />
@@ -51,7 +71,6 @@
 					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
 				</fieldset>
 			</g:form>
-			
-	</div>
+		</div>
 	</body>
 </html>

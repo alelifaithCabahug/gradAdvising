@@ -18,6 +18,12 @@
 		
 		<g:layoutHead/>
 		<r:layoutResources />
+		<style type="text/css">
+			.searchBox{
+				margin-left: 10em;
+				float: right;
+			}
+		</style>
 	</head>
 	
 	<body>

@@ -9,6 +9,7 @@ class YearSem {
 		sem(blank:false, min:1, max:3)
     }
 	
+	
 	public YearSem(int y, int s)
 	{
 		year = y
