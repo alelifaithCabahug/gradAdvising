@@ -53,15 +53,15 @@ class Student{
 	
 	def getSubjectWithNoGrades(){
 
-		//def subjectsGrade = Grade.findAll("from Grade as g where g.enrollments.student.id=:studentId", [studentId:this.id])
-		//def sub = subjectsGrade.subject
-		//println " try ${sub}"
-		def subjectsWithGrade = (enrollments.grade.subject).flatten()
-		
+		def grades = Grade.findAll("from Grade as g where g.enrollments.student.id=:studentId", [studentId:this.id])
+		grades = grades.subject
+		def gradesEqualToFive = Grade.findAll("from Grade as g where g.enrollments.student.id=:studentId and (g.grade=:grade5 or g.grade=:INC or g.grade=:DROPPED or g.grade=:WDRW)", [studentId:this.id, grade5:"5.0", INC:"INC", DROPPED:"DROPPED", WDRW:"WDRW"])
+		gradesEqualToFive = gradesEqualToFive.subject
 		def studentSubjects = (program.subject)
 
-		def subjectsWithNoGrade = studentSubjects.id-subjectsWithGrade.id
+		def subjectsWithNoGrade = (studentSubjects.id-grades.id)+(gradesEqualToFive.id)
 		def result = subjectsWithNoGrade.collect{Subject.get(it)}
+		
 		return result
 	}
 }
