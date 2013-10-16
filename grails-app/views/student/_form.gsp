@@ -17,10 +17,12 @@
 				<label for="sPassword">
 				<g:message code="student.sPassword.label" default="Password" />
 				</label>
-				<g:textField name="sPassword" placeholder="xxxxxx" value="${studentInstance?.sPassword}"/>
+				<g:field type="password" name="sPassword" placeholder="xxxxxx" value="${studentInstance?.sPassword}"/>
+				<!-- <g:textField name="sPassword" input type="password" placeholder="xxxxxx" value="${studentInstance?.sPassword}"/> -->
 			</div>
 			
 			<!-- xxxxx -->
+			
 			
 	</div>
 
