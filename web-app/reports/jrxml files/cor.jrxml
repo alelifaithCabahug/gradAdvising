@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cor" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8f8cb5e6-e2c2-4f04-a519-5a4b6275a90e">
+	<property name="ireport.zoom" value="1.2100000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="93"/>
+	<parameter name="total_units" class="java.lang.String"/>
+	<field name="yr_sem_string" class="java.lang.String"/>
+	<field name="id_number" class="java.lang.String"/>
+	<field name="student_name" class="java.lang.String"/>
+	<field name="under_grad_course" class="java.lang.String"/>
+	<field name="bachelors_degree" class="java.lang.String"/>
+	<field name="program_name" class="java.lang.String"/>
+	<field name="year_level" class="java.lang.String"/>
+	<field name="date_enrolled" class="java.lang.String"/>
+	<field name="subject_code" class="java.lang.String"/>
+	<field name="subject_description" class="java.lang.String"/>
+	<field name="unit_load" class="java.lang.String"/>
+	<group name="yr_sem_string">
+		<groupExpression><![CDATA[$F{yr_sem_string}]]></groupExpression>
+		<groupFooter>
+			<band height="59">
+				<staticText>
+					<reportElement uuid="3b49ea5a-8dde-40cf-a62d-6212f3797f3f" x="355" y="4" width="100" height="20"/>
+					<textElement/>
+					<text><![CDATA[TOTAL UNITS]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="f92f6a66-694f-48ce-a040-73405893b082" x="455" y="4" width="100" height="20"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$P{total_units}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="fe5243af-5641-4545-b6c9-c2ff5bfcfdd4" x="1" y="45" width="553" height="1"/>
+				</line>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="cf40f98b-e454-4120-a894-a9c5ebedd79f" x="0" y="0" width="555" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Republic of the Philippines]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="55e48f7b-a2c4-4b0e-9238-87570ee40616" x="0" y="19" width="555" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mindanao State University]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ad7b8f88-9378-40bd-92d5-5842ad2be009" x="0" y="38" width="555" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ILIGAN INSTITUTE OF TECHNOLOGY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b0898565-2396-4c83-b2ec-03b6c4822b1f" x="0" y="57" width="554" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Andres Bonifacio Avenue, Tibanga, 9200 Iligan City]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="123" splitType="Stretch">
+			<textField>
+				<reportElement uuid="83666fe1-f3ca-409e-8c70-7f5807c58074" x="0" y="22" width="554" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{yr_sem_string}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="fe5b5916-c473-40fb-86d4-0ff1ff2b161b" x="0" y="42" width="554" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="8f677f85-5a3f-456b-a76e-825d80a62cd0" x="0" y="43" width="113" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID NUMBER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2d98fec3-0ea9-42d6-84c0-ea9bcaec0bf7" x="0" y="63" width="113" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="090d071e-5883-4a95-91d6-799b22a55712" x="0" y="83" width="113" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[UNDERGRAD COURSE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="17c21d69-6a79-4ac2-ba85-0d941dc03f11" x="0" y="103" width="113" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[BACHELOR'S DEGREE]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="4f6ddc51-6f92-4d5e-8f80-758280a4800b" x="113" y="43" width="171" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{id_number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="23ffdf07-5f7c-4fcf-ad1c-e89557f82db6" x="113" y="63" width="171" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{student_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="bb4a0c78-96a0-410c-b6b6-5f9bf8ac0c13" x="113" y="83" width="171" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{under_grad_course}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fa056d7e-20bc-4fe3-93f3-8154cf627ccc" x="113" y="103" width="171" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{bachelors_degree}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="db63f559-4d76-41e2-965a-7cadbb07fe82" x="284" y="43" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROGRAM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d480b7ff-cf7b-4d0f-b39f-3eec31d13409" x="284" y="63" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[YEAR LEVEL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="36266b32-19c2-4755-872b-c01995dadf17" x="284" y="83" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATE ENROLLED]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b33ad8f0-3ab6-4180-99ce-081d5d101640" x="384" y="43" width="170" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{program_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3630e6b5-809e-42de-97d6-ffdd2073367d" x="384" y="63" width="170" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{year_level}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="554dac36-15c0-4659-a2e1-498d5388711b" x="384" y="83" width="170" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{date_enrolled}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="e5838fa1-592c-4d79-8a13-70f76deb3c5a" x="1" y="2" width="553" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CERTIFICATE OF REGISTRATION]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<line>
+				<reportElement uuid="99f54ba0-694f-4d30-8f99-de2e7d3b41ee" x="0" y="0" width="554" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="2bf9c238-9a08-48e0-89aa-e5162c188677" x="0" y="1" width="126" height="20"/>
+				<textElement/>
+				<text><![CDATA[SUBJECT CODE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ce6c7865-4f2d-496d-b936-7d7a1f9eb8e0" x="126" y="1" width="328" height="20"/>
+				<textElement/>
+				<text><![CDATA[SUBJECT DESCRIPTION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a23d0be8-5b9c-43f9-811b-ee5cea48c3ae" x="454" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[UNIT LOAD]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="1d2f3ddf-eba8-42ff-93b6-79b378d2853a" x="0" y="21" width="554" height="1"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="26" splitType="Stretch">
+			<textField>
+				<reportElement uuid="2be7ba7d-d188-495a-9220-a865354c819b" x="1" y="3" width="125" height="20"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{subject_code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d58dc9d1-345c-4417-b08f-7216d5a7dd2b" x="455" y="3" width="100" height="20"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{unit_load}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1ac9a297-5501-4fd2-931e-0dc296a90385" x="126" y="3" width="328" height="20"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{subject_description}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
