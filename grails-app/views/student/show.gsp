@@ -7,11 +7,17 @@
 		<g:set var="entityName" value="${message(code: 'student.label', default: 'Student')}" />
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
-	<br><br>
+	
+	<div class="container-fluid">
+		<div class="row-fluid">
+		<div class="span2">
+		</div>
+		
+		<div class="span8">
 		
 		<div align="center">	
 		<ul class="nav nav-pills" style="border: solid 0px #0000FF;">
-	
+		
 		<li class="active"><a href="http://localhost:8080/gradAdvising/student/list">Student List</a></li>
 		
 		<g:if test="${flash.message}">
@@ -49,7 +55,7 @@
 	</td>
 	</table>
 
-	<g:link class="btn" controller="enrollments" action="create" params="[studentId: studentInstance?.id]">Add Enrollment</g:link></br>
+	<g:link class="btn" controller="enrollments" action="create" params="[studentId: studentInstance?.id]">Add Enrollment</g:link>
 	<g:link class="btn" controller="report" action="showEvaluation" id="${studentInstance?.id}">Evaluation of Records</g:link></br>
 	
 	</td>
@@ -88,7 +94,7 @@
 	<h4> ${enr.yrsem} </h4>
 	
 	<table border="1">
-		<g:sortableColumn property="column" title="${message(code: 'user.id.label', default: 'Subject Name')}" />
+		<g:sortableColumn property="column" defaultOrder="desc" title="${message(code: 'user.id.label', default: 'Subject Name')}" />
 		<g:sortableColumn property="column" title="${message(code: 'user.id.label', default: 'Grade')}" />
 		
 		<g:each in="${enr.subject}" status="i" var="sub">
@@ -112,7 +118,6 @@
 			<align="left">GPA: ${enr.getGPA()} &nbsp;&nbsp;&nbsp;</a>
 			<!--<g:link class="btn" controller="grade" action="create" id="${enr?.id}">Add Grade</g:link>-->
 			<g:link class="btn" controller="enrollments" action="edit" id="${enr?.id}">Edit Enrollment</g:link></br>
-			<g:link class="btn" controller="grade" action="create" id="${enr?.id}">Add Grade</g:link></br>
 	
 			</a>
 
