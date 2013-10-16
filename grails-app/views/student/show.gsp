@@ -118,7 +118,11 @@
 			<align="left">GPA: ${enr.getGPA()} &nbsp;&nbsp;&nbsp;</a>
 			<!--<g:link class="btn" controller="grade" action="create" id="${enr?.id}">Add Grade</g:link>-->
 			<g:link class="btn" controller="enrollments" action="edit" id="${enr?.id}">Edit Enrollment</g:link></br>
-	
+		
+			<g:jasperReport  jasper="cor" controller="report" action="printCOR" format="PDF" name="(PDF)" >  Download COR
+					<g:hiddenField name="studentId" value="${studentInstance?.id}"/>
+					<g:hiddenField name="enrollmentsId" value="${enr?.id}"/>
+				</g:jasperReport>
 			</a>
 
 	</div>
