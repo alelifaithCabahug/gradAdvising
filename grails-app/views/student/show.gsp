@@ -82,7 +82,7 @@
 	
 	<!-- Tables for enrolled subjects with grades -->
 	
-<g:each in="${studentInstance.enrollments}" var="enr">
+<g:each in="${studentInstance.getEnrollmentsList()}" var="enr">
 	
 	<p>
 	<br>

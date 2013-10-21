@@ -64,4 +64,8 @@ class Student{
 		
 		return result
 	}
+	
+	def getEnrollmentsList(){
+		return Enrollments.findAll("from Enrollments as e where e.student.id='${this.id}' order by e.id")
+	}
 }
