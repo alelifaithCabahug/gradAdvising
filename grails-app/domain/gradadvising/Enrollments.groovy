@@ -9,6 +9,8 @@ class Enrollments {
 	static belongsTo = [student:Student]
 	static hasMany = [grade:Grade, subject:Subject]
 	
+	
+	
 	static constraints(){
 		student(blank:false, unique:true)
 		yrsem(blank:false)
@@ -21,10 +23,11 @@ class Enrollments {
 		"enrollment: ${student.studentName} ${this.yrsem}"
 	}
 	
-	double getGPA()
+	def getGPA()
 	{
 		double result = 0;
 		double totalLoad = 0;
+		def finalResult = 0;
 
 		grade.each()
 		{
@@ -40,8 +43,17 @@ class Enrollments {
 			}
 			
 		}
-		return (result/totalLoad).round(2);
 		
+			if(totalLoad!=0.0)
+				finalResult = (result/totalLoad).round(2)
+				
+			else
+				finalResult = "Not Computed"
+		
+			if(id)
+			Enrollments.executeUpdate("update Enrollments e set e.studentGPA='${finalResult}' where e.id='${this?.id}'" )
+			
+			return finalResult;
 	}
 	
 	

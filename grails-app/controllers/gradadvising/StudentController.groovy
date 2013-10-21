@@ -34,7 +34,7 @@ class StudentController extends AdviserBaseController {
 
     def show(Long id) {
         def studentInstance = Student.get(id)
-
+	
         if (!studentInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'student.label', default: 'Student'), id])
             redirect(action: "list")

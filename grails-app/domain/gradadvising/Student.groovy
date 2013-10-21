@@ -36,6 +36,8 @@ class Student{
 		sPassword(blank:true)
     }
 	
+	
+	
 	static searchable = true
 	
 	String toString(){
@@ -64,4 +66,9 @@ class Student{
 		
 		return result
 	}
+	
+/*
+	def getEnrollments(){
+		return Enrollments.findAll("from Enrollments as e where e.student.id='${this.id}' order by e.id")
+	}*/
 }
